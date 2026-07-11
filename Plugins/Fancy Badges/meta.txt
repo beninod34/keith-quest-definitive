@@ -1,0 +1,5 @@
+Name         = Fancy Badges
+Version      = 1.1
+Requires     = Luka's Scripting Utilities,4.1.1
+Website      = https://luka-sj.com/res/fcbd
+Credits      = Luka S.J.
