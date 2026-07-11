@@ -1,0 +1,147 @@
+Loop Song Data:
+
+Difficult Battle Won:
+	End Time: 596865
+	Start Time: 126185
+	Loop Length: 470680
+Dominic Theme:
+	End time: 8373371
+	Start Time: 1156088
+	Loop Length: 7217283
+Ultra Friendship Battle:
+	End Time: 8574255
+	Start Time: 389883
+	Loop Length: 8184371
+Barry's Duel:
+	End Time: 5305010
+	Start Time: 2663360
+	Loop Length: 2641651
+Desperate Struggle:
+	End Time: 9816737
+	Start Time: 2724738
+	Loop Length: 7091999
+Clashing Views Aimed Straight:
+	End Time: 5188449
+	Start Time: 2541779
+	Loop Length: 2646670
+Perfect Compatibility:
+	End Time: 7522902
+	Start Time: 2924299
+	Loop Length: 4598602
+50/50:
+	End Time: 5495829
+	Start Time: 2506752
+	Loop Length: 2989077
+Conflict Through the Roots:
+	End Time: 23399857
+	Start Time: 5061191
+	Loop Length: 18338666
+Last Obstacle:
+	End Time: 4280845
+	Start Time: 433679
+	Loop Length: 3847166
+Front Yard Traffic:
+	End Time: 11660114
+	Start Time: 0
+	Loop Length: 11660114
+Humble Abode:
+	End Time: 3587575
+	Start Time: 1334183
+	Loop Length: 2253392
+The Great Outdoors:
+	End Time: 7508742
+	Start Time: 3275597
+	Loop Length: 4233146
+Unsuspecting Garden:
+	End Time: 4902751
+	Start Time: 615238
+	Loop Length: 4287513
+Tears of the Souls:
+	End Time: 4861051
+	Start Time: 1741107
+	Loop Length: 3119944
+In The Pot:
+	End Time: 5657857
+	Start Time: 1511045
+	Loop Length: 4146812
+A Warming Cold:
+	End Time: 26965407
+	Start Time: 0
+	Loop Length: 26965407
+Rooted:
+	End Time: 7878926
+	Start Time: 1578082
+	Loop Length: 6300845
+Unknown Territory:
+	End Time: 2093236
+	Start Time: 317404
+	Loop Length: 1775832
+Unexpected Ending:
+	End Time: 1679521
+	Start Time: 376916
+	Loop Length: 1302605
+Charging Beam:
+	Start Time: 84274
+	Loop Length: 73709
+The Dojo:
+	Start Time: 3390643
+	Loop Length: 7197340
+Fatherly Fued: 
+	Start Time: 5991133
+	Loop Length: 5981697
+The Master:
+	Start Time: 2264080
+	Loop Length: 6209158
+Lost Woods:
+	Start Time: 850269
+	Loop Length: 1693382
+Fine Dining:
+	End Time: 2873046
+	Start Time: 317105
+	Loop Length: 2555942
+Battle Cynthia:
+	End Time: 6441549
+	Start Time: 3133214
+	Loop Length: 3308378
+Super Shmooving:
+	End Time: 6811218
+	Start Time: 1178486
+	Loop Length: 5632391
+Match of Movement
+	End Time: 9110751
+	Start Time: 546114
+	Loop Length: 8564637
+Sparring Match
+	End Time:11815812
+	Start Time: 3831782
+	Loop Length: 7984630
+Yuna's Team:
+	Start Time: 2101634
+	Loop Length: 3931172
+Emile:
+	Start Time: 628807
+	Loop Length: 5206360	
+The Darkness:
+	Start Time: 1198957
+	Loop Length: 3629275
+Unwavering Struggle:
+	Start Time:1143959
+	Loop Length: 4234883
+Chilling Heat:
+	Start Time: 5888877
+	Loop Length: 5887045
+Atlanta Anthem:
+	Start Time: 167330
+	Loop Length: 7816546
+Motivation:
+	Start Time: 4593628
+	Loop Length: 4022126
+Battle for the Heat:
+	Start Time: 2706220
+	Loop Length: 4821409
+Ultimate Friendship Climax:
+	Start Time: 515496
+	Loop Length: 8941286
+Poker Face:
+	Start Time: 245065
+	Loop Length: 6478660
