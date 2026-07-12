@@ -400,5 +400,7 @@ Compiler_MapsAndEvents.rb
 ================== (21).rb
 [[ Teams ]].rb
 Teams.rb
+[[ Badges ]].rb
+Badges_BadgeCase.rb
 [[ Main ]].rb
 Main.rb
