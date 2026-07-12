@@ -292,6 +292,7 @@ def renderBadgeAnimation(badge_number = 0)
     end
     fp["eff"].angle += 2
     Graphics.update
+    Graphics.update if frame % 3 == 0 # holds every 10th frame an extra tick, ~10% slower overall
     Input.update
     pbUpdateSceneMap
   end
