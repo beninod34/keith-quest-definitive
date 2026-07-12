@@ -152,6 +152,15 @@ MapPosition = 0,14,6
 BattleBack = field
 MapSize = 2,1101
 #-------------------------------
+[032]	# KEITH'S HOUSE
+Name = Keith's House
+Outdoor = true
+ShowArea = true
+Bicycle = true
+HealingSpot = 32,26,10
+MapPosition = 2,15,16
+SnapEdges = true
+#-------------------------------
 [034]   # Ice Cave
 Name = Route 3
 Bicycle = true
@@ -205,6 +214,19 @@ BicycleAlways = true
 MapPosition = 0,11,7
 MapSize = 1,111
 #-------------------------------
+[042]	# Inside 2
+Name = Inside 2
+MapPosition = 2,15,19
+#-------------------------------
+[043]	# THE GREAT OUTDOORS
+Name = The Great Outdoors
+Outdoor = true
+ShowArea = true
+Bicycle = true
+BicycleAlways = false
+MapPosition = 2,15,0
+SnapEdges = true
+#-------------------------------
 [044]   # Route 6
 Name = Route 6
 Outdoor = true
@@ -234,6 +256,14 @@ MapPosition = 0,15,10
 BattleBack = rocky
 MapSize = 2,11
 Environment = Rock
+#-------------------------------
+[048]	# FAIRY VALE
+Name = Fairy Vale
+Outdoor = true
+ShowArea = true
+Bicycle = true
+MapPosition = 2,22,3
+SnapEdges = true
 #-------------------------------
 [049]   # Rock Cave 1F
 Name = Route 7
@@ -396,3 +426,203 @@ Name = Tiall Region
 Outdoor = true
 MapPosition = 1,13,16
 BattleBack = city
+#-------------------------------
+[076]	# MARE INSULARUM
+Name = Mare Insularum
+Outdoor = true
+ShowArea = true
+Bicycle = true
+MapPosition = 2,19,14
+SnapEdges = true
+#-------------------------------
+[077]	# GRAND SCHISM
+Name = Grand Schism
+Outdoor = true
+ShowArea = true
+Bicycle = true
+MapPosition = 2,8,5
+SnapEdges = true
+#-------------------------------
+[078]	# PROMETHEAN KILN
+Name = Promethean Kiln
+Outdoor = true
+ShowArea = true
+Bicycle = true
+Weather = Sun,100
+MapPosition = 2,10,13
+SnapEdges = true
+#-------------------------------
+[079]	# PURGATORIUM
+Name = Purgatorium
+Outdoor = true
+ShowArea = true
+Bicycle = true
+Weather = Rain,100
+MapPosition = 2,5,10
+SnapEdges = true
+#-------------------------------
+[080]	# ATELIER ACCELERATUS
+Name = Atelier Acceleratus
+Outdoor = true
+ShowArea = true
+Bicycle = true
+MapPosition = 2,24,10
+SnapEdges = true
+#-------------------------------
+[081]	# ROOTS
+Name = Roots
+Outdoor = true
+ShowArea = true
+Bicycle = true
+MapPosition = 2,15,6
+SafariMap = false
+SnapEdges = true
+#-------------------------------
+[082]	# THE DUNGEON
+Name = THE DUNGEON
+ShowArea = true
+SnapEdges = true
+#-------------------------------
+[083]	# Inside 3
+Name = Inside 3
+DarkMap = true
+SnapEdges = true
+#-------------------------------
+[084]	# Final Frontier
+Name = Final Frontier
+SnapEdges = true
+#-------------------------------
+[085]	# THE DOJO
+Name = The Dojo
+Outdoor = true
+ShowArea = true
+Bicycle = true
+MapPosition = 2,15,19
+SnapEdges = true
+#-------------------------------
+[086]	# FAIRY VALE
+Name = Fairy Vale
+ShowArea = true
+Bicycle = false
+MapPosition = 2,22,3
+SnapEdges = true
+#-------------------------------
+[087]	# Lost Woods
+Name = Lost Woods
+ShowArea = true
+Bicycle = false
+SnapEdges = true
+#-------------------------------
+[088]	# FAIRY VALE
+Name = Fairy Vale
+Outdoor = true
+ShowArea = true
+Bicycle = true
+SnapEdges = true
+#-------------------------------
+[089]	# PROMETHEAN KILN
+Name = Promethean Kiln
+Outdoor = true
+ShowArea = true
+Weather = Sun,100
+SnapEdges = true
+#-------------------------------
+[091]	# PURGATORIUM
+Name = Purgatorium
+Outdoor = true
+ShowArea = true
+Weather = Rain,100
+SnapEdges = true
+#-------------------------------
+[092]	# Casino
+Name = Casino
+SnapEdges = true
+#-------------------------------
+[093]	# The Clearing
+Name = The Clearing
+ShowArea = true
+Bicycle = false
+SnapEdges = true
+#-------------------------------
+[094]	# 2nd Floor
+Name = 2nd Floor
+SnapEdges = true
+#-------------------------------
+[095]	# ATELIER ACCELERATUS
+Name = Atelier Acceleratus
+ShowArea = true
+Bicycle = true
+SnapEdges = true
+#-------------------------------
+[096]	# RaceTrack
+Name = RaceTrack
+Bicycle = false
+SnapEdges = true
+#-------------------------------
+[097]	# ATELIER ACCELERATUS
+Name = Atelier Acceleratus
+ShowArea = true
+SnapEdges = true
+#-------------------------------
+[098]	# GRAND SCHISM
+Name = Grand Schism
+SnapEdges = true
+#-------------------------------
+[099]	# GRAND SCHISM
+Name = Grand Schism
+SnapEdges = true
+#-------------------------------
+[100]	# The Tower
+Name = The Tower
+SnapEdges = true
+#-------------------------------
+[101]	# MARE INSULARUM
+Name = Mare Insularum
+ShowArea = true
+SnapEdges = true
+#-------------------------------
+[102]	# THE VOID
+Name = The Void
+Bicycle = false
+#-------------------------------
+[103]	# Void Heights
+Name = Void Heights
+Bicycle = false
+SnapEdges = true
+#-------------------------------
+[104]	# Void Lab
+Name = Void Lab
+Bicycle = false
+SnapEdges = true
+#-------------------------------
+[105]	# Void Garden
+Name = Void Garden
+Bicycle = false
+SnapEdges = true
+#-------------------------------
+[106]	# Void Duality
+Name = Void Duality
+Bicycle = false
+SnapEdges = true
+#-------------------------------
+[107]	# Void Pan
+Name = Void Pan
+Bicycle = false
+SnapEdges = true
+#-------------------------------
+[108]	# Void Graveyard
+Name = Void Graveyard
+Bicycle = false
+SnapEdges = true
+#-------------------------------
+[109]	# MARE INSULARUM
+Name = Mare Insularum
+ShowArea = true
+SnapEdges = true
+#-------------------------------
+[110]	# PROMETHEAN KILN
+Name = Promethean Kiln
+Outdoor = true
+ShowArea = true
+Weather = Sun,100
+SnapEdges = true

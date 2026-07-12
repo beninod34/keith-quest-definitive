@@ -51,6 +51,7 @@ def pbTransferWithTransition(map_id, x, y, transition = nil, dir = $game_player.
   4.times do
     next if [:ZOOMED, :MELT].include?(transition)
     Graphics.update
+    pbUpdateSceneMap
   end
   # part responsible for transferring the player around
     # Set transferring player flag
@@ -67,6 +68,7 @@ def pbTransferWithTransition(map_id, x, y, transition = nil, dir = $game_player.
   4.times do
     next if [:ZOOMED, :MELT].include?(transition)
     Graphics.update
+    pbUpdateSceneMap
   end
   screen.visible = false if ![:ZOOMED].include?(transition)
   # final stage of transition
@@ -137,6 +139,7 @@ module Transitions
       fp["trans"].y -= ((Graphics.height/8)*(flip ? -1 : 1)*(horizontal ? 0 : 1)*(reverse ? -1 : 1))/self.delta
       fp["screen"].opacity += (16*(reverse ? -1 : 1))/self.delta
       Graphics.update
+      pbUpdateSceneMap
     end
     bmp = Graphics.snap_to_bitmap
     pbDisposeSpriteHash(fp)
@@ -178,6 +181,7 @@ module Transitions
       zoom -= (2.0/20*(reverse ? -1 : 1))/self.delta
       bg.opacity += (16*(reverse ? -1 : 1))/self.delta
       Graphics.update
+      pbUpdateSceneMap
     end
     bmp = Graphics.snap_to_bitmap
     bg.dispose
@@ -196,6 +200,7 @@ module Transitions
     (8 * self.delta).round.times do
       viewport.color.alpha += (32*(reverse ? -1 : 1))/self.delta
       Graphics.update
+      pbUpdateSceneMap
     end
     bmp = Graphics.snap_to_bitmap
     viewport.dispose
@@ -220,6 +225,7 @@ module Transitions
       screen.zoom_x += 0.01/self.delta
       screen.zoom_y += 0.01/self.delta
       Graphics.update
+      pbUpdateSceneMap
     end
     if reverse
       screen.viewport.dispose
@@ -244,6 +250,7 @@ module Transitions
       next if reverse
       viewport.color.alpha += (32*(reverse ? -1 : 1))/self.delta
       Graphics.update
+      pbUpdateSceneMap
     end
     return nil
   end
@@ -261,6 +268,7 @@ module Transitions
       next if !reverse
       spr.opacity -= 16/self.delta
       Graphics.update
+      pbUpdateSceneMap
     end
     spr.dispose
     viewport.dispose

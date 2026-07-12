@@ -1,0 +1,3 @@
+Name         = HGSS Style Transitions Script
+Version      = 1.5
+Credits      = Jonas930
