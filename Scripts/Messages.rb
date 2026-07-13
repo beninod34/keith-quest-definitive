@@ -450,6 +450,14 @@ def pbMessageDisplay(msgwindow, message, letterbyletter = true, commandProc = ni
     end
     next ""
   end
+  shout = 0
+  shoutSE = nil
+  if text=~/\\sh/i
+    text.gsub!(/\\sh/i,"")
+    msgwindow.setSkin("Graphics/Windowskins/shout",false)
+    shout=16
+    shoutSE="shout"
+  end
   isDarkSkin = isDarkWindowskin(msgwindow.windowskin)
   text.gsub!(/\\c\[([0-9]+)\]/i) do
     next getSkinColor(msgwindow.windowskin, $1.to_i, isDarkSkin)
@@ -541,6 +549,7 @@ def pbMessageDisplay(msgwindow, message, letterbyletter = true, commandProc = ni
       end
     end
   end
+  startSE ||= shoutSE
   if startSE
     pbSEPlay(pbStringToAudioFile(startSE))
   elsif !appear_timer_start && letterbyletter
@@ -557,6 +566,14 @@ def pbMessageDisplay(msgwindow, message, letterbyletter = true, commandProc = ni
   # Show text
   msgwindow.text = text
   loop do
+    if shout != 0
+      shout=(shout*-0.9).floor
+      if atTop
+        msgwindow.y=shout
+      else
+        msgwindow.y=Graphics.height-(msgwindow.height + shout)
+      end
+    end
     if appear_timer_start
       y_start = (atTop) ? -msgwindow.height : Graphics.height
       y_end = (atTop) ? 0 : Graphics.height - msgwindow.height

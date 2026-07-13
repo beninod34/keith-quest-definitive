@@ -1522,3 +1522,17 @@ ItemHandlers::UseOnPokemon.add(:REINSOFUNITYUSED, proc { |item, qty, pkmn, scene
   $bag.replace_item(:REINSOFUNITYUSED, :REINSOFUNITY)
   next true
 })
+
+ItemHandlers::UseOnPokemon.add(:FAMILYPHOTO, proc { |item, qty, pkmn, scene|
+  if pkmn.happiness >= 255
+    scene.pbDisplay(_INTL("It won't have any effect."))
+    next false
+  end
+  if scene.pbConfirm(_INTL("Would you like to max out {1}'s Happiness?", pkmn.name))
+    pkmn.changeHappiness("familyphoto",true)
+    scene.pbRefresh
+    scene.pbDisplay(_INTL("{1}'s Happiness maxed out!",pkmn.name))
+    next true
+  end
+  next false
+})
