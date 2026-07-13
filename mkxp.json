@@ -142,8 +142,12 @@
 
     // Sync screen redraws to the monitor refresh rate, to reduce screen
     // tearing.
+    // Disabled so that "fixedFramerate" below actually caps the real update
+    // rate to 40 on every system, instead of vsync letting it run at each
+    // player's native monitor Hz (which desyncs frame_count/frame_rate-based
+    // timers, like the HGSS transitions, from real time).
     //
-    "vsync": true,
+    "vsync": false,
 
     // Use a fixed framerate that is approx. equal to the native screen refresh
     // rate. This is different from "fixedFramerate" because the actual frame
@@ -151,9 +155,12 @@
     // refresh rate cannot be determined, this option is force-disabled. This
     // option may be force-disabled at build time.
     //
-    "syncToRefreshrate": true,
+    "syncToRefreshrate": false,
 
     // The game's frame rate, if "syncToRefreshrate" is false.
+    // Pinned to 40 (RGSS1's native rate) since walking speed, command delay,
+    // and other frame-count-based engine logic assume that baseline and
+    // aren't scaled by Graphics.frame_rate.
     //
-    // "fixedFramerate": 60,
+    "fixedFramerate": 40,
 }

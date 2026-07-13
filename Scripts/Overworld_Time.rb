@@ -2,7 +2,7 @@
 # Day and night system
 #===============================================================================
 def pbGetTimeNow
-  return Time.now
+  return Time.local(Time.now.year, Time.now.month, Time.now.day, 12, 0, 0)
 end
 
 #===============================================================================

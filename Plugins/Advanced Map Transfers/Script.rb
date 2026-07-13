@@ -277,7 +277,6 @@ module Transitions
   #-----------------------------------------------------------------------------
   #  calculate delta
   #-----------------------------------------------------------------------------
-  SPEED_MULTIPLIER = 1.65 # increase to make all transitions play out faster
-  def self.delta; return (Graphics.frame_rate/40.0) / SPEED_MULTIPLIER; end
+  def self.delta; return (Graphics.frame_rate/40.0) ; end
   #-----------------------------------------------------------------------------
 end

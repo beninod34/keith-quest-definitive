@@ -36,8 +36,6 @@
 #===============================================================================
 def pbHGSSTransitions(place,black=true)
     name="Day"
-    name="Afternoon" if PBDayNight.isAfternoon? || PBDayNight.isEvening?
-    name="Night" if PBDayNight.isNight?
     pbToneChangeAll(Tone.new(-255,-255,-255),0) if black
     viewport=Viewport.new(0,0,Graphics.width,Graphics.height)
     viewport.z=99
