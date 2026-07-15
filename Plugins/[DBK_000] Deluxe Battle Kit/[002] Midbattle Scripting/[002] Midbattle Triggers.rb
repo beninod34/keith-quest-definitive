@@ -490,6 +490,11 @@ MidbattleHandlers.add(:midbattle_triggers, "useItem",
     else
       battle.pbDisplay(_INTL("But it had no effect!"))
     end
+    # Using an item consumes the acting battler's whole turn, same as choosing
+    # "Use Item" normally would; clear their queued move so they don't also
+    # attack (must also drop choice[0] away from :UseMove, since pbCalculatePriority
+    # and the attack-phase loops assume choice[2] is a valid move whenever it's :UseMove).
+    battle.pbClearChoice(idxBattler) if battle.choices[idxBattler]&.[](0) == :UseMove
   }
 )
 

@@ -412,3 +412,10 @@ Gender = Male
 BaseMoney = 100
 BattleBGM = 50_50
 VictoryBGM = Difficult Battle Won
+#-------------------------------
+[LITESKINLEGEND]
+Name = Liteskin Legend
+Gender = Male
+BaseMoney = 100
+BattleBGM = Perfect Compatibility
+VictoryBGM = Difficult Battle Won

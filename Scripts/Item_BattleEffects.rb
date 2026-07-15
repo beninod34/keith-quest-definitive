@@ -295,6 +295,16 @@ ItemHandlers::CanUseInBattle.add(:POKEFLUTE, proc { |item, pokemon, battler, mov
   next true
 })
 
+ItemHandlers::CanUseInBattle.add(:KEYBLADE,proc { |item, pokemon, battler, move, firstAction, battle, scene, showMessages|
+  if $game_variables[35] >= 1
+    scene.pbDisplay(_INTL("You've already used the Keyblade.")) if showMessages
+    next false
+  end
+  next true
+})
+
+ItemHandlers::CanUseInBattle.copy(:KEYBLADE, :KEYBLADE_BRANDON)
+
 #===============================================================================
 # UseInBattle handlers
 # For items used directly or on an opposing battler
@@ -709,4 +719,21 @@ ItemHandlers::BattleUseOnBattler.add(:DIREHIT3, proc { |item, battler, scene|
   battler.effects[PBEffects::FocusEnergy] = 3
   scene.pbDisplay(_INTL("{1} is getting pumped!", battler.pbThis))
   battler.pokemon.changeHappiness("battleitem")
+})
+
+ItemHandlers::BattleUseOnBattler.add(:KEYBLADE,proc { |item, battler, scene|
+  battler.pbRaiseStatStage(:ATTACK, 1, battler)
+  battler.pbRaiseStatStage(:DEFENSE, 1, battler)
+  battler.pbRaiseStatStage(:SPECIAL_ATTACK, 1, battler)
+  battler.pbRaiseStatStage(:SPECIAL_DEFENSE, 1, battler)
+  battler.pbRaiseStatStage(:SPEED, 1, battler)
+  $game_variables[35] = 1
+})
+
+ItemHandlers::BattleUseOnBattler.add(:KEYBLADE_BRANDON,proc { |item, battler, scene|
+  battler.pbLowerStatStage(:ATTACK, 1, battler)
+  battler.pbLowerStatStage(:DEFENSE, 1, battler)
+  battler.pbLowerStatStage(:SPECIAL_ATTACK, 1, battler)
+  battler.pbLowerStatStage(:SPECIAL_DEFENSE, 1, battler)
+  battler.pbLowerStatStage(:SPEED, 1, battler)
 })

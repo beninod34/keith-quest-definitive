@@ -508,6 +508,9 @@ class Battle
       @peer.pbOnLeavingBattle(self, pkmn, @usedInBattle[0][i], true)   # Reset form
       pkmn.item = @initialItems[0][i]
     end
+    if $PokemonBag.has?(:KEYBLADE)
+      $game_variables[35] = 0
+    end
     return @decision
   end
 

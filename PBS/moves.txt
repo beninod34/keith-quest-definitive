@@ -8712,3 +8712,15 @@ TotalPP = 40
 Target = User
 FunctionCode = RaiseUserDefense1
 Description = The user withdraws its body into its hard shell, raising its Defense stat.
+#-------------------------------
+[DEATH]
+Name = Death
+Type = ICE
+Category = Physical
+Power = 100000
+Accuracy = 100
+TotalPP = 20
+Target = NearOther
+FunctionCode = HitTwoTimes
+Flags = Contact,CanProtect,CanMirrorMove
+Description = Death comes for us all.

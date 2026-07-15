@@ -638,7 +638,7 @@ ShadowSize = 2
 #-------------------------------
 [CLODSIRE]
 BackSprite = -5,72
-FrontSprite = 3,33
+FrontSprite = 3,20
 ShadowX = 0
 ShadowSize = 3
 #-------------------------------

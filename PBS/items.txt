@@ -6727,3 +6727,21 @@ NamePlural = Move Tokens
 Pocket = 1
 Price = 10000
 Description = A token that is very shiny. Can be given to someone to change Pokemon moves.
+#-------------------------------
+[KEYBLADE]
+Name = Keyblade
+NamePlural = Keyblades
+Pocket = 8
+Price = 0
+BattleUse = OnBattler
+Flags = KeyItem
+Description = "My friends are my power!" Can be used in battle to give a boost to all stats once per battle.
+#-------------------------------
+[KEYBLADE_BRANDON]
+Name = Keyblade
+NamePlural = Keyblades
+Pocket = 8
+Price = 0
+BattleUse = OnBattler
+Flags = KeyItem
+Description = "My friends are my power!" Can be used in battle to give a boost to all stats once per battle.

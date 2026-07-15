@@ -212,3 +212,84 @@ def pbAddTeamBenino
   $PokemonStorage.pbStoreCaught(pkmn5)
 
 end
+
+def pbAddTeamBrandon
+  brandon = NPCTrainer.new("Brandon", :LITESKINLEGEND)
+  perfect_ivs = {
+    :HP => 31, :ATTACK => 31, :DEFENSE => 31,
+    :SPECIAL_ATTACK => 31, :SPECIAL_DEFENSE => 31, :SPEED => 31
+  }
+
+  pkmn0 = Pokemon.new(:CLODSIRE, 80, brandon, false)
+  pkmn0.gender = 1
+  pkmn0.ability = :WATERABSORB
+  pkmn0.nature = :IMPISH
+  pkmn0.item = :ROCKYHELMET
+  pkmn0.moves = [:TOXIC, :STEALTHROCK, :RECOVER, :EARTHQUAKE]
+  pkmn0.happiness = 255
+  pkmn0.iv = perfect_ivs
+  pkmn0.ev = { :HP => 252, :ATTACK => 4, :DEFENSE => 252, }
+  pkmn0.obtain_map = 77
+
+  pkmn1 = Pokemon.new(:STARAPTOR, 80, brandon, false)
+  pkmn1.gender = 0
+  pkmn1.ability = :INTIMIDATE
+  pkmn1.nature = :JOLLY
+  pkmn1.item = :SITRUSBERRY
+  pkmn1.moves = [:BRAVEBIRD, :CLOSECOMBAT, :ROOST, :QUICKATTACK]
+  pkmn1.happiness = 255
+  pkmn1.iv = perfect_ivs
+  pkmn1.ev = { :ATTACK => 252, :DEFENSE => 4, :SPEED => 252 }
+  pkmn1.obtain_map = 77
+
+  pkmn2 = Pokemon.new(:SLOWBRO, 80, brandon, false)
+  pkmn2.gender = 0
+  pkmn2.ability = :OBLIVIOUS
+  pkmn2.nature = :BOLD
+  pkmn2.item = :LEFTOVERS
+  pkmn2.moves = [:SCALD, :PSYCHIC, :SLACKOFF, :FLAMETHROWER]
+  pkmn2.happiness = 255
+  pkmn2.iv = perfect_ivs
+  pkmn2.ev = { :HP => 252, :DEFENSE => 252, :SPECIAL_ATTACK => 4 }
+  pkmn2.obtain_map = 77
+
+  pkmn3 = Pokemon.new(:KROOKODILE, 80, brandon, false)
+  pkmn3.gender = 0
+  pkmn3.ability = :INTIMIDATE
+  pkmn3.nature = :JOLLY
+  pkmn3.item = :ASSAULTVEST
+  pkmn3.moves = [:KNOCKOFF, :EARTHQUAKE, :FIREFANG, :DRAGONCLAW]
+  pkmn3.happiness = 255
+  pkmn3.iv = perfect_ivs
+  pkmn3.ev = { :ATTACK => 252, :DEFENSE => 4, :SPEED => 252 }
+  pkmn3.obtain_map = 77
+
+  pkmn4 = Pokemon.new(:BLAZIKEN, 80, brandon, false)
+  pkmn4.gender = 1
+  pkmn4.ability = :SPEEDBOOST
+  pkmn4.nature = :JOLLY
+  pkmn4.item = :HEAVYDUTYBOOTS
+  pkmn4.moves = [:FLAREBLITZ, :THUNDERPUNCH, :SWORDSDANCE, :CLOSECOMBAT]
+  pkmn4.happiness = 255
+  pkmn4.iv = perfect_ivs
+  pkmn4.ev = { :ATTACK => 252, :DEFENSE => 4, :SPEED => 252 }
+  pkmn4.obtain_map = 77
+
+  pkmn5 = Pokemon.new(:LUGIA, 85, brandon, false)
+  pkmn5.ability = :CONTRARY
+  pkmn5.nature = :TIMID
+  pkmn5.item = :WIDELENS
+  pkmn5.moves = [:DRAGONASCENT, :THUNDERBOLT, :SWORDSDANCE, :PSYCHOBOOST]
+  pkmn5.happiness = 255
+  pkmn5.iv = perfect_ivs
+  pkmn5.ev = { :DEFENSE => 4, :SPECIAL_ATTACK => 252, :SPEED => 252 }
+  pkmn5.obtain_map = 77
+
+  $PokemonStorage.pbStoreCaught(pkmn0)
+  $PokemonStorage.pbStoreCaught(pkmn1)
+  $PokemonStorage.pbStoreCaught(pkmn2)
+  $PokemonStorage.pbStoreCaught(pkmn3)
+  $PokemonStorage.pbStoreCaught(pkmn4)
+  $PokemonStorage.pbStoreCaught(pkmn5)
+
+end
