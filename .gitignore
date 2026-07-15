@@ -1,0 +1,10 @@
+# RGSS Script Editor local backups (timestamped snapshots of Scripts.rxdata,
+# auto-generated on every save, grows unbounded)
+.rgss-script-editor/backups/
+
+# Windows folder-view metadata
+desktop.ini
+Thumbs.db
+
+# Pokemon Essentials save data (written next to Game.exe when the game is played)
+/Game.rxdata
