@@ -6702,3 +6702,28 @@ Pocket = 8
 Price = 0
 Flags = KeyItem
 Description = A faded sea chart that shows the way to a certain island.
+#-------------------------------
+[FAMILYPHOTO]
+Name = Family Photo
+NamePlural = Family Photos
+Pocket = 8
+Price = 0
+FieldUse = OnPokemon
+Flags = KeyItem
+Description = Joyful memories come back to you as you gaze at this photo. Raises a Pokémon's happiness to max.
+#-------------------------------
+[SHMOOVEMENTLICENSE]
+Name = Shmoovement License
+NamePlural = Shmoovement Licenses
+Pocket = 8
+Price = 0
+FieldUse = Direct
+Flags = KeyItem
+Description = Whilst wielding this license, you can shmoove around at ungodly speeds.
+#-------------------------------
+[MOVETOKEN]
+Name = Move Token
+NamePlural = Move Tokens
+Pocket = 1
+Price = 10000
+Description = A token that is very shiny. Can be given to someone to change Pokemon moves.

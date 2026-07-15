@@ -34,3 +34,15 @@ Point = 22,16,Faraday Island,,,,,52
 Name = Tiall
 Filename = mapRegion1.png
 Point = 13,16,Here
+#-------------------------------
+[2]
+Name = The Great Outdoors
+Filename = mapRegion2.png
+Point = 10,13,PROMETHEAN KILN,Lascelles,78,15,12,
+Point = 5,9,PURGATORIUM,Luke,79,17,26,7
+Point = 19,14,MARE INSULARUM,Alex,76,25,12,
+Point = 24,10,ALTELIER ACCELERATUS,Benino,80,6,3,
+Point = 22,3,FAIRY VALE,Barry & Yuna,48,6,5,
+Point = 8,5,GRAND SCHISM,"Brandon, Captain Ice & No Ice",77,20,14,
+Point = 15,16,Home,"Dad, Mom, Dominic",32,26,10,
+Point = 15,6,ROOTS,Dungeon,81,14,57,

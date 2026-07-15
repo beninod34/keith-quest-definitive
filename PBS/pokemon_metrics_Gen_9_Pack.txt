@@ -860,7 +860,7 @@ ShadowSize = 3
 #-------------------------------
 [MUNKIDORI]
 BackSprite = 0,54
-FrontSprite = -2,19
+FrontSprite = -2,3
 ShadowX = 0
 ShadowSize = 1
 #-------------------------------

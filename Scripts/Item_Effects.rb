@@ -5,7 +5,7 @@ ItemHandlers::UseText.add(:BICYCLE, proc { |item|
   next ($PokemonGlobal.bicycle) ? _INTL("Walk") : _INTL("Use")
 })
 
-ItemHandlers::UseText.copy(:BICYCLE, :MACHBIKE, :ACROBIKE)
+ItemHandlers::UseText.copy(:BICYCLE, :MACHBIKE, :ACROBIKE, :SHMOOVEMENTLICENSE)
 
 ItemHandlers::UseText.add(:EXPALLOFF, proc { |item|
   next _INTL("Turn on")
@@ -44,7 +44,7 @@ ItemHandlers::UseFromBag.add(:BICYCLE, proc { |item|
   next (pbBikeCheck) ? 2 : 0
 })
 
-ItemHandlers::UseFromBag.copy(:BICYCLE, :MACHBIKE, :ACROBIKE)
+ItemHandlers::UseFromBag.copy(:BICYCLE, :MACHBIKE, :ACROBIKE, :SHMOOVEMENTLICENSE)
 
 ItemHandlers::UseFromBag.add(:OLDROD, proc { |item|
   notCliff = $game_map.passable?($game_player.x, $game_player.y, $game_player.direction, $game_player)
@@ -271,7 +271,7 @@ ItemHandlers::UseInField.add(:BICYCLE, proc { |item|
   next false
 })
 
-ItemHandlers::UseInField.copy(:BICYCLE, :MACHBIKE, :ACROBIKE)
+ItemHandlers::UseInField.copy(:BICYCLE, :MACHBIKE, :ACROBIKE, :SHMOOVEMENTLICENSE)
 
 ItemHandlers::UseInField.add(:OLDROD, proc { |item|
   notCliff = $game_map.passable?($game_player.x, $game_player.y, $game_player.direction, $game_player)
@@ -1521,4 +1521,18 @@ ItemHandlers::UseOnPokemon.add(:REINSOFUNITYUSED, proc { |item, qty, pkmn, scene
   end
   $bag.replace_item(:REINSOFUNITYUSED, :REINSOFUNITY)
   next true
+})
+
+ItemHandlers::UseOnPokemon.add(:FAMILYPHOTO, proc { |item, qty, pkmn, scene|
+  if pkmn.happiness >= 255
+    scene.pbDisplay(_INTL("It won't have any effect."))
+    next false
+  end
+  if scene.pbConfirm(_INTL("Would you like to max out {1}'s Happiness?", pkmn.name))
+    pkmn.changeHappiness("familyphoto",true)
+    scene.pbRefresh
+    scene.pbDisplay(_INTL("{1}'s Happiness maxed out!",pkmn.name))
+    next true
+  end
+  next false
 })
