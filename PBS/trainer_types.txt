@@ -419,3 +419,9 @@ Gender = Male
 BaseMoney = 100
 BattleBGM = Perfect Compatibility
 VictoryBGM = Difficult Battle Won
+#-------------------------------
+[DIAMETRICDUO]
+Name = Diametric Duo
+Gender = Male
+BaseMoney = 100
+BattleBGM = Clashing Views Aimed Straight

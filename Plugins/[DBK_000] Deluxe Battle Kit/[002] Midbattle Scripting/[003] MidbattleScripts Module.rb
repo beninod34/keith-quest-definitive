@@ -666,6 +666,58 @@ module MidbattleScripts
     }
   }
 
+  DIAMETRICDUO = {
+    "RoundStartCommand_1_foe" => {
+      "setSpeaker" => :SNOWMASTER,
+      "editWindow" => [nil, "bw choice"],
+      "speech" => "Cryo-freeze activated!",
+      "setSpeaker" => :HEATMASTER,
+      "speech" => "Blazing-rage on standby!"
+    },
+    "BattlerFainted_player" => {
+      "setSpeaker" => :DIAMETRICDUO,
+      "editWindow" => [nil, "bw choice"],
+      "speech"  => "Both: BOOM!"
+    },
+    "BattlerFainted_foe" => {
+      "setSpeaker" => :LITESKINLEGEND,
+      "editWindow" => [nil, "bw choice"],
+      "speech"  => "Dayum!!!!"
+    },
+    "BeforeItemUse_player" => {
+      "setSpeaker" => :LITESKINLEGEND,
+      "editWindow" => [nil, "bw choice"],
+      "speech" => "Really, you can do that?"
+    },
+    "BeforeItemUse_foe" => {
+      "setSpeaker" => :LITESKINLEGEND,
+      "editWindow" => [nil, "bw choice"],
+      "speech" => "Alright, gotta power up."
+    },
+    "BeforeLastSwitchIn_player" => {
+      "setSpeaker" => :LITESKINLEGEND,
+      "editWindow" => [nil, "bw choice"],
+      "speech" => "Hmph. *smirks*"
+    },
+    "BeforeLastSwitchIn_foe" => {
+      "changeBGM" => "Khaotic Good",
+      "setSpeaker" => :LITESKINLEGEND,
+      "editWindow" => [nil, "bw choice"],
+      "speech" => "*Silent Concentration Mode*",
+    },
+    "AfterLastSwitchIn_foe" => {
+      "text" => "*Brandon leaves the concentration mode for only a second to utter these few, powerful words*",
+      "setSpeaker" => :LITESKINLEGEND,
+      "editWindow" => [nil, "bw choice"],
+      "speech" => "G i v e   m e   s t r e n g t h",
+    },
+    "BattleEndLoss" => {
+      "setSpeaker" => :LITESKINLEGEND,
+      "editWindow" => [nil, "bw choice"],
+      "speech" => "Hmph, guess I won this time, Keith."
+    }
+  }
+
   LITESKINLEGEND = {
     "RoundStartCommand_1_foe" => {
       "setSpeaker" => :LITESKINLEGEND,
@@ -703,12 +755,11 @@ module MidbattleScripts
       "editWindow" => [nil, "bw choice"],
       "speech" => "*Silent Concentration Mode*",
     },
-    "TurnStart_LUGIA_foe" => {
+    "AfterLastSwitchIn_foe" => {
       "text" => "*Brandon leaves the concentration mode for only a second to utter these few, powerful words*",
       "setSpeaker" => :LITESKINLEGEND,
       "editWindow" => [nil, "bw choice"],
       "speech" => "G i v e   m e   s t r e n g t h",
-      "useItem_foe" => :KEYBLADE_BRANDON
     },
     "BattleEndLoss" => {
       "setSpeaker" => :LITESKINLEGEND,

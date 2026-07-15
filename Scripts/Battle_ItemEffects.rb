@@ -246,6 +246,13 @@ Battle::ItemEffects::SpeedCalc.add(:QUICKPOWDER,
   }
 )
 
+Battle::ItemEffects::SpeedCalc.add(:KEYBLADE,
+  proc { |item, battler, mult|
+    stats = battler.effects[PBEffects::KeybladeStats]
+    next mult * 1.5 if stats && stats.include?(:SPEED)
+  }
+)
+
 #===============================================================================
 # WeightCalc handlers
 #===============================================================================
@@ -1074,6 +1081,15 @@ Battle::ItemEffects::DamageCalcFromUser.add(:WISEGLASSES,
   }
 )
 
+Battle::ItemEffects::DamageCalcFromUser.add(:KEYBLADE,
+  proc { |item, user, target, move, mults, power, type|
+    stats = user.effects[PBEffects::KeybladeStats]
+    next if !stats
+    mults[:attack_multiplier] *= 1.3 if move.physicalMove? && stats.include?(:ATTACK)
+    mults[:attack_multiplier] *= 1.3 if move.specialMove? && stats.include?(:SPECIAL_ATTACK)
+  }
+)
+
 #===============================================================================
 # DamageCalcFromTarget handlers
 # NOTE: Species-specific held items consider the original species, not the
@@ -1232,6 +1248,16 @@ Battle::ItemEffects::DamageCalcFromTarget.add(:YACHEBERRY,
     target.pbMoveTypeWeakeningBerry(:ICE, type, mults)
   }
 )
+
+Battle::ItemEffects::DamageCalcFromTarget.add(:KEYBLADE,
+  proc { |item, user, target, move, mults, power, type|
+    stats = target.effects[PBEffects::KeybladeStats]
+    next if !stats
+    mults[:defense_multiplier] *= 1.3 if move.physicalMove? && stats.include?(:DEFENSE)
+    mults[:defense_multiplier] *= 1.3 if move.specialMove?  && stats.include?(:SPECIAL_DEFENSE)
+  }
+)
+
 
 #===============================================================================
 # CriticalCalcFromUser handlers
@@ -1921,6 +1947,37 @@ Battle::ItemEffects::OnSwitchIn.add(:ROOMSERVICE,
     battle.pbCommonAnimation("UseItem", battler)
     battler.pbLowerStatStage(:SPEED, 1, nil)
     battler.pbConsumeItem
+  }
+)
+
+Battle::ItemEffects::OnSwitchIn.add(:KEYBLADE,
+  proc { |item, battler, battle|
+    highestStat = nil
+    secondHighestStat = nil
+    highestStatVal = 0
+    secondHighestStatVal = 0
+    stageMul = [2, 2, 2, 2, 2, 2, 2, 3, 4, 5, 6, 7, 8]
+    stageDiv = [8, 7, 6, 5, 4, 3, 2, 2, 2, 2, 2, 2, 2]
+    battler.plainStats.each do |stat, val|
+      stage = battler.stages[stat] + 6
+      realStat = (val.to_f * stageMul[stage] / stageDiv[stage]).floor
+      if realStat > highestStatVal
+        secondHighestStatVal = highestStatVal
+        secondHighestStat = highestStat
+        highestStatVal = realStat 
+        highestStat = stat
+      elsif realStat > secondHighestStatVal
+        secondHighestStatVal = realStat
+        secondHighestStat = stat
+      end
+    end
+    if highestStat && secondHighestStat
+      battle.pbDisplay(_INTL("{1} used its {2}! ", battler.pbThis, battler.itemName))
+      battler.pbHeldItemTriggered(battler.item)
+      battler.effects[PBEffects::KeybladeStats] = [highestStat, secondHighestStat]
+      battle.pbDisplay(_INTL("{1}'s {2} and {3} were heightened!", battler.pbThis, GameData::Stat.get(highestStat).name, GameData::Stat.get(secondHighestStat).name))
+      battle.pbHideAbilitySplash(battler)
+    end
   }
 )
 
