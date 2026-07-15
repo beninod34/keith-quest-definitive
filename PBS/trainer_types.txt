@@ -399,3 +399,16 @@ Gender = Male
 BaseMoney = 100
 BattleBGM = Battle Champion
 VictoryBGM = Battle victory leader
+#-------------------------------
+[LITTLEBROTHER]
+Name = Little Brother
+Gender = Male
+BaseMoney = 100
+BattleBGM = Dominic Theme
+#-------------------------------
+[LABMONGER]
+Name = Labmonger
+Gender = Male
+BaseMoney = 100
+BattleBGM = 50_50
+VictoryBGM = Difficult Battle Won

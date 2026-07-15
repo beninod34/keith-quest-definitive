@@ -156,6 +156,21 @@ HeadbuttHigh
     30,SHROOMISH,14,17
     20,BURMY,12,15
 #-------------------------------
+[032] # KEITH'S HOUSE
+Land,0
+    15,WHISMUR,50
+    13,TYMPOLE,50
+    13,CHIKORITA,50
+    13,EEVEE,50
+    13,GLIGAR,50
+    13,ODDISH,50
+    4,DRILBUR,80
+    4,GARCHOMP,80
+    4,CROBAT,80
+    4,GOLURK,80
+    2,LEAVANNY,80
+    2,HAXORUS,80
+#-------------------------------
 [034] # Ice Cave
 Cave,5
     40,SWINUB,16,18

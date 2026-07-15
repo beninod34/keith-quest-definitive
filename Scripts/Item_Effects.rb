@@ -5,7 +5,7 @@ ItemHandlers::UseText.add(:BICYCLE, proc { |item|
   next ($PokemonGlobal.bicycle) ? _INTL("Walk") : _INTL("Use")
 })
 
-ItemHandlers::UseText.copy(:BICYCLE, :MACHBIKE, :ACROBIKE)
+ItemHandlers::UseText.copy(:BICYCLE, :MACHBIKE, :ACROBIKE, :SHMOOVEMENTLICENSE)
 
 ItemHandlers::UseText.add(:EXPALLOFF, proc { |item|
   next _INTL("Turn on")
@@ -44,7 +44,7 @@ ItemHandlers::UseFromBag.add(:BICYCLE, proc { |item|
   next (pbBikeCheck) ? 2 : 0
 })
 
-ItemHandlers::UseFromBag.copy(:BICYCLE, :MACHBIKE, :ACROBIKE)
+ItemHandlers::UseFromBag.copy(:BICYCLE, :MACHBIKE, :ACROBIKE, :SHMOOVEMENTLICENSE)
 
 ItemHandlers::UseFromBag.add(:OLDROD, proc { |item|
   notCliff = $game_map.passable?($game_player.x, $game_player.y, $game_player.direction, $game_player)
@@ -271,7 +271,7 @@ ItemHandlers::UseInField.add(:BICYCLE, proc { |item|
   next false
 })
 
-ItemHandlers::UseInField.copy(:BICYCLE, :MACHBIKE, :ACROBIKE)
+ItemHandlers::UseInField.copy(:BICYCLE, :MACHBIKE, :ACROBIKE, :SHMOOVEMENTLICENSE)
 
 ItemHandlers::UseInField.add(:OLDROD, proc { |item|
   notCliff = $game_map.passable?($game_player.x, $game_player.y, $game_player.direction, $game_player)

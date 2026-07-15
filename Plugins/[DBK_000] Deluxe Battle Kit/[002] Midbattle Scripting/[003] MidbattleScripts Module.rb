@@ -615,4 +615,55 @@ module MidbattleScripts
     }
   }
 
+  LABMONGER = {
+    "RoundStartCommand_1_foe" => {
+      "setSpeaker" => :LABMONGER,
+      "editWindow" => [nil, "bw choice"],
+      "speech" => "Show me a good time, Keith!"
+    },
+    "BattlerFainted_player" => {
+      "setSpeaker" => :LABMONGER,
+      "editWindow" => [nil, "bw choice"],
+      "speech"  => "Heeeeeeeeeeee!"
+    },
+    "BattlerFainted_foe" => {
+      "setSpeaker" => :LABMONGER,
+      "editWindow" => [nil, "bw choice"],
+      "speech"  => "Sheeeeeeeeesh!"
+    },
+    "BeforeItemUse_player" => {
+      "setSpeaker" => :LABMONGER,
+      "editWindow" => [nil, "bw choice"],
+      "speech" => "Heeeeeeeeee! This kid is using an item!"
+    },
+    "BeforeItemUse_foe" => {
+      "setSpeaker" => :LABMONGER,
+      "editWindow" => [nil, "bw choice"],
+      "speech" => "Don't mind me..."
+    },
+    "BeforeLastSwitchIn_player" => {
+      "setSpeaker" => :LABMONGER,
+      "editWindow" => [nil, "bw choice"],
+      "speech" => "Let's see if he can get himself out of the corner..!"
+    },
+    "BeforeLastSwitchIn_foe" => {
+      "changeBGM" => "Khaotic Good",
+      "setSpeaker" => :LABMONGER,
+      "editWindow" => [nil, "bw choice"],
+      "speech" => "I'm going full monke, Keith! Let's show him our divine lightning, Zekrom!!!"
+    },
+    "AfterLastSwitchIn_foe" => {
+      "setSpeaker" => :LABMONGER,
+      "editWindow" => [nil, "bw choice"],
+      "speech" => "I'm getting pumped. I guess it's time to start schmooving, as well.",
+      "text" => "*Benino starts shmooving so fast, that an electric current generates due to the static electricity between his feet and the ground*",
+      "changeTerrain" => :Electric
+    },
+    "BattleEndLoss" => {
+      "setSpeaker" => :LABMONGER,
+      "editWindow" => [nil, "bw choice"],
+      "speech" => "Alright, I won! Looks like we are playing FighterZ next, better hit the lab Keith! Heeeeeeeeeeeeeeeeeeee!"
+    }
+  }
+
 end

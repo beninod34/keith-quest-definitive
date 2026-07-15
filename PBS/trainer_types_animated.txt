@@ -1119,9 +1119,3 @@ Name = Red Fog
 Gender = Unknown
 BaseMoney = 72
 HideShadow = true
-#-------------------------------
-[LITTLEBROTHER]
-Name = Little Brother
-Gender = Male
-BaseMoney = 100
-BattleBGM = Dominic Theme

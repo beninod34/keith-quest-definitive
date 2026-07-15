@@ -131,3 +131,84 @@ def pbAddTeamDominic
   $PokemonStorage.pbStoreCaught(pkmn5)
   
 end
+
+def pbAddTeamBenino
+  benino = NPCTrainer.new("Benino", :LABMONGER)
+  perfect_ivs = {
+    :HP => 31, :ATTACK => 31, :DEFENSE => 31,
+    :SPECIAL_ATTACK => 31, :SPECIAL_DEFENSE => 31, :SPEED => 31
+  }
+
+  pkmn0 = Pokemon.new(:AMBIPOM, 80, benino, false)
+  pkmn0.gender = 1
+  pkmn0.ability = :TECHNICIAN
+  pkmn0.nature = :JOLLY
+  pkmn0.item = :LOADEDDICE
+  pkmn0.moves = [:FAKEOUT, :TAILSLAP, :AERIELACE, :TRIPLEAXEL]
+  pkmn0.happiness = 255
+  pkmn0.iv = perfect_ivs
+  pkmn0.ev = { :ATTACK => 252, :DEFENSE => 4, :SPEED => 252 }
+  pkmn0.obtain_map = 80
+
+  pkmn1 = Pokemon.new(:MUNKIDORI, 80, benino, false)
+  pkmn1.gender = 0
+  pkmn1.ability = :TOXICCHAIN
+  pkmn1.nature = :TIMID
+  pkmn1.item = :SHUCABERRY
+  pkmn1.moves = [:SLUDGEWAVE, :PSYCHIC, :GRASSKNOT, :CONFUSERAY]
+  pkmn1.happiness = 255
+  pkmn1.iv = perfect_ivs
+  pkmn1.ev = { :DEFENSE => 4, :SPECIAL_ATTACK => 252, :SPEED => 252 }
+  pkmn1.obtain_map = 80
+
+  pkmn2 = Pokemon.new(:RILLABOOM, 80, benino, false)
+  pkmn2.gender = 0
+  pkmn2.ability = :GRASSYSURGE
+  pkmn2.nature = :ADAMANT
+  pkmn2.item = :ASSAULTVEST
+  pkmn2.moves = [:GRASSYGLIDE, :EARTHQUAKE, :KNOCKOFF, :ROCKSLIDE]
+  pkmn2.happiness = 255
+  pkmn2.iv = perfect_ivs
+  pkmn2.ev = { :HP => 252, :ATTACK => 132, :DEFENSE => 124 }
+  pkmn2.obtain_map = 80
+
+  pkmn3 = Pokemon.new(:DARMANITAN, 80, benino, false)
+  pkmn3.gender = 0
+  pkmn3.ability = :SHEERFORCE
+  pkmn3.nature = :ADAMANT
+  pkmn3.item = :LIFEORB
+  pkmn3.moves = [:FLAREBLITZ, :BODYSLAM, :IRONHEAD, :ROCKSLIDE]
+  pkmn3.happiness = 255
+  pkmn3.iv = perfect_ivs
+  pkmn3.ev = { :HP => 196, :ATTACK => 56, :DEFENSE => 128, :SPECIAL_DEFENSE => 128 }
+  pkmn3.obtain_map = 80
+
+  pkmn4 = Pokemon.new(:ANNIHILAPE, 80, benino, false)
+  pkmn4.gender = 0
+  pkmn4.ability = :DEFIANT
+  pkmn4.nature = :ADAMANT
+  pkmn4.item = :LEFTOVERS
+  pkmn4.moves = [:DRAINPUNCH, :RAGEFIST, :BULKUP, :THUNDERPUNCH]
+  pkmn4.happiness = 255
+  pkmn4.iv = perfect_ivs
+  pkmn4.ev = { :HP => 252, :ATTACK => 136, :DEFENSE => 100, :SPECIAL_DEFENSE => 20 }
+  pkmn4.obtain_map = 80
+
+  pkmn5 = Pokemon.new(:ZEKROM, 85, benino, false)
+  pkmn5.ability = :SURGESURFER
+  pkmn5.nature = :JOLLY
+  pkmn5.item = :LUMBERRY
+  pkmn5.moves = [:FUSIONBOLT, :ICEPUNCH, :OUTRAGE, :STEELWING]
+  pkmn5.happiness = 255
+  pkmn5.iv = perfect_ivs
+  pkmn5.ev = { :ATTACK => 252, :DEFENSE => 4, :SPEED => 252 }
+  pkmn5.obtain_map = 80
+
+  $PokemonStorage.pbStoreCaught(pkmn0)
+  $PokemonStorage.pbStoreCaught(pkmn1)
+  $PokemonStorage.pbStoreCaught(pkmn2)
+  $PokemonStorage.pbStoreCaught(pkmn3)
+  $PokemonStorage.pbStoreCaught(pkmn4)
+  $PokemonStorage.pbStoreCaught(pkmn5)
+
+end
