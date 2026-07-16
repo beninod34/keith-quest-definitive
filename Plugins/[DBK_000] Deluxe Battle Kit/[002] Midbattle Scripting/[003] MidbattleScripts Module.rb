@@ -668,53 +668,80 @@ module MidbattleScripts
 
   DIAMETRICDUO = {
     "RoundStartCommand_1_foe" => {
-      "setSpeaker" => :SNOWMASTER,
-      "editWindow" => [nil, "bw choice"],
-      "speech" => "Cryo-freeze activated!",
-      "setSpeaker" => :HEATMASTER,
-      "speech" => "Blazing-rage on standby!"
+      "setSpeaker_A" => :SNOWMASTER,
+      "editWindow_A" => ["Captain Ice", "bw choice"],
+      "speech_A" => "Cryo-freeze activated!",
+      "setSpeaker_B" => :HEATMASTER,
+      "editWindow_B" => ["No Ice", "bw choice"],
+      "speech_B" => "Blazing-rage on standby!"
     },
     "BattlerFainted_player" => {
       "setSpeaker" => :DIAMETRICDUO,
       "editWindow" => [nil, "bw choice"],
       "speech"  => "Both: BOOM!"
     },
-    "BattlerFainted_foe" => {
-      "setSpeaker" => :LITESKINLEGEND,
-      "editWindow" => [nil, "bw choice"],
-      "speech"  => "Dayum!!!!"
+    "BattlerFainted_SNOVER_foe" => {
+      "setSpeaker" => :SNOWMASTER,
+      "editWindow" => ["Captain Ice", "bw choice"],
+      "speech"  => "WOOOOAAAAHHH MY GAAAAHHHHHWWDD!!!!!"
+    },
+    "BattlerFainted_NUMEL_foe" => {
+      "setSpeaker" => :HEATMASTER,
+      "editWindow" => ["No Ice", "bw choice"],
+      "speech"  => "OH HELLL NOOOOOOOOWOOOAAAAOOOOAAAHH!!!!!"
     },
     "BeforeItemUse_player" => {
-      "setSpeaker" => :LITESKINLEGEND,
-      "editWindow" => [nil, "bw choice"],
-      "speech" => "Really, you can do that?"
+      "setSpeaker_A" => :HEATMASTER,
+      "editWindow_A" => ["No Ice", "bw choice"],
+      "speech_A" => "What in the...",
+      "setSpeaker_B" => :SNOWMASTER,
+      "editWindow_B" => ["Captain Ice", "bw choice"],
+      "speech_B"  => "Cheaters never win!"
     },
-    "BeforeItemUse_foe" => {
-      "setSpeaker" => :LITESKINLEGEND,
-      "editWindow" => [nil, "bw choice"],
-      "speech" => "Alright, gotta power up."
+    "BeforeItemUse_SNOVER_foe" => {
+      "setSpeaker" => :SNOWMASTER,
+      "editWindow" => ["Captain Ice", "bw choice"],
+      "speech" => "I've gotta do whatever it takes!"
     },
-    "BeforeLastSwitchIn_player" => {
-      "setSpeaker" => :LITESKINLEGEND,
-      "editWindow" => [nil, "bw choice"],
-      "speech" => "Hmph. *smirks*"
+    "BeforeItemUse_ROTOM_foe" => {
+      "setSpeaker" => :SNOWMASTER,
+      "editWindow" => ["Captain Ice", "bw choice"],
+      "speech" => "I've gotta do whatever it takes!"
     },
-    "BeforeLastSwitchIn_foe" => {
-      "changeBGM" => "Khaotic Good",
-      "setSpeaker" => :LITESKINLEGEND,
-      "editWindow" => [nil, "bw choice"],
-      "speech" => "*Silent Concentration Mode*",
+    "BeforeItemUse_REGICE_foe" => {
+      "setSpeaker" => :SNOWMASTER,
+      "editWindow" => ["Captain Ice", "bw choice"],
+      "speech" => "I've gotta do whatever it takes!"
     },
-    "AfterLastSwitchIn_foe" => {
-      "text" => "*Brandon leaves the concentration mode for only a second to utter these few, powerful words*",
-      "setSpeaker" => :LITESKINLEGEND,
-      "editWindow" => [nil, "bw choice"],
-      "speech" => "G i v e   m e   s t r e n g t h",
+    "BeforeItemUse_NUMEL_foe" => {
+      "setSpeaker" => :HEATMASTER,
+      "editWindow" => ["No Ice", "bw choice"],
+      "speech" => "Hmph, so it's come to this!"
+    },
+    "BeforeItemUse_COMBUSKEN_foe" => {
+      "setSpeaker" => :HEATMASTER,
+      "editWindow" => ["No Ice", "bw choice"],
+      "speech" => "Hmph, so it's come to this!"
+    },
+    "BeforeItemUse_REGISTEEL_foe" => {
+      "setSpeaker" => :HEATMASTER,
+      "editWindow" => ["No Ice", "bw choice"],
+      "speech" => "Hmph, so it's come to this!"
+    },
+    "BeforeSwitchIn_REGICE_foe" => {
+      "setSpeaker" => :SNOWMASTER,
+      "editWindow" => ["Captain Ice", "bw choice"],
+      "speech" => "This is where it gets FROSTY!"
+    },
+    "BeforeSwitchIn_REGISTEEL_foe" => {
+      "setSpeaker" => :HEATMASTER,
+      "editWindow" => ["No Ice", "bw choice"],
+      "speech" => "No more holding back, let's BURN!"
     },
     "BattleEndLoss" => {
-      "setSpeaker" => :LITESKINLEGEND,
+      "setSpeaker" => :DIAMETRICDUO,
       "editWindow" => [nil, "bw choice"],
-      "speech" => "Hmph, guess I won this time, Keith."
+      "speech" => "SERVES YOU RIGHT! GET SOME BETTER TASTE IN MUSIC!"
     }
   }
 

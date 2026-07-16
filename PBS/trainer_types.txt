@@ -413,15 +413,27 @@ BaseMoney = 100
 BattleBGM = 50_50
 VictoryBGM = Difficult Battle Won
 #-------------------------------
+[DIAMETRICDUO]
+Name = Diametric Duo
+Gender = Male
+BaseMoney = 100
+BattleBGM = Clashing Views Aimed Straight
+#-------------------------------
+[HEATMASTER]
+Name = Heatmaster
+Gender = Male
+BaseMoney = 100
+BattleBGM = Clashing Views Aimed Straight
+#-------------------------------
+[SNOWMASTER]
+Name = Snowmaster
+Gender = Male
+BaseMoney = 100
+BattleBGM = Clashing Views Aimed Straight
+#-------------------------------
 [LITESKINLEGEND]
 Name = Liteskin Legend
 Gender = Male
 BaseMoney = 100
 BattleBGM = Perfect Compatibility
 VictoryBGM = Difficult Battle Won
-#-------------------------------
-[DIAMETRICDUO]
-Name = Diametric Duo
-Gender = Male
-BaseMoney = 100
-BattleBGM = Clashing Views Aimed Straight
