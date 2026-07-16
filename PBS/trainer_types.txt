@@ -437,3 +437,10 @@ Gender = Male
 BaseMoney = 100
 BattleBGM = Perfect Compatibility
 VictoryBGM = Difficult Battle Won
+#-------------------------------
+[CROWNLESSKING]
+Name = Crownless King
+Gender = Male
+BaseMoney = 100
+BattleBGM = Super Sexy Handsome Music
+VictoryBGM = Difficult Battle Won

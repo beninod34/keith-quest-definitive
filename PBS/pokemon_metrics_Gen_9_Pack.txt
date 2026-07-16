@@ -254,7 +254,7 @@ ShadowSize = 1
 #-------------------------------
 [LOKIX]
 BackSprite = 0,45
-FrontSprite = -1,19
+FrontSprite = -1,9
 ShadowX = 0
 ShadowSize = 2
 #-------------------------------
@@ -637,7 +637,7 @@ ShadowX = 0
 ShadowSize = 2
 #-------------------------------
 [CLODSIRE]
-BackSprite = -5,72
+BackSprite = -5,52
 FrontSprite = 3,20
 ShadowX = 0
 ShadowSize = 3

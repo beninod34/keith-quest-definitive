@@ -213,6 +213,86 @@ def pbAddTeamBenino
 
 end
 
+def pbAddTeamIces
+  captainIce = NPCTrainer.new("Captain Ice", :SNOWMASTER)
+  noIce = NPCTrainer.new("No Ice", :HEATMASTER)
+  perfect_ivs = {
+    :HP => 31, :ATTACK => 31, :DEFENSE => 31,
+    :SPECIAL_ATTACK => 31, :SPECIAL_DEFENSE => 31, :SPEED => 31
+  }
+
+  pkmn0 = Pokemon.new(:SNOVER, 80, captainIce, false)
+  pkmn0.gender = 1
+  pkmn0.ability = :SNOWWARNING
+  pkmn0.nature = :SASSY
+  pkmn0.item = :ICYROCK
+  pkmn0.moves = [:SHEERCOLD, :GIGADRAIN, :ICESHARD, :PROTECT]
+  pkmn0.happiness = 255
+  pkmn0.iv = perfect_ivs
+  pkmn0.ev = { :HP => 248, :ATTACK => 8, :SPECIAL_DEFENSE => 252 }
+  pkmn0.obtain_map = 77
+
+  pkmn1 = Pokemon.new(:NUMEL, 80, noIce, false)
+  pkmn1.gender = 0
+  pkmn1.ability = :SIMPLE
+  pkmn1.nature = :CALM
+  pkmn1.item = :EVIOLITE
+  pkmn1.moves = [:LAVAPLUME, :STOCKPILE, :REST, :SLEEPTALK]
+  pkmn1.happiness = 255
+  pkmn1.iv = perfect_ivs
+  pkmn1.ev = { :HP => 252, :SPECIAL_ATTACK => 4, :SPECIAL_DEFENSE => 252 }
+  pkmn1.obtain_map = 77
+
+  pkmn2 = Pokemon.new(:ROTOM, 80, captainIce, false)
+  pkmn2.form = 3
+  pkmn2.ability = :LEVITATE
+  pkmn2.nature = :TIMID
+  pkmn2.item = :LIGHTCLAY
+  pkmn2.moves = [:BLIZZARD, :REFLECT, :LIGHTSCREEN, :THUNDERBOLT]
+  pkmn2.happiness = 255
+  pkmn2.iv = perfect_ivs
+  pkmn2.ev = { :DEFENSE => 4, :SPECIAL_ATTACK => 252, :SPEED => 252 }
+  pkmn2.obtain_map = 77
+
+  pkmn3 = Pokemon.new(:COMBUSKEN, 80, noIce, false)
+  pkmn3.gender = 0
+  pkmn3.ability = :SPEEDBOOST
+  pkmn3.nature = :ADAMANT
+  pkmn3.item = :EVIOLITE
+  pkmn3.moves = [:SWORDSDANCE, :PROTECT, :FLAREBLITZ, :SKYUPPERCUT]
+  pkmn3.happiness = 255
+  pkmn3.iv = perfect_ivs
+  pkmn3.ev = { :ATTACK => 252, :DEFENSE => 4, :SPEED => 252 }
+  pkmn3.obtain_map = 77
+
+  pkmn4 = Pokemon.new(:REGICE, 85, captainIce, false)
+  pkmn4.ability = :HEATPROOF
+  pkmn4.nature = :MODEST
+  pkmn4.item = :NEVERMELTICE
+  pkmn4.moves = [:BLIZZARD, :ROCKPOLISH, :THUNDERBOLT, :FOCUSBLAST]
+  pkmn4.happiness = 255
+  pkmn4.iv = perfect_ivs
+  pkmn4.ev = { :DEFENSE => 4, :SPECIAL_ATTACK => 4, :SPEED => 252 }
+  pkmn4.obtain_map = 77
+
+  pkmn5 = Pokemon.new(:REGISTEEL, 85, noIce, false)
+  pkmn5.ability = :FLASHFIRE
+  pkmn5.nature = :CALM
+  pkmn5.item = :LEFTOVERS
+  pkmn5.moves = [:SEISMICTOSS, :TOXIC, :IRONDEFENSE, :HIDDENPOWER]
+  pkmn5.happiness = 255
+  pkmn5.iv = { :HP => 31, :ATTACK => 0, :DEFENSE => 31, :SPECIAL_ATTACK => 30, :SPECIAL_DEFENSE => 31, :SPEED => 30 }
+  pkmn5.ev = { :HP => 252, :DEFENSE => 252, :SPECIAL_ATTACK => 4 }
+  pkmn5.obtain_map = 77
+
+  $PokemonStorage.pbStoreCaught(pkmn0)
+  $PokemonStorage.pbStoreCaught(pkmn1)
+  $PokemonStorage.pbStoreCaught(pkmn2)
+  $PokemonStorage.pbStoreCaught(pkmn3)
+  $PokemonStorage.pbStoreCaught(pkmn4)
+  $PokemonStorage.pbStoreCaught(pkmn5)
+end
+
 def pbAddTeamBrandon
   brandon = NPCTrainer.new("Brandon", :LITESKINLEGEND)
   perfect_ivs = {
@@ -278,12 +358,93 @@ def pbAddTeamBrandon
   pkmn5 = Pokemon.new(:LUGIA, 85, brandon, false)
   pkmn5.ability = :CONTRARY
   pkmn5.nature = :TIMID
-  pkmn5.item = :WIDELENS
   pkmn5.moves = [:DRAGONASCENT, :THUNDERBOLT, :SWORDSDANCE, :PSYCHOBOOST]
   pkmn5.happiness = 255
   pkmn5.iv = perfect_ivs
   pkmn5.ev = { :DEFENSE => 4, :SPECIAL_ATTACK => 252, :SPEED => 252 }
   pkmn5.obtain_map = 77
+
+  $PokemonStorage.pbStoreCaught(pkmn0)
+  $PokemonStorage.pbStoreCaught(pkmn1)
+  $PokemonStorage.pbStoreCaught(pkmn2)
+  $PokemonStorage.pbStoreCaught(pkmn3)
+  $PokemonStorage.pbStoreCaught(pkmn4)
+  $PokemonStorage.pbStoreCaught(pkmn5)
+
+end
+
+def pbAddTeamLuke
+  luke = NPCTrainer.new("Luke", :CROWNLESSKING)
+  perfect_ivs = {
+    :HP => 31, :ATTACK => 31, :DEFENSE => 31,
+    :SPECIAL_ATTACK => 31, :SPECIAL_DEFENSE => 31, :SPEED => 31
+  }
+
+  pkmn0 = Pokemon.new(:SAMUROTT, 80, luke, false)
+  pkmn0.gender = 0
+  pkmn0.form = 1
+  pkmn0.ability = :SHARPNESS
+  pkmn0.nature = :ADAMANT
+  pkmn0.item = :BLACKGLASSES
+  pkmn0.moves = [:CEASELESSEDGE, :SUCKERPUNCH, :AQUACUTTER, :SHELLSMASH]
+  pkmn0.happiness = 255
+  pkmn0.iv = perfect_ivs
+  pkmn0.ev = { :HP => 4, :ATTACK => 252, :SPEED => 252 }
+  pkmn0.obtain_map = 79
+
+  pkmn1 = Pokemon.new(:MASQUERAIN, 80, luke, false)
+  pkmn1.gender = 1
+  pkmn1.ability = :INTIMIDATE
+  pkmn1.nature = :MODEST
+  pkmn1.item = :FOCUSSASH
+  pkmn1.moves = [:HYDROPUMP, :HURRICANE, :TAILWIND, :QUIVERDANCE]
+  pkmn1.happiness = 255
+  pkmn1.iv = perfect_ivs
+  pkmn1.ev = { :SPECIAL_ATTACK => 252, :SPECIAL_DEFENSE => 4, :SPEED => 252 }
+  pkmn1.obtain_map = 79
+
+  pkmn2 = Pokemon.new(:LOKIX, 80, luke, false)
+  pkmn2.gender = 0
+  pkmn2.ability = :TINTEDLENS
+  pkmn2.nature = :JOLLY
+  pkmn2.item = :LIFEORB
+  pkmn2.moves = [:FIRSTIMPRESSION, :KNOCKOFF, :UTURN, :AXEKICK]
+  pkmn2.happiness = 255
+  pkmn2.iv = perfect_ivs
+  pkmn2.ev = { :ATTACK => 252, :SPECIAL_DEFENSE => 4, :SPEED => 252 }
+  pkmn2.obtain_map = 79
+
+  pkmn3 = Pokemon.new(:JELLICENT, 80, luke, false)
+  pkmn3.gender = 0
+  pkmn3.ability = :CURSEDBODY
+  pkmn3.nature = :CALM
+  pkmn3.item = :LEFTOVERS
+  pkmn3.moves = [:STRENGTHSAP, :SCALD, :HEX, :WILLOWISP]
+  pkmn3.happiness = 255
+  pkmn3.iv = perfect_ivs
+  pkmn3.ev = { :HP => 252, :SPECIAL_ATTACK => 4, :SPECIAL_DEFENSE => 252 }
+  pkmn3.obtain_map = 79
+
+  pkmn4 = Pokemon.new(:SCIZOR, 80, luke, false)
+  pkmn4.gender = 1
+  pkmn4.ability = :TECHNICIAN
+  pkmn4.nature = :ADAMANT
+  pkmn4.item = :SCIZORITE
+  pkmn4.moves = [:BULLETPUNCH, :DUALWINGBEAT, :TRAILBLAZE, :SWORDSDANCE]
+  pkmn4.happiness = 255
+  pkmn4.iv = perfect_ivs
+  pkmn4.ev = { :HP => 248, :ATTACK => 252, :SPECIAL_DEFENSE => 4 }
+  pkmn4.obtain_map = 79
+
+  pkmn5 = Pokemon.new(:RESHIRAM, 85, luke, false)
+  pkmn5.ability = :DESOLATELAND
+  pkmn5.nature = :MODEST
+  pkmn5.item = :WEAKNESSPOLICY
+  pkmn5.moves = [:BLUEFLARE, :DRACOMETEOR, :SOLARBEAM, :ROOST]
+  pkmn5.happiness = 255
+  pkmn5.iv = perfect_ivs
+  pkmn5.ev = { :HP => 248, :SPECIAL_ATTACK => 252, :SPECIAL_DEFENSE => 8 }
+  pkmn5.obtain_map = 79
 
   $PokemonStorage.pbStoreCaught(pkmn0)
   $PokemonStorage.pbStoreCaught(pkmn1)

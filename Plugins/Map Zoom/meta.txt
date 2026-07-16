@@ -1,0 +1,2 @@
+Name         = Map Zoom
+Version      = 1.0

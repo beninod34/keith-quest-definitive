@@ -681,62 +681,62 @@ module MidbattleScripts
       "speech"  => "Both: BOOM!"
     },
     "BattlerFainted_SNOVER_foe" => {
-      "setSpeaker" => :SNOWMASTER,
-      "editWindow" => ["Captain Ice", "bw choice"],
-      "speech"  => "WOOOOAAAAHHH MY GAAAAHHHHHWWDD!!!!!"
+      "setSpeaker_A" => :SNOWMASTER,
+      "editWindow_A" => ["Captain Ice", "bw choice"],
+      "speech_A"  => "WOOOOAAAAHHH MY GAAAAHHHHHWWDD!!!!!"
     },
     "BattlerFainted_NUMEL_foe" => {
-      "setSpeaker" => :HEATMASTER,
-      "editWindow" => ["No Ice", "bw choice"],
-      "speech"  => "OH HELLL NOOOOOOOOWOOOAAAAOOOOAAAHH!!!!!"
+      "setSpeaker_B" => :HEATMASTER,
+      "editWindow_B" => ["No Ice", "bw choice"],
+      "speech_B"  => "OH HELLL NOOOOOOOOWOOOAAAAOOOOAAAHH!!!!!"
     },
     "BeforeItemUse_player" => {
-      "setSpeaker_A" => :HEATMASTER,
-      "editWindow_A" => ["No Ice", "bw choice"],
-      "speech_A" => "What in the...",
-      "setSpeaker_B" => :SNOWMASTER,
-      "editWindow_B" => ["Captain Ice", "bw choice"],
-      "speech_B"  => "Cheaters never win!"
+      "setSpeaker_B" => :HEATMASTER,
+      "editWindow_B" => ["No Ice", "bw choice"],
+      "speech_B" => "What in the...",
+      "setSpeaker_A" => :SNOWMASTER,
+      "editWindow_A" => ["Captain Ice", "bw choice"],
+      "speech_A"  => "Cheaters never win!"
     },
     "BeforeItemUse_SNOVER_foe" => {
-      "setSpeaker" => :SNOWMASTER,
-      "editWindow" => ["Captain Ice", "bw choice"],
-      "speech" => "I've gotta do whatever it takes!"
+      "setSpeaker_A" => :SNOWMASTER,
+      "editWindow_A" => ["Captain Ice", "bw choice"],
+      "speech_A" => "I've gotta do whatever it takes!"
     },
     "BeforeItemUse_ROTOM_foe" => {
-      "setSpeaker" => :SNOWMASTER,
-      "editWindow" => ["Captain Ice", "bw choice"],
-      "speech" => "I've gotta do whatever it takes!"
+      "setSpeaker_A" => :SNOWMASTER,
+      "editWindow_A" => ["Captain Ice", "bw choice"],
+      "speech_A" => "I've gotta do whatever it takes!"
     },
     "BeforeItemUse_REGICE_foe" => {
-      "setSpeaker" => :SNOWMASTER,
-      "editWindow" => ["Captain Ice", "bw choice"],
-      "speech" => "I've gotta do whatever it takes!"
+      "setSpeaker_A" => :SNOWMASTER,
+      "editWindow_A" => ["Captain Ice", "bw choice"],
+      "speech_A" => "I've gotta do whatever it takes!"
     },
     "BeforeItemUse_NUMEL_foe" => {
-      "setSpeaker" => :HEATMASTER,
-      "editWindow" => ["No Ice", "bw choice"],
-      "speech" => "Hmph, so it's come to this!"
+      "setSpeaker_B" => :HEATMASTER,
+      "editWindow_B" => ["No Ice", "bw choice"],
+      "speech_B" => "Hmph, so it's come to this!"
     },
     "BeforeItemUse_COMBUSKEN_foe" => {
-      "setSpeaker" => :HEATMASTER,
-      "editWindow" => ["No Ice", "bw choice"],
-      "speech" => "Hmph, so it's come to this!"
+      "setSpeaker_B" => :HEATMASTER,
+      "editWindow_B" => ["No Ice", "bw choice"],
+      "speech_B" => "Hmph, so it's come to this!"
     },
     "BeforeItemUse_REGISTEEL_foe" => {
-      "setSpeaker" => :HEATMASTER,
-      "editWindow" => ["No Ice", "bw choice"],
-      "speech" => "Hmph, so it's come to this!"
+      "setSpeaker_B" => :HEATMASTER,
+      "editWindow_B" => ["No Ice", "bw choice"],
+      "speech_B" => "Hmph, so it's come to this!"
     },
     "BeforeSwitchIn_REGICE_foe" => {
-      "setSpeaker" => :SNOWMASTER,
-      "editWindow" => ["Captain Ice", "bw choice"],
-      "speech" => "This is where it gets FROSTY!"
+      "setSpeaker_A" => :SNOWMASTER,
+      "editWindow_A" => ["Captain Ice", "bw choice"],
+      "speech_A" => "This is where it gets FROSTY!"
     },
     "BeforeSwitchIn_REGISTEEL_foe" => {
-      "setSpeaker" => :HEATMASTER,
-      "editWindow" => ["No Ice", "bw choice"],
-      "speech" => "No more holding back, let's BURN!"
+      "setSpeaker_B" => :HEATMASTER,
+      "editWindow_B" => ["No Ice", "bw choice"],
+      "speech_B" => "No more holding back, let's BURN!"
     },
     "BattleEndLoss" => {
       "setSpeaker" => :DIAMETRICDUO,
@@ -792,6 +792,50 @@ module MidbattleScripts
       "setSpeaker" => :LITESKINLEGEND,
       "editWindow" => [nil, "bw choice"],
       "speech" => "Hmph, guess I won this time, Keith."
+    }
+  }
+
+  CROWNLESSKING = {
+    "RoundStartCommand_1_foe" => {
+      "setSpeaker" => :CROWNLESSKING,
+      "editWindow" => [nil, "bw choice"],
+      "speech" => "Let's fight till we wake the dead!!"
+    },
+    "BattlerFainted_player" => {
+      "setSpeaker" => :CROWNLESSKING,
+      "editWindow" => [nil, "bw choice"],
+      "speech"  => "Holy shit!!!"
+    },
+    "BattlerFainted_foe" => {
+      "setSpeaker" => :CROWNLESSKING,
+      "editWindow" => [nil, "bw choice"],
+      "speech"  => "Fuck!!!"
+    },
+    "BeforeItemUse_player" => {
+      "setSpeaker" => :CROWNLESSKING,
+      "editWindow" => [nil, "bw choice"],
+      "speech" => "Lol an item? I guess I'll take it a little easier on you!"
+    },
+    "BeforeItemUse_foe" => {
+      "setSpeaker" => :CROWNLESSKING,
+      "editWindow" => [nil, "bw choice"],
+      "speech" => "Damn, looks like I gotta cheat a little bit..."
+    },
+    "BeforeLastSwitchIn_player" => {
+      "setSpeaker" => :CROWNLESSKING,
+      "editWindow" => [nil, "bw choice"],
+      "speech" => "Let's see if he can get himself out of the corner..!"
+    },
+    "BeforeLastSwitchIn_foe" => {
+      "changeBGM" => "Khaotic Good",
+      "setSpeaker" => :CROWNLESSKING,
+      "editWindow" => [nil, "bw choice"],
+      "speech" => "Alright Keith, I'll hold nothing back from this point on! Part the clouds with Hellfire, Reshiram!!!"
+    },
+    "BattleEndLoss" => {
+      "setSpeaker" => :CROWNLESSKING,
+      "editWindow" => [nil, "bw choice"],
+      "speech" => "Ah, guess I overdid it a bit..."
     }
   }
 
