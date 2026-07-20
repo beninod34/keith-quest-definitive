@@ -839,4 +839,48 @@ module MidbattleScripts
     }
   }
 
+  PRIMORDIALEMPEROR = {
+    "RoundStartCommand_1_foe" => {
+      "setSpeaker" => :PRIMORDIALEMPEROR,
+      "editWindow" => [nil, "bw choice"],
+      "speech" => "Don't disappoint me, Keith..."
+    },
+    "BattlerFainted_player" => {
+      "setSpeaker" => :PRIMORDIALEMPEROR,
+      "editWindow" => [nil, "bw choice"],
+      "speech"  => "..."
+    },
+    "BattlerFainted_foe" => {
+      "setSpeaker" => :PRIMORDIALEMPEROR,
+      "editWindow" => [nil, "bw choice"],
+      "speech"  => "Impressive, Keith! Very impressive!"
+    },
+    "BeforeItemUse_player" => {
+      "setSpeaker" => :PRIMORDIALEMPEROR,
+      "editWindow" => [nil, "bw choice"],
+      "speech" => "Even at this level, am I too strong for you to handle?"
+    },
+    "BeforeItemUse_foe" => {
+      "setSpeaker" => :PRIMORDIALEMPEROR,
+      "editWindow" => [nil, "bw choice"],
+      "speech" => "Excellent work so far, Keith."
+    },
+    "BeforeLastSwitchIn_player" => {
+      "setSpeaker" => :PRIMORDIALEMPEROR,
+      "editWindow" => [nil, "bw choice"],
+      "speech" => "Are you going to give up after coming so far?"
+    },
+    "BeforeLastSwitchIn_foe" => {
+      "changeBGM" => "Khaotic Good",
+      "setSpeaker" => :PRIMORDIALEMPEROR,
+      "editWindow" => [nil, "bw choice"],
+      "speech" => "The moment is near Keith, let's see if you can finish what you've started!"
+    },
+    "BattleEndLoss" => {
+      "setSpeaker" => :PRIMORDIALEMPEROR,
+      "editWindow" => [nil, "bw choice"],
+      "speech" => "And you got my hopes up too, oh well... Guess I'll go back to searching for bikini babes..."
+    }
+  }
+
 end
