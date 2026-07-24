@@ -883,4 +883,54 @@ module MidbattleScripts
     }
   }
 
+  GRANDMASTER = {
+    "RoundStartCommand_1_foe" => {
+      "setSpeaker" => :GRANDMASTER,
+      "editWindow" => ["Barry", "bw choice"],
+      "speech" => "Ho ho ho... such delightful creatures!"
+    },
+    "BattlerFainted_player" => {
+      "setSpeaker" => :GRANDMASTER,
+      "editWindow" => ["Barry", "bw choice"],
+      "speech"  => "So that's how it works..."
+    },
+    "BattlerFainted_foe" => {
+      "setSpeaker" => :GRANDMASTER,
+      "editWindow" => ["Barry", "bw choice"],
+      "speech"  => "I could feel that from back here!"
+    },
+    "BeforeItemUse_player" => {
+      "setSpeaker_A" => :GRANDMASTER,
+      "editWindow_A" => ["Yuna", "bw choice"],
+      "speech_A"  => "Yuna: *SKREEONK!!*",
+      "setSpeaker_B" => :GRANDMASTER,
+      "editWindow_B" => ["Barry", "bw choice"],
+      "speech_A"  => "Barry: No, Yuna, that's completely legal."
+    },
+    "BeforeItemUse_foe" => {
+      "setSpeaker" => :GRANDMASTER,
+      "editWindow" => ["Barry", "bw choice"],
+      "speech" => "Forgive me, my finger slipped!"
+    },
+    "BeforeLastSwitchIn_player" => {
+      "setSpeaker" => :GRANDMASTER,
+      "editWindow" => ["Barry", "bw choice"],
+      "speech" => "Barry: Are you okay, child? You seem tense!"
+    },
+    "BeforeLastSwitchIn_foe" => {
+      "changeBGM" => "Khaotic Good",
+      "setSpeaker_A" => :GRANDMASTER,
+      "editWindow_A" => ["Barry", "bw choice"],
+      "speech_A" => "Barry: Quite the force of sentinels you have there! You don't mind if Yuna gets to play with her critter for a bit, hm? Go ahead, Yuna.",
+      "setSpeaker_B" => :GRANDMASTER,
+      "editWindow_B" => ["Yuna", "bw choice"],
+      "speech_B" => "Yuna: *BIDIBIDIBIDI!!!*"
+    },
+    "BattleEndLoss" => {
+      "setSpeaker" => :GRANDMASTER,
+      "editWindow" => ["Barry", "bw choice"],
+      "speech" => "Come back next time, I'm sure you'll win."
+    }
+  }
+
 end

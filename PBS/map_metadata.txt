@@ -161,6 +161,11 @@ HealingSpot = 32,26,10
 MapPosition = 2,15,16
 SnapEdges = true
 #-------------------------------
+[033]	# Inside 1
+Name = Inside 1
+MapPosition = 2,15,19
+Flags = HideFollowingPkmn
+#-------------------------------
 [034]   # Ice Cave
 Name = Route 3
 Bicycle = true
@@ -217,6 +222,7 @@ MapSize = 1,111
 [042]	# Inside 2
 Name = Inside 2
 MapPosition = 2,15,19
+Flags = HideFollowingPkmn
 #-------------------------------
 [043]	# THE GREAT OUTDOORS
 Name = The Great Outdoors
@@ -264,6 +270,7 @@ ShowArea = true
 Bicycle = true
 MapPosition = 2,22,3
 SnapEdges = true
+BattleBack = field
 #-------------------------------
 [049]   # Rock Cave 1F
 Name = Route 7
@@ -434,6 +441,7 @@ ShowArea = true
 Bicycle = true
 MapPosition = 2,19,14
 SnapEdges = true
+BattleBack = beach
 #-------------------------------
 [077]	# GRAND SCHISM
 Name = Grand Schism
@@ -442,6 +450,7 @@ ShowArea = true
 Bicycle = true
 MapPosition = 2,8,5
 SnapEdges = true
+BattleBack = icefire
 #-------------------------------
 [078]	# PROMETHEAN KILN
 Name = Promethean Kiln
@@ -482,15 +491,18 @@ SnapEdges = true
 Name = THE DUNGEON
 ShowArea = true
 SnapEdges = true
+Flags = HideFollowingPkmn
 #-------------------------------
 [083]	# Inside 3
 Name = Inside 3
 DarkMap = true
 SnapEdges = true
+Flags = HideFollowingPkmn
 #-------------------------------
 [084]	# Final Frontier
 Name = Final Frontier
 SnapEdges = true
+Flags = HideFollowingPkmn
 #-------------------------------
 [085]	# THE DOJO
 Name = The Dojo
@@ -499,6 +511,7 @@ ShowArea = true
 Bicycle = true
 MapPosition = 2,15,19
 SnapEdges = true
+Flags = HideFollowingPkmn
 #-------------------------------
 [086]	# FAIRY VALE
 Name = Fairy Vale
@@ -512,6 +525,7 @@ Name = Lost Woods
 ShowArea = true
 Bicycle = false
 SnapEdges = true
+Flags = HideFollowingPkmn
 #-------------------------------
 [088]	# FAIRY VALE
 Name = Fairy Vale
@@ -527,6 +541,10 @@ ShowArea = true
 Weather = Sun,100
 SnapEdges = true
 #-------------------------------
+[090]	# Restaurant
+Name = Restaurant
+Flags = HideFollowingPkmn
+#-------------------------------
 [091]	# PURGATORIUM
 Name = Purgatorium
 Outdoor = true
@@ -537,16 +555,19 @@ SnapEdges = true
 [092]	# Casino
 Name = Casino
 SnapEdges = true
+Flags = HideFollowingPkmn
 #-------------------------------
 [093]	# The Clearing
 Name = The Clearing
 ShowArea = true
 Bicycle = false
 SnapEdges = true
+Flags = HideFollowingPkmn
 #-------------------------------
 [094]	# 2nd Floor
 Name = 2nd Floor
 SnapEdges = true
+Flags = HideFollowingPkmn
 #-------------------------------
 [095]	# ATELIER ACCELERATUS
 Name = Atelier Acceleratus
@@ -558,6 +579,7 @@ SnapEdges = true
 Name = RaceTrack
 Bicycle = false
 SnapEdges = true
+Flags = HideFollowingPkmn
 #-------------------------------
 [097]	# ATELIER ACCELERATUS
 Name = Atelier Acceleratus
@@ -571,10 +593,12 @@ SnapEdges = true
 [099]	# GRAND SCHISM
 Name = Grand Schism
 SnapEdges = true
+Flags = HideFollowingPkmn
 #-------------------------------
 [100]	# The Tower
 Name = The Tower
 SnapEdges = true
+Flags = HideFollowingPkmn
 #-------------------------------
 [101]	# MARE INSULARUM
 Name = Mare Insularum
@@ -584,36 +608,43 @@ SnapEdges = true
 [102]	# THE VOID
 Name = The Void
 Bicycle = false
+Flags = HideFollowingPkmn
 #-------------------------------
 [103]	# Void Heights
 Name = Void Heights
 Bicycle = false
 SnapEdges = true
+Flags = HideFollowingPkmn
 #-------------------------------
 [104]	# Void Lab
 Name = Void Lab
 Bicycle = false
 SnapEdges = true
+Flags = HideFollowingPkmn
 #-------------------------------
 [105]	# Void Garden
 Name = Void Garden
 Bicycle = false
 SnapEdges = true
+Flags = HideFollowingPkmn
 #-------------------------------
 [106]	# Void Duality
 Name = Void Duality
 Bicycle = false
 SnapEdges = true
+Flags = HideFollowingPkmn
 #-------------------------------
 [107]	# Void Pan
 Name = Void Pan
 Bicycle = false
 SnapEdges = true
+Flags = HideFollowingPkmn
 #-------------------------------
 [108]	# Void Graveyard
 Name = Void Graveyard
 Bicycle = false
 SnapEdges = true
+Flags = HideFollowingPkmn
 #-------------------------------
 [109]	# MARE INSULARUM
 Name = Mare Insularum
@@ -626,3 +657,10 @@ Outdoor = true
 ShowArea = true
 Weather = Sun,100
 SnapEdges = true
+#-------------------------------
+[113]	# SECLUDED GRAVE
+Name = Secluded Grave
+Outdoor = true
+ShowArea = true
+SnapEdges = true
+Flags = HideFollowingPkmn

@@ -377,6 +377,18 @@ ItemHandlers::UseInField.add(:EXPALLOFF, proc { |item|
   next true
 })
 
+ItemHandlers::UseInField.add(:BESTCHARACTERBADGE,proc{ |item|
+    pbMessage(_INTL("You stare at the badge..."))
+    if pbConfirmMessage("Do you acknowledge that Swiftwind exists?")
+      for i in $player.party
+      i.heal
+      end
+    pbSEPlay("Use item in party")
+    pbMessage(_INTL("Your Pokémon were fully healed."))
+    end
+   next 1
+})
+
 #===============================================================================
 # UseOnPokemon handlers
 #===============================================================================

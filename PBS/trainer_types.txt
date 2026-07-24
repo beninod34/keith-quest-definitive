@@ -451,3 +451,10 @@ Gender = Male
 BaseMoney = 100
 BattleBGM = Desperate Struggle
 VictoryBGM = Difficult Battle Won
+#-------------------------------
+[GRANDMASTER]
+Name = Grandmaster
+Gender = Male
+BaseMoney = 100
+BattleBGM = Barry's Duel
+VictoryBGM = Difficult Battle Won

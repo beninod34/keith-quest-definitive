@@ -6735,3 +6735,13 @@ Pocket = 8
 Price = 0
 Flags = KeyItem
 Description = "My friends are my power!" Can be used in battle to give a boost to all stats once per battle.
+#-------------------------------
+[BESTCHARACTERBADGE]
+Name = Best Character Badge
+NamePlural = Best Character Badges
+Pocket = 8
+Price = 0
+FieldUse = Direct
+Flags = KeyItem
+Description = "My friends are my power!" Can be used in battle to give a boost to all stats once per battle.
+

@@ -26,48 +26,81 @@ def pbAddTeamKeith
   pkmn1.ev = { :ATTACK => 252, :SPECIAL_DEFENSE => 4, :SPEED => 252 }
   pkmn1.obtain_map = 32
 
-  pkmn2 = Pokemon.new(:GARCHOMP, 80, $player, false)
+  pkmn2 = Pokemon.new(:VILEPLUME, 80, $player, false)
   pkmn2.gender = 0
-  pkmn2.ability = :SANDVEIL
-  pkmn2.nature = :ADAMANT
-  pkmn2.item = :BRIGHTPOWDER
-  pkmn2.moves = [:SANDSTORM, :DRAGONCLAW, :EARTHQUAKE, :STONEEDGE]
+  pkmn2.ability = :EFFECTSPORE
+  pkmn2.nature = :MODEST
+  pkmn2.item = :BLACKSLUDGE
+  pkmn2.moves = [:MOONBLAST, :SLUDGEWAVE, :GIGADRAIN, :STRENGTHSAP]
   pkmn2.happiness = 255
   pkmn2.iv = perfect_ivs
-  pkmn2.ev = { :ATTACK => 252, :SPECIAL_DEFENSE => 4, :SPEED => 252 }
+  pkmn2.ev = { :HP => 252, :SPECIAL_ATTACK => 252, :SPECIAL_DEFENSE => 4 }
   pkmn2.obtain_map = 32
 
-  pkmn3 = Pokemon.new(:EXCADRILL, 80, $player, false)
-  pkmn3.gender = 0
-  pkmn3.ability = :SANDRUSH
-  pkmn3.nature = :JOLLY
-  pkmn3.item = :AIRBALLOON
-  pkmn3.moves = [:EARTHQUAKE, :IRONHEAD, :THROATCHOP, :RAPIDSPIN]
+  pkmn3 = Pokemon.new(:CROBAT, 80, $player, false)
+  pkmn3.gender = 1
+  pkmn3.ability = :INFILTRATOR
+  pkmn3.nature = :TIMID
+  pkmn3.item = :WIDELENS
+  pkmn3.moves = [:AIRSLASH, :SLUDGEBOMB, :GIGADRAIN, :HEATWAVE]
   pkmn3.happiness = 255
   pkmn3.iv = perfect_ivs
-  pkmn3.ev = { :ATTACK => 252, :SPECIAL_DEFENSE => 4, :SPEED => 252 }
+  pkmn3.ev = { :SPECIAL_ATTACK => 252, :SPECIAL_DEFENSE => 4, :SPEED => 252 }
   pkmn3.obtain_map = 32
 
-  pkmn4 = Pokemon.new(:CROBAT, 80, $player, false)
-  pkmn4.gender = 1
-  pkmn4.ability = :INFILTRATOR
-  pkmn4.nature = :MODEST
-  pkmn4.item = :WIDELENS
-  pkmn4.moves = [:AIRSLASH, :SLUDGEBOMB, :GIGADRAIN, :HEATWAVE]
+  pkmn4 = Pokemon.new(:DUDUNSPARCE, 80, $player, false)
+  pkmn4.gender = 0
+  pkmn4.ability = :SERENEGRACE
+  pkmn4.nature = :ADAMANT
+  pkmn4.item = :LEFTOVERS
+  pkmn4.moves = [:BODYSLAM, :EARTHQUAKE, :ROCKSLIDE, :GYROBALL]
   pkmn4.happiness = 255
   pkmn4.iv = perfect_ivs
-  pkmn4.ev = { :SPECIAL_ATTACK => 252, :SPECIAL_DEFENSE => 4, :SPEED => 252 }
+  pkmn4.ev = { :HP => 252, :ATTACK => 252, :SPECIAL_DEFENSE => 4 }
   pkmn4.obtain_map = 32
 
-  pkmn5 = Pokemon.new(:GOLURK, 80, $player, false)
-  pkmn5.ability = :IRONFIST
+  pkmn5 = Pokemon.new(:MALAMAR, 80, $player, false)
+  pkmn5.ability = :CONTRARY
   pkmn5.nature = :ADAMANT
-  pkmn5.item = :LEFTOVERS
-  pkmn5.moves = [:DRAINPUNCH, :SHADOWPUNCH, :THUNDERPUNCH, :ICEPUNCH]
+  pkmn5.item = :SITRUSBERRY
+  pkmn5.moves = [:SUPERPOWER, :PSYCHOCUT, :KNOCKOFF, :LIQUIDATION]
   pkmn5.happiness = 255
   pkmn5.iv = perfect_ivs
-  pkmn5.ev = { :HP => 252, :ATTACK => 252, :SPECIAL_DEFENSE => 4 }
+  pkmn5.ev = { :HP => 248, :ATTACK => 252, :SPECIAL_DEFENSE => 8 }
   pkmn5.obtain_map = 32
+
+  # Extra Mon's
+  pkmn6 = Pokemon.new(:GARCHOMP, 80, $player, false)
+  pkmn6.gender = 0
+  pkmn6.ability = :SANDVEIL
+  pkmn6.nature = :ADAMANT
+  pkmn6.item = :BRIGHTPOWDER
+  pkmn6.moves = [:SANDSTORM, :DRAGONCLAW, :EARTHQUAKE, :STONEEDGE]
+  pkmn6.happiness = 255
+  pkmn6.iv = perfect_ivs
+  pkmn6.ev = { :ATTACK => 252, :SPECIAL_DEFENSE => 4, :SPEED => 252 }
+  pkmn6.obtain_map = 32
+
+  pkmn7 = Pokemon.new(:EXCADRILL, 80, $player, false)
+  pkmn7.gender = 0
+  pkmn7.ability = :SANDRUSH
+  pkmn7.nature = :JOLLY
+  pkmn7.item = :AIRBALLOON
+  pkmn7.moves = [:EARTHQUAKE, :IRONHEAD, :THROATCHOP, :RAPIDSPIN]
+  pkmn7.happiness = 255
+  pkmn7.iv = perfect_ivs
+  pkmn7.ev = { :ATTACK => 252, :SPECIAL_DEFENSE => 4, :SPEED => 252 }
+  pkmn7.obtain_map = 32
+
+  pkmn8 = Pokemon.new(:GOLURK, 80, $player, false)
+  pkmn8.ability = :IRONFIST
+  pkmn8.nature = :ADAMANT
+  pkmn8.item = :LEFTOVERS
+  pkmn8.moves = [:DRAINPUNCH, :SHADOWPUNCH, :THUNDERPUNCH, :ICEPUNCH]
+  pkmn8.happiness = 255
+  pkmn8.iv = perfect_ivs
+  pkmn8.ev = { :HP => 252, :ATTACK => 252, :SPECIAL_DEFENSE => 4 }
+  pkmn8.obtain_map = 32
 
   pbAddPokemonSilent(pkmn0)
   pbAddPokemonSilent(pkmn1)
@@ -75,6 +108,10 @@ def pbAddTeamKeith
   pbAddPokemonSilent(pkmn3)
   pbAddPokemonSilent(pkmn4)
   pbAddPokemonSilent(pkmn5)
+  $PokemonStorage.pbStoreCaught(pkmn6)
+  $PokemonStorage.pbStoreCaught(pkmn7)
+  $PokemonStorage.pbStoreCaught(pkmn8)
+  
 end
 
 def pbAddTeamDominic
@@ -452,4 +489,85 @@ def pbAddTeamLuke
   $PokemonStorage.pbStoreCaught(pkmn4)
   $PokemonStorage.pbStoreCaught(pkmn5)
 
+end
+
+def pbAddTeamBarry
+  barry = NPCTrainer.new("Barry", :GRANDMASTER)
+  yuna = NPCTrainer.new("Yuna", :GRANDMASTER)
+  perfect_ivs = {
+    :HP => 31, :ATTACK => 31, :DEFENSE => 31,
+    :SPECIAL_ATTACK => 31, :SPECIAL_DEFENSE => 31, :SPEED => 31
+  }
+
+  pkmn0 = Pokemon.new(:ESPEON, 80, barry, false)
+  pkmn0.ability = :MAGICBOUNCE
+  pkmn0.nature = :TIMID
+  pkmn0.item = :LIGHTCLAY
+  pkmn0.moves = [:LIGHTSCREEN, :REFLECT, :YAWN, :ALLURINGVOICE]
+  pkmn0.happiness = 255
+  pkmn0.iv = perfect_ivs
+  pkmn0.ev = { :HP => 252, :SPECIAL_ATTACK => 4, :SPEED => 252 }
+  pkmn0.obtain_map = 48
+
+  pkmn1 = Pokemon.new(:PHEROMOSA, 80, barry, false)
+  pkmn1.ability = :BEASTBOOST
+  pkmn1.nature = :ADAMANT
+  pkmn1.item = :WHITEHERB
+  pkmn1.moves = [:CLOSECOMBAT, :LUNGE, :OUTRAGE, :RAPIDSPIN]
+  pkmn1.happiness = 255
+  pkmn1.iv = perfect_ivs
+  pkmn1.ev = { :HP => 4, :ATTACK => 252, :SPEED => 252 }
+  pkmn1.obtain_map = 48
+
+  pkmn2 = Pokemon.new(:PRIMARINA, 80, barry, false)
+  pkmn2.ability = :LIQUIDVOICE
+  pkmn2.nature = :MODEST
+  pkmn2.item = :LEFTOVERS
+  pkmn2.moves = [:AQUARING, :ALLURINGVOICE, :SCALD, :ICEBEAM]
+  pkmn2.happiness = 255
+  pkmn2.iv = perfect_ivs
+  pkmn2.ev = { :HP => 252, :SPECIAL_ATTACK => 252, :SPECIAL_DEFENSE => 4 }
+  pkmn2.obtain_map = 48
+
+  pkmn3 = Pokemon.new(:BEEDRILL, 80, barry, false)
+  pkmn3.shiny = true
+  pkmn3.ability = :ADAPTABILITY
+  pkmn3.nature = :JOLLY
+  pkmn3.item = :BEEDRILLITE
+  pkmn3.moves = [:FELLSTINGER, :POISONJAB, :OUTRAGE, :KNOCKOFF]
+  pkmn3.happiness = 255
+  pkmn3.iv = perfect_ivs
+  pkmn3.ev = { :ATTACK => 252, :SPECIAL_DEFENSE => 4, :SPEED => 252 }
+  pkmn3.obtain_map = 48
+
+  pkmn4 = Pokemon.new(:LILLIGANT, 80, barry, false)
+  pkmn4.gender = 1
+  pkmn4.shiny = true
+  pkmn4.name = "Devastator"
+  pkmn4.ability = :OWNTEMPO
+  pkmn4.nature = :MODEST
+  pkmn4.item = :GRASSIUMZ
+  pkmn4.moves = [:GIGADRAIN, :PETALDANCE, :QUIVERDANCE, :SLEEPPOWDER]
+  pkmn4.happiness = 255
+  pkmn4.iv = perfect_ivs
+  pkmn4.ev = { :HP => 4, :SPECIAL_ATTACK => 252, :SPEED => 252 }
+  pkmn4.obtain_map = 48
+
+  pkmn5 = Pokemon.new(:KYUREM, 85, yuna, false)
+  pkmn5.form = 1
+  pkmn5.ability = :PARENTALBOND
+  pkmn5.nature = :TIMID
+  pkmn5.item = :LIFEORB
+  pkmn5.moves = [:BOOMBURST, :MALIGNANTCHAIN, :TORCHSONG, :PSYSTRIKE]
+  pkmn5.happiness = 255
+  pkmn5.iv = perfect_ivs
+  pkmn5.ev = { :DEFENSE => 4, :SPECIAL_ATTACK => 252, :SPEED => 252 }
+  pkmn5.obtain_map = 48
+
+  $PokemonStorage.pbStoreCaught(pkmn0)
+  $PokemonStorage.pbStoreCaught(pkmn1)
+  $PokemonStorage.pbStoreCaught(pkmn2)
+  $PokemonStorage.pbStoreCaught(pkmn3)
+  $PokemonStorage.pbStoreCaught(pkmn4)
+  $PokemonStorage.pbStoreCaught(pkmn5)
 end
