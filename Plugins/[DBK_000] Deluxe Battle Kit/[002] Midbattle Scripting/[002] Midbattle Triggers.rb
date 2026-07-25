@@ -30,10 +30,10 @@ module MidbattleHandlers
     return @@scripts[:midbattle_scripts].keys
   end
 
-  def self.trigger(midbattle, id, battle, idxBattler, idxTarget, params)
+  def self.trigger(midbattle, id, battle, idxBattler, idxTarget, params, raw_key = nil)
     return nil if !@@scripts.has_key?(midbattle)
     return nil if !self.exists?(midbattle, id)
-    return @@scripts[midbattle][id].call(battle, idxBattler, idxTarget, params)
+    return @@scripts[midbattle][id].call(battle, idxBattler, idxTarget, params, raw_key)
   end
   
   def self.trigger_each(midbattle, battle, idxBattler, idxTarget, trigger)
@@ -1542,11 +1542,16 @@ MidbattleHandlers.add(:midbattle_triggers, "fieldEffects",
 # Changes the battlefield weather.
 #-------------------------------------------------------------------------------
 MidbattleHandlers.add(:midbattle_triggers, "changeWeather",
-  proc { |battle, idxBattler, idxTarget, params|
+  proc { |battle, idxBattler, idxTarget, params, raw_key|
     next if battle.decision > 0
     next if [:HarshSun, :HeavyRain, :StrongWinds].include?(battle.field.weather)
     battler = battle.battlers[idxBattler]
     battle.scene.pbForceEndSpeech
+    duration = nil
+    if raw_key
+      suffix = raw_key.split("_")[1]
+      duration = suffix.to_i if suffix && suffix =~ /\A\d+\z/
+    end
     case params
     when :Random
       array = []
@@ -1557,6 +1562,7 @@ MidbattleHandlers.add(:midbattle_triggers, "changeWeather",
       weather = array.sample
       PBDebug.log("     'changeWeather': starting random weather")
       battle.pbStartWeather(battler, weather, true)
+      battle.field.weatherDuration = duration if duration
     when :None
       PBDebug.log("     'changeWeather': ending current weather")
       case battle.field.weather
@@ -1584,6 +1590,7 @@ MidbattleHandlers.add(:midbattle_triggers, "changeWeather",
       if try_weather && battle.field.weather != try_weather.id
         PBDebug.log("     'changeWeather': starting #{try_weather.name} weather")
         battle.pbStartWeather(battler, try_weather.id, true)
+        battle.field.weatherDuration = duration if duration
       end
     end
   }
@@ -1593,10 +1600,15 @@ MidbattleHandlers.add(:midbattle_triggers, "changeWeather",
 # Changes the battlefield terrain.
 #-------------------------------------------------------------------------------
 MidbattleHandlers.add(:midbattle_triggers, "changeTerrain",
-  proc { |battle, idxBattler, idxTarget, params|
+  proc { |battle, idxBattler, idxTarget, params, raw_key|
     next if battle.decision > 0
     battler = battle.battlers[idxBattler]
     battle.scene.pbForceEndSpeech
+    duration = nil
+    if raw_key
+      suffix = raw_key.split("_")[1]
+      duration = suffix.to_i if suffix && suffix =~ /\A\d+\z/
+    end
     case params
     when :Random
       array = []
@@ -1607,6 +1619,7 @@ MidbattleHandlers.add(:midbattle_triggers, "changeTerrain",
       terrain = array.sample
       PBDebug.log("     'changeTerrain': starting random terrain")
       battle.pbStartTerrain(battler, terrain)
+      battle.field.terrainDuration = duration if duration
     when :None
       PBDebug.log("     'changeTerrain': ending current terrain")
       case battle.field.terrain
@@ -1622,6 +1635,7 @@ MidbattleHandlers.add(:midbattle_triggers, "changeTerrain",
       if try_terrain && battle.field.terrain != try_terrain.id
         PBDebug.log("     'changeTerrain': starting #{try_terrain.name} Terrain")
         battle.pbStartTerrain(battler, try_terrain.id)
+        battle.field.terrainDuration = duration if duration
       end
     end
   }

@@ -165,6 +165,7 @@ SnapEdges = true
 Name = Inside 1
 MapPosition = 2,15,19
 Flags = HideFollowingPkmn
+BattleBack = indoor3
 #-------------------------------
 [034]   # Ice Cave
 Name = Route 3
@@ -460,6 +461,7 @@ Bicycle = true
 Weather = Sun,100
 MapPosition = 2,10,13
 SnapEdges = true
+BattleBack = hotpot
 #-------------------------------
 [079]	# PURGATORIUM
 Name = Purgatorium
@@ -469,6 +471,7 @@ Bicycle = true
 Weather = Rain,100
 MapPosition = 2,5,10
 SnapEdges = true
+BattleBack = bridge
 #-------------------------------
 [080]	# ATELIER ACCELERATUS
 Name = Atelier Acceleratus
@@ -477,6 +480,7 @@ ShowArea = true
 Bicycle = true
 MapPosition = 2,24,10
 SnapEdges = true
+BattleBack = indoor1
 #-------------------------------
 [081]	# ROOTS
 Name = Roots
@@ -486,18 +490,21 @@ Bicycle = true
 MapPosition = 2,15,6
 SafariMap = false
 SnapEdges = true
+BattleBack = forest
 #-------------------------------
 [082]	# THE DUNGEON
 Name = THE DUNGEON
 ShowArea = true
 SnapEdges = true
 Flags = HideFollowingPkmn
+BattleBack = loliden
 #-------------------------------
 [083]	# Inside 3
 Name = Inside 3
 DarkMap = true
 SnapEdges = true
 Flags = HideFollowingPkmn
+BattleBack = distortion
 #-------------------------------
 [084]	# Final Frontier
 Name = Final Frontier
@@ -512,6 +519,7 @@ Bicycle = true
 MapPosition = 2,15,19
 SnapEdges = true
 Flags = HideFollowingPkmn
+BattleBack = dojo
 #-------------------------------
 [086]	# FAIRY VALE
 Name = Fairy Vale
@@ -519,6 +527,7 @@ ShowArea = true
 Bicycle = false
 MapPosition = 2,22,3
 SnapEdges = true
+BattleBack = field
 #-------------------------------
 [087]	# Lost Woods
 Name = Lost Woods
@@ -526,6 +535,7 @@ ShowArea = true
 Bicycle = false
 SnapEdges = true
 Flags = HideFollowingPkmn
+BattleBack = forest
 #-------------------------------
 [088]	# FAIRY VALE
 Name = Fairy Vale
@@ -533,6 +543,7 @@ Outdoor = true
 ShowArea = true
 Bicycle = true
 SnapEdges = true
+BattleBack = field
 #-------------------------------
 [089]	# PROMETHEAN KILN
 Name = Promethean Kiln
@@ -540,6 +551,7 @@ Outdoor = true
 ShowArea = true
 Weather = Sun,100
 SnapEdges = true
+BattleBack = hotpot
 #-------------------------------
 [090]	# Restaurant
 Name = Restaurant
@@ -551,6 +563,7 @@ Outdoor = true
 ShowArea = true
 Weather = Rain,100
 SnapEdges = true
+BattleBack = bridge
 #-------------------------------
 [092]	# Casino
 Name = Casino
@@ -574,6 +587,7 @@ Name = Atelier Acceleratus
 ShowArea = true
 Bicycle = true
 SnapEdges = true
+BattleBack = indoor1
 #-------------------------------
 [096]	# RaceTrack
 Name = RaceTrack
@@ -584,7 +598,9 @@ Flags = HideFollowingPkmn
 [097]	# ATELIER ACCELERATUS
 Name = Atelier Acceleratus
 ShowArea = true
+Bicycle = true
 SnapEdges = true
+BattleBack = indoor1
 #-------------------------------
 [098]	# GRAND SCHISM
 Name = Grand Schism
@@ -599,11 +615,13 @@ Flags = HideFollowingPkmn
 Name = The Tower
 SnapEdges = true
 Flags = HideFollowingPkmn
+BattleBack = tower
 #-------------------------------
 [101]	# MARE INSULARUM
 Name = Mare Insularum
 ShowArea = true
 SnapEdges = true
+BattleBack = beach
 #-------------------------------
 [102]	# THE VOID
 Name = The Void
@@ -650,6 +668,7 @@ Flags = HideFollowingPkmn
 Name = Mare Insularum
 ShowArea = true
 SnapEdges = true
+BattleBack = beach
 #-------------------------------
 [110]	# PROMETHEAN KILN
 Name = Promethean Kiln
@@ -657,6 +676,7 @@ Outdoor = true
 ShowArea = true
 Weather = Sun,100
 SnapEdges = true
+BattleBack = hotpot
 #-------------------------------
 [113]	# SECLUDED GRAVE
 Name = Secluded Grave

@@ -195,7 +195,7 @@ class Battle
             old_user = user
             midbattle[trigger].each do |key, params|
               base_key = key.split("_").first
-              ret = MidbattleHandlers.trigger(:midbattle_triggers, base_key, self, user, target, params)
+              ret = MidbattleHandlers.trigger(:midbattle_triggers, base_key, self, user, target, params, key)
               oldVar = @midbattleVariable if base_key == "setVariable"
               if !ret.nil?
                 case base_key

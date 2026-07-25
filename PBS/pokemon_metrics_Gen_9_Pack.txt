@@ -649,14 +649,14 @@ ShadowX = 0
 ShadowSize = 2
 #-------------------------------
 [DUDUNSPARCE]
-BackSprite = 0,47
+BackSprite = 0,27
 FrontSprite = 0,33
 ShadowX = 0
 ShadowSize = 2
 #-------------------------------
 [DUDUNSPARCE,1]
 BackSprite = -4,58
-FrontSprite = -4,29
+FrontSprite = -4,13
 ShadowX = 0
 ShadowSize = 3
 #-------------------------------

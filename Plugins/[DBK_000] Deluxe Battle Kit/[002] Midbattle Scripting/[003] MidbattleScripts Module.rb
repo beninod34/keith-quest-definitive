@@ -236,7 +236,7 @@ module MidbattleScripts
         [:Charge,     5, "{1} began charging power!"],
         [:MagnetRise, 5, "{1} levitated with electromagnetism!"],
       ],
-      "changeTerrain"  => :Electric
+      "changeTerrain_8"  => :Electric
     },
     #---------------------------------------------------------------------------
     # Player's Pokemon becomes paralyzed after dealing supereffective damage. 

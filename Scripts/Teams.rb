@@ -50,13 +50,13 @@ def pbAddTeamKeith
 
   pkmn4 = Pokemon.new(:DUDUNSPARCE, 80, $player, false)
   pkmn4.gender = 0
-  pkmn4.ability = :SERENEGRACE
-  pkmn4.nature = :ADAMANT
+  pkmn4.ability = :RATTLED
+  pkmn4.nature = :BOLD
   pkmn4.item = :LEFTOVERS
-  pkmn4.moves = [:BODYSLAM, :EARTHQUAKE, :ROCKSLIDE, :GYROBALL]
+  pkmn4.moves = [:CALMMIND, :BOOMBURST, :SHADOWBALL, :ROOST]
   pkmn4.happiness = 255
   pkmn4.iv = perfect_ivs
-  pkmn4.ev = { :HP => 252, :ATTACK => 252, :SPECIAL_DEFENSE => 4 }
+  pkmn4.ev = { :HP => 252, :DEFENSE => 156, :SPEED => 100 }
   pkmn4.obtain_map = 32
 
   pkmn5 = Pokemon.new(:MALAMAR, 80, $player, false)
@@ -111,7 +111,7 @@ def pbAddTeamKeith
   $PokemonStorage.pbStoreCaught(pkmn6)
   $PokemonStorage.pbStoreCaught(pkmn7)
   $PokemonStorage.pbStoreCaught(pkmn8)
-  
+
 end
 
 def pbAddTeamDominic
@@ -180,7 +180,7 @@ def pbAddTeamBenino
   pkmn0.ability = :TECHNICIAN
   pkmn0.nature = :JOLLY
   pkmn0.item = :LOADEDDICE
-  pkmn0.moves = [:FAKEOUT, :TAILSLAP, :AERIELACE, :TRIPLEAXEL]
+  pkmn0.moves = [:FAKEOUT, :TAILSLAP, :AERIALACE, :TRIPLEAXEL]
   pkmn0.happiness = 255
   pkmn0.iv = perfect_ivs
   pkmn0.ev = { :ATTACK => 252, :DEFENSE => 4, :SPEED => 252 }
