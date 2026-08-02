@@ -6733,8 +6733,9 @@ Name = Keyblade
 NamePlural = Keyblades
 Pocket = 8
 Price = 0
-Flags = KeyItem
-Description = "My friends are my power!" Can be used in battle to give a boost to all stats once per battle.
+Flags = KeyItem, HeldKeyItem
+ShowQuantity = false
+Description = "My friends are my power!" Can be held by a Pokemon to boost its two highest stats.
 #-------------------------------
 [BESTCHARACTERBADGE]
 Name = Best Character Badge
@@ -6751,4 +6752,55 @@ NamePlural = Birthday Candles
 Pocket = 1
 Price = 10000
 Description = This warm candle was lit in honor of you. Can be given to someone to change Pokemon EVs.
-
+#-------------------------------
+[FLYITEM]
+Name = Eldritch Horrors
+NamePlural = Eldritch Horrors
+Pocket = 8
+Price = 0
+FieldUse = Direct
+Flags = KeyItem
+Description = Gaze into the gap? Allows you to travel to places you've been to.
+#-------------------------------
+[EXPALL]
+Name = Egg of Enlightenment
+NamePlural = Eggs of Enlightenment
+Pocket = 8
+Price = 0
+FieldUse = Direct
+Flags = KeyItem
+Description = Irasshaimase. You now gain 1.5x the amount of exp after battle and all of the Pokémon in your party gain exp.
+#-------------------------------
+[EXPALLOFF]
+Name = Egg of Enlightenment
+NamePlural = Eggs of Enlightenment
+Pocket = 8
+Price = 0
+FieldUse = Direct
+Flags = KeyItem
+Description = Irasshaimase. You now gain 1.5x the amount of exp after battle and all of the Pokémon in your party gain exp.
+#-------------------------------
+[DURAGOFGREED]
+Name = Durag of Greed
+NamePlural = Durags of Greed
+Pocket = 8
+Price = 0
+Flags = KeyItem
+Description = The greed consumes you. You now gain double the amount of money after winning a battle.
+#-------------------------------
+[STRENGTHITEM]
+Name = Strong
+NamePlural = Strongs
+Pocket = 8
+Price = 0
+Flags = KeyItem
+Description = ...
+#-------------------------------
+[ARCADECAPACITOR]
+Name = Arcade Capacitor
+NamePlural = Arcade Capacitor
+Pocket = 8
+Price = 0
+Flags = KeyItem, HeldKeyItem
+ShowQuantity = false
+Description = A capacitor taken from a high-end arcade machine. Can be held by a Pokemon to set Electric terrain.

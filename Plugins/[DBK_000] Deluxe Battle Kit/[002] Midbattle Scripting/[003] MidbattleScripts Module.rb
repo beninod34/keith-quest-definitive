@@ -657,7 +657,7 @@ module MidbattleScripts
       "editWindow" => [nil, "bw choice"],
       "speech" => "I'm getting pumped. I guess it's time to start schmooving, as well.",
       "text" => "*Benino starts shmooving so fast, that an electric current generates due to the static electricity between his feet and the ground*",
-      "changeTerrain" => :Electric
+      "changeTerrain_8" => :Electric
     },
     "BattleEndLoss" => {
       "setSpeaker" => :LABMONGER,
@@ -930,6 +930,46 @@ module MidbattleScripts
       "setSpeaker" => :GRANDMASTER,
       "editWindow" => ["Barry", "bw choice"],
       "speech" => "Come back next time, I'm sure you'll win."
+    }
+  }
+
+    SILKYSAINT = {
+    "RoundStartCommand_1_foe" => {
+      "setSpeaker" => :SILKYSAINT,
+      "editWindow" => [nil, "bw choice"],
+      "speech" => "*Tightens Durag* Durag, give me hope!"
+    },
+    "BattlerFainted_player" => {
+      "setSpeaker" => :SILKYSAINT,
+      "editWindow" => [nil, "bw choice"],
+      "speech"  => "BOOM! How does my cooking taste!?"
+    },
+    "BattlerFainted_foe" => {
+      "setSpeaker" => :SILKYSAINT,
+      "editWindow" => [nil, "bw choice"],
+      "speech"  => "IT DOESN'T MATTER HOW MANY TIMES I GET HIT! I'LL KEEP GETTING UP AGAIN AND AGAIN!!"
+    },
+    "BeforeItemUse_player" => {
+      "setSpeaker" => :SILKYSAINT,
+      "editWindow" => [nil, "bw choice"],
+      "speech" => "!\n!?\nAre you serious right now Keith?\nAre you actually for real?\nDid I just see-\nDid you just use an item!?\nAN ITEM!?!?!"
+    },
+    "BeforeLastSwitchIn_player" => {
+      "setSpeaker" => :SILKYSAINT,
+      "editWindow" => [nil, "bw choice"],
+      "speech" => "THIS IS WHAT TESTS YOUR TRUE POWER, KEITH!\nARE YOUR EMBERS FADING?\nOR DO YOU STILL HAVE AN INFERNO INSIDE YOU?!"
+    },
+    "BeforeLastSwitchIn_foe" => {
+      "changeBGM" => "Khaotic Good",
+      "setSpeaker" => :SILKYSAINT,
+      "editWindow" => [nil, "bw choice"],
+      "speech" => "THE BATTLE HAS ONLY JUST BEGUN KEITH!\nMY FLAME IS ROARING!!\nME AND LUDICOLO ARE FILLED WITH NOTHING BUT DETERMINATION!!!!!!",
+      "changeWeather_8" => :Rain
+    },
+    "BattleEndLoss" => {
+      "setSpeaker" => :SILKYSAINT,
+      "editWindow" => [nil, "bw choice"],
+      "speech" => "BOOM! Told ya you can't hang with me!"
     }
   }
 

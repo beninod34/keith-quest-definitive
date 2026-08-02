@@ -100,37 +100,13 @@ EventHandlers.add(:on_frame_update,:map_zoom,
 #===============================================================================
 #If you're using an alternate pause UI,
 #you should probably delete this whole section.
-
-
-class Scene_Map
- 
-  def call_menu
-    $game_temp.menu_calling = false
-    $game_temp.in_menu = true
-    $game_player.straighten
-    $game_map.update
-    $game_temp.pause_menu_scene = PokemonPauseMenu_Scene.new
-    $game_temp.pause_menu_screen = PokemonPauseMenu.new($game_temp.pause_menu_scene)
-    $game_temp.pause_menu_screen.pbStartPokemonMenu
-    $game_temp.in_menu = false
-  end
- 
-end
-
-
-class PokemonPauseMenu_Scene
-  def pbShowMenu
-    @sprites["cmdwindow"].visible = true if @sprites["cmdwindow"]
-    @sprites["infowindow"].visible = @infostate if @sprites["infowindow"]
-    @sprites["helpwindow"].visible = @helpstate if @sprites["helpwindow"]
-  end
-
-  def pbHideMenu
-    @sprites["cmdwindow"].visible = false if @sprites["cmdwindow"]
-    @sprites["infowindow"].visible = false if @sprites["infowindow"]
-    @sprites["helpwindow"].visible = false if @sprites["helpwindow"]
-  end
-end
+#
+#Disabled: this project uses Voltseon's Pause Menu, which already provides its
+#own Scene_Map#call_menu override. Keeping this section active clobbers that
+#override (last-loaded `call_menu` wins) while leaving Voltseon's
+#PokemonPauseMenu#pbStartPokemonMenu override active, which calls
+#@scene.update - a method the standard PokemonPauseMenu_Scene doesn't have,
+#causing a NoMethodError when opening the pause menu.
 
 #===============================================================================
 #Sprite Utilities

@@ -212,7 +212,7 @@ ShadowSize = 1
 #-------------------------------
 [QUAQUAVAL]
 BackSprite = 0,54
-FrontSprite = 1,12
+FrontSprite = 1,6
 ShadowX = 0
 ShadowSize = 2
 #-------------------------------
@@ -494,7 +494,7 @@ ShadowSize = 2
 #-------------------------------
 [TINKATON]
 BackSprite = 0,42
-FrontSprite = 12,16
+FrontSprite = 12,26
 ShadowX = 0
 ShadowSize = 2
 #-------------------------------
@@ -859,7 +859,7 @@ ShadowX = 0
 ShadowSize = 3
 #-------------------------------
 [MUNKIDORI]
-BackSprite = 0,54
+BackSprite = 0,34
 FrontSprite = -2,3
 ShadowX = 0
 ShadowSize = 1

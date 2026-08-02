@@ -571,3 +571,163 @@ def pbAddTeamBarry
   $PokemonStorage.pbStoreCaught(pkmn4)
   $PokemonStorage.pbStoreCaught(pkmn5)
 end
+
+def pbAddTeamLas
+  las = NPCTrainer.new("Lascelles", :SILKYSAINT)
+  perfect_ivs = {
+    :HP => 31, :ATTACK => 31, :DEFENSE => 31,
+    :SPECIAL_ATTACK => 31, :SPECIAL_DEFENSE => 31, :SPEED => 31
+  }
+
+  pkmn0 = Pokemon.new(:TOXAPEX, 80, las, false)
+  pkmn0.ability = :REGENERATOR
+  pkmn0.nature = :BOLD
+  pkmn0.item = :BLACKSLUDGE
+  pkmn0.moves = [:TOXICSPIKES, :ICEBEAM, :BANEFULBUNKER, :RECOVER]
+  pkmn0.happiness = 255
+  pkmn0.iv = perfect_ivs
+  pkmn0.ev = { :HP => 136, :DEFENSE => 252, :SPECIAL_DEFENSE => 120 }
+  pkmn0.obtain_map = 78
+
+  pkmn1 = Pokemon.new(:INFERNAPE, 80, las, false)
+  pkmn1.ability = :IRONFIST
+  pkmn1.nature = :JOLLY
+  pkmn1.item = :LIFEORB
+  pkmn1.moves = [:FIREPUNCH, :THUNDERPUNCH, :CLOSECOMBAT, :MACHPUNCH]
+  pkmn1.happiness = 255
+  pkmn1.iv = perfect_ivs
+  pkmn1.ev = { :HP => 4, :ATTACK => 252, :SPEED => 252 }
+  pkmn1.obtain_map = 78
+
+  pkmn2 = Pokemon.new(:BLASTOISE, 80, las, false)
+  pkmn2.ability = :TORRENT
+  pkmn2.nature = :MODEST
+  pkmn2.item = :BLASTOISINITE
+  pkmn2.moves = [:WATERPULSE, :AURASPHERE, :ICEBEAM, :SHELLSMASH]
+  pkmn2.happiness = 255
+  pkmn2.iv = perfect_ivs
+  pkmn2.ev = { :HP => 4, :SPECIAL_ATTACK => 252, :SPEED => 252 }
+  pkmn2.obtain_map = 78
+
+  pkmn3 = Pokemon.new(:TINKATON, 80, las, false)
+  pkmn3.gender = 1
+  pkmn3.ability = :MOLDBREAKER
+  pkmn3.nature = :ADAMANT
+  pkmn3.item = :AIRBALLOON
+  pkmn3.moves = [:GIGATONHAMMER, :PLAYROUGH, :THUNDERWAVE, :FAKEOUT]
+  pkmn3.happiness = 255
+  pkmn3.iv = perfect_ivs
+  pkmn3.ev = { :HP => 4, :ATTACK => 252, :DEFENSE => 152, :SPEED => 100 }
+  pkmn3.obtain_map = 78
+
+  pkmn4 = Pokemon.new(:QUAQUAVAL, 80, las, false)
+  pkmn4.ability = :MOXIE
+  pkmn4.nature = :JOLLY
+  pkmn4.item = :FOCUSSASH
+  pkmn4.moves = [:LASTRESORT, :AQUASTEP]
+  pkmn4.happiness = 255
+  pkmn4.iv = perfect_ivs
+  pkmn4.ev = { :HP => 4, :ATTACK => 252, :SPEED => 252 }
+  pkmn4.obtain_map = 78
+
+  pkmn5 = Pokemon.new(:LUDICOLO, 85, las, false)
+  pkmn5.name = "LAST HOPE"
+  pkmn5.gender = 0
+  pkmn5.ability = :RAINDISH
+  pkmn5.nature = :BOLD
+  pkmn5.item = :LEFTOVERS
+  pkmn5.moves = [:ICEBEAM, :RAINDANCE, :PROTECT, :LEECHSEED]
+  pkmn5.happiness = 255
+  pkmn5.iv = perfect_ivs
+  pkmn5.ev = { :HP => 4, :DEFENSE => 252, :SPECIAL_DEFENSE => 252 }
+  pkmn5.obtain_map = 78
+
+  $PokemonStorage.pbStoreCaught(pkmn0)
+  $PokemonStorage.pbStoreCaught(pkmn1)
+  $PokemonStorage.pbStoreCaught(pkmn2)
+  $PokemonStorage.pbStoreCaught(pkmn3)
+  $PokemonStorage.pbStoreCaught(pkmn4)
+  $PokemonStorage.pbStoreCaught(pkmn5)
+
+end
+
+def pbAddTeamAlex
+  alex = NPCTrainer.new("Alex", :PRIMORDIALEMPEROR)
+  perfect_ivs = {
+    :HP => 31, :ATTACK => 31, :DEFENSE => 31,
+    :SPECIAL_ATTACK => 31, :SPECIAL_DEFENSE => 31, :SPEED => 31
+  }
+
+  pkmn0 = Pokemon.new(:MIMIKYU, 80, alex, false)
+  pkmn0.gender = 1
+  pkmn0.ability = :DISGUISE
+  pkmn0.nature = :JOLLY
+  pkmn0.item = :REDCARD
+  pkmn0.moves = [:SWORDSDANCE, :SHADOWSNEAK, :PLAYROUGH, :SHADOWCLAW]
+  pkmn0.happiness = 255
+  pkmn0.iv = perfect_ivs
+  pkmn0.ev = { :ATTACK => 252, :DEFENSE => 4, :SPEED => 252 }
+  pkmn0.obtain_map = 76
+
+  pkmn1 = Pokemon.new(:BEARTIC, 80, alex, false)
+  pkmn1.gender = 0
+  pkmn1.ability = :THICKFAT
+  pkmn1.nature = :ADAMANT
+  pkmn1.item = :LIFEORB
+  pkmn1.moves = [:AQUAJET, :ICICLECRASH, :SWORDSDANCE, :SUPERPOWER]
+  pkmn1.happiness = 255
+  pkmn1.iv = perfect_ivs
+  pkmn1.ev = { :HP => 252, :ATTACK => 252, :DEFENSE => 4 }
+  pkmn1.obtain_map = 76
+
+  pkmn2 = Pokemon.new(:SCOVILLAIN, 80, alex, false)
+  pkmn2.gender = 0
+  pkmn2.ability = :MOODY
+  pkmn2.nature = :JOLLY
+  pkmn2.item = :FOCUSSASH
+  pkmn2.moves = [:TEMPERFLARE, :SEEDBOMB, :TRAILBLAZE, :STOMPINGTANTRUM]
+  pkmn2.happiness = 255
+  pkmn2.iv = perfect_ivs
+  pkmn2.ev = { :ATTACK => 252, :DEFENSE => 4, :SPEED => 252 }
+  pkmn2.obtain_map = 76
+
+  pkmn3 = Pokemon.new(:TYPHLOSION, 80, alex, false)
+  pkmn3.gender = 1
+  pkmn3.ability = :STORMDRAIN
+  pkmn3.nature = :TIMID
+  pkmn3.item = :FIREGEM
+  pkmn3.moves = [:ERUPTION, :FOCUSBLAST, :HIDDENPOWER, :EXTRASENSORY]
+  pkmn3.happiness = 255
+  pkmn3.iv = perfect_ivs
+  pkmn3.ev = { :SPECIAL_ATTACK => 252, :SPECIAL_DEFENSE => 4, :SPEED => 252 }
+  pkmn3.obtain_map = 76
+
+  pkmn4 = Pokemon.new(:STARMIE, 80, alex, false)
+  pkmn4.gender = 0
+  pkmn4.ability = :ANALYTIC
+  pkmn4.nature = :JOLLY
+  pkmn4.item = :STARMINITE
+  pkmn4.moves = [:AQUAJET, :LIQUIDATION, :PSYCHOCUT, :AVALANCHE]
+  pkmn4.happiness = 255
+  pkmn4.iv = perfect_ivs
+  pkmn4.ev = { :ATTACK => 252, DEFENSE => 4, :SPEED => 252 }
+  pkmn4.obtain_map = 76
+
+  pkmn5 = Pokemon.new(:HOOH, 85, alex, false)
+  pkmn5.ability = :PRESSURE
+  pkmn5.nature = :GENTLE
+  pkmn5.item = :LEFTOVERS
+  pkmn5.moves = [:SACREDFIRE, :RECOVER, :TOXIC, :EARTHPOWER]
+  pkmn5.happiness = 255
+  pkmn5.iv = perfect_ivs
+  pkmn5.ev = { :HP => 248, :SPECIAL_ATTACK => 4, :SPECIAL_DEFENSE => 252 }
+  pkmn5.obtain_map = 76
+
+  $PokemonStorage.pbStoreCaught(pkmn0)
+  $PokemonStorage.pbStoreCaught(pkmn1)
+  $PokemonStorage.pbStoreCaught(pkmn2)
+  $PokemonStorage.pbStoreCaught(pkmn3)
+  $PokemonStorage.pbStoreCaught(pkmn4)
+  $PokemonStorage.pbStoreCaught(pkmn5)
+
+end

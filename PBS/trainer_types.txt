@@ -458,3 +458,10 @@ Gender = Male
 BaseMoney = 100
 BattleBGM = Barry's Duel
 VictoryBGM = Difficult Battle Won
+#-------------------------------
+[SILKYSAINT]
+Name = Silky Saint
+Gender = Male
+BaseMoney = 100
+BattleBGM = Ultra Friendship Battle
+VictoryBGM = Difficult Battle Won

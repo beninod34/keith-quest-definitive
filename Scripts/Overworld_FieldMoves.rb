@@ -482,7 +482,7 @@ def pbFlyToNewLocation(pkmn = nil, move = :FLY)
   end
   $stats.fly_count += 1
   pbFadeOutIn do
-    pbSEPlay("Fly")
+    pbSEPlay("Sudden Appearance")
     $game_temp.player_new_map_id    = $game_temp.fly_destination[0]
     $game_temp.player_new_x         = $game_temp.fly_destination[1]
     $game_temp.player_new_y         = $game_temp.fly_destination[2]

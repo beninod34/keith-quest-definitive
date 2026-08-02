@@ -1981,6 +1981,16 @@ Battle::ItemEffects::OnSwitchIn.add(:KEYBLADE,
   }
 )
 
+Battle::ItemEffects::OnSwitchIn.add(:ARCADECAPACITOR,
+  proc { |item, battler, battle|
+    next false if battle.field.terrain == :Electric
+    cause = [battler.pbThis, battler.itemName]
+    battler.pbHeldItemTriggered(battler.item)
+    battle.pbStartTerrain(battler, :Electric, true, cause)
+    battler.pbConsumeItem
+  }
+)
+
 #===============================================================================
 # OnIntimidated handlers
 #===============================================================================
