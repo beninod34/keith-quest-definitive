@@ -118,11 +118,6 @@ Name = Poké Maniac
 Gender = Male
 BaseMoney = 64
 #-------------------------------
-[POKEMONBREEDER]
-Name = Pokémon Breeder
-Gender = Female
-BaseMoney = 48
-#-------------------------------
 [PROFESSOR]
 Name = Professor
 Gender = Male
@@ -465,3 +460,73 @@ Gender = Male
 BaseMoney = 100
 BattleBGM = Ultra Friendship Battle
 VictoryBGM = Difficult Battle Won
+#-------------------------------
+[CRAZWONK]
+Name = Craz Wonk
+Gender = Male
+BaseMoney = 100
+BattleBGM = Conflict Through the Roots
+VictoryBGM = Difficult Battle Won
+#-------------------------------
+[OLMAN]
+Name = Ol' Man
+Gender = Male
+BaseMoney = 100
+BattleBGM = Conflict Through the Roots
+VictoryBGM = Difficult Battle Won
+#-------------------------------
+[CALAMITOUSCOUSINS]
+Name = Calamitous Cousins
+Gender = Male
+BaseMoney = 100
+BattleBGM = Conflict Through the Roots
+VictoryBGM = Difficult Battle Won
+#-------------------------------
+[ORGXIIIMEMBER]
+Name = Org XIII Member
+Gender = Male
+BaseMoney = 100
+BattleBGM = Conflict Through the Roots
+VictoryBGM = Difficult Battle Won
+#-------------------------------
+[FALSEPAPA]
+Name = False Papa
+Gender = Male
+BaseMoney = 100
+BattleBGM = Conflict Through the Roots
+VictoryBGM = Difficult Battle Won
+#-------------------------------
+[COACH]
+Name = Coach
+Gender = Male
+BaseMoney = 100
+BattleBGM = Conflict Through the Roots
+VictoryBGM = Difficult Battle Won
+#-------------------------------
+[POKEMONBREEDER]
+Name = Pokémon Breeder
+Gender = Male
+BaseMoney = 100
+BattleBGM = A Questionable Outlook
+VictoryBGM = Difficult Battle Won
+#-------------------------------
+[NUBILEDEITY]
+Name = Moe Moe Kawaii
+Gender = Male
+BaseMoney = 100
+BattleBGM = Fly High Power
+VictoryBGM = Difficult Battle Won
+#-------------------------------
+[CHILDGOBBLER]
+Name = Shadow
+Gender = Male
+BaseMoney = 100
+BattleBGM = Unwinnable Battle
+VictoryBGM = Difficult Battle Won
+#-------------------------------
+[FINALBATTLE]
+Name = Aggravated Shadow
+Gender = Male
+BaseMoney = 100
+BattleBGM = Unwinnable Battle
+VictoryBGM = God Defeated
