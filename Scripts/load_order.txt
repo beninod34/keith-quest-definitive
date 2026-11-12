@@ -402,5 +402,6 @@ Compiler_MapsAndEvents.rb
 Teams.rb
 Badges_BadgeCase.rb
 EVTraining.rb
+MegaStoneHints.rb
 [[ Main ]].rb
 Main.rb

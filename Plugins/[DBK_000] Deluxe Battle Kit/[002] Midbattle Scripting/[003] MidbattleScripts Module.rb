@@ -973,4 +973,216 @@ module MidbattleScripts
     }
   }
 
+  CRAZWONK = {
+    "BattlerFainted_player" => {
+      "setSpeaker" => :CRAZWONK,
+      "editWindow" => [nil, "bw choice"],
+      "speech"  => "GO TO BED LITTLE FUCK!"
+    },
+    "BattlerFainted_foe" => {
+      "setSpeaker" => :CRAZWONK,
+      "editWindow" => [nil, "bw choice"],
+      "speech"  => "YOU'RE BEING A DICKASS!"
+    },
+    "BeforeItemUse_player" => {
+      "setSpeaker" => :CRAZWONK,
+      "editWindow" => [nil, "bw choice"],
+      "speech" => "This NPC is doing an illegal U-Turn."
+    },
+    "BeforeItemUse_foe" => {
+      "setSpeaker" => :CRAZWONK,
+      "editWindow" => [nil, "bw choice"],
+      "speech" => "KILL ALL DEFAULTS!"
+    },
+    "BeforeLastSwitchIn_foe" => {
+      "changeBGM" => "Khaotic Good",
+      "setSpeaker" => :CRAZWONK,
+      "editWindow" => [nil, "bw choice"],
+      "speech" => "CAN YOU NOT SHOOT ME!! IT'S SUPPOSED TO BE THE OPPOSITE! I'M BLACK!!",
+    },
+    "BattleEndLoss" => {
+      "setSpeaker" => :CRAZWONK,
+      "editWindow" => [nil, "bw choice"],
+      "speech" => "Did you deep fry your cock!?!"
+    }
+  }
+
+  OLMAN = {
+    "BattlerFainted_player" => {
+      "setSpeaker" => :OLMAN,
+      "editWindow" => [nil, "bw choice"],
+      "speech"  => "Life just ain't swell I guess."
+    },
+    "BattlerFainted_foe" => {
+      "setSpeaker" => :OLMAN,
+      "editWindow" => [nil, "bw choice"],
+      "speech"  => "Perfect."
+    },
+    "BeforeItemUse_player" => {
+      "setSpeaker" => :OLMAN,
+      "editWindow" => [nil, "bw choice"],
+      "speech" => "Man, you're twisting my tip with that one."
+    },
+    "BeforeItemUse_foe" => {
+      "setSpeaker" => :OLMAN,
+      "editWindow" => [nil, "bw choice"],
+      "speech" => "Reel em in, Reel em in."
+    },
+    "BeforeLastSwitchIn_foe" => {
+      "changeBGM" => "Khaotic Good",
+      "setSpeaker" => :OLMAN,
+      "editWindow" => [nil, "bw choice"],
+      "speech" => "Let's get this show on the road.",
+    },
+    "BattleEndLoss" => {
+      "setSpeaker" => :OLMAN,
+      "editWindow" => [nil, "bw choice"],
+      "speech" => "I'm the God dang champ man."
+    }
+  }
+
+  CALAMITOUSCOUSINS = {
+    "BattleEndLoss" => {
+      "setSpeaker" => :CALAMITOUSCOUSINS,
+      "editWindow" => [nil, "bw choice"],
+      "speech" => "Jack: Skill issue tbh.\nPatrick: *Welding noises*"
+    }
+  }
+
+  ORGXIIIMEMBER = {
+    "RoundStartCommand_1_foe" => {
+      "setSpeaker" => :ORGXIIIMEMBER,
+      "editWindow" => [nil, "bw choice"],
+      "speech" => "I'm hyped!!"
+    },
+    "BattlerFainted_player" => {
+      "setSpeaker" => :ORGXIIIMEMBER,
+      "editWindow" => [nil, "bw choice"],
+      "speech"  => "Ah, my bad Keith, are you ok?"
+    },
+    "BattlerFainted_foe" => {
+      "setSpeaker" => :ORGXIIIMEMBER,
+      "editWindow" => [nil, "bw choice"],
+      "speech"  => "Nice attack, Keith!"
+    },
+    "BeforeItemUse_foe" => {
+      "setSpeaker" => :ORGXIIIMEMBER,
+      "editWindow" => [nil, "bw choice"],
+      "speech" => "Man, you got me on the ropes!"
+    },
+    "BeforeLastSwitchIn_foe" => {
+      "changeBGM" => "Khaotic Good",
+      "setSpeaker" => :ORGXIIIMEMBER,
+      "editWindow" => [nil, "bw choice"],
+      "speech" => "Got it memorized?",
+    },
+    "BattleEndLoss" => {
+      "setSpeaker" => :ORGXIIIMEMBER,
+      "editWindow" => [nil, "bw choice"],
+      "speech" => "I'M SO SORRY ARE YOU OK!?"
+    }
+  }
+
+  FALSEPAPA = {
+    "BattlerFainted_player" => {
+      "setSpeaker" => :FALSEPAPA,
+      "editWindow" => [nil, "bw choice"],
+      "speech"  => "I'll save that one for later."
+    },
+    "BattlerFainted_foe" => {
+      "setSpeaker" => :FALSEPAPA,
+      "editWindow" => [nil, "bw choice"],
+      "speech"  => "Damn brat!!<icon=ANGER>"
+    },
+    "BeforeItemUse_player" => {
+      "setSpeaker" => :FALSEPAPA,
+      "editWindow" => [nil, "bw choice"],
+      "speech" => "The smugness after using that<icon=ANGER>"
+    },
+    "BeforeItemUse_foe" => {
+      "setSpeaker" => :FALSEPAPA,
+      "editWindow" => [nil, "bw choice"],
+      "speech" => "You didn't see that..."
+    },
+    "BeforeLastSwitchIn_foe" => {
+      "changeBGM" => "Khaotic Good",
+      "setSpeaker" => :FALSEPAPA,
+      "editWindow" => [nil, "bw choice"],
+      "speech" => "I'm gonna show you what happens when you mess with an adult<icon=ANGER><icon=ANGER>!!!",
+    },
+    "BattleEndLoss" => {
+      "setSpeaker" => :FALSEPAPA,
+      "editWindow" => [nil, "bw choice"],
+      "speech" => "Don't worry! Ill take gooooood care of your team!!!!! *wild grin*"
+    }
+  }
+
+  COACH = {
+    "BattlerFainted_player" => {
+      "setSpeaker" => :COACH,
+      "editWindow" => [nil, "bw choice"],
+      "speech"  => "Aaand boom goes the dynamite."
+    },
+    "BattlerFainted_foe" => {
+      "setSpeaker" => :COACH,
+      "editWindow" => [nil, "bw choice"],
+      "speech"  => "Relax. Everybody gets one buddy."
+    },
+    "BeforeItemUse_player" => {
+      "setSpeaker" => :COACH,
+      "editWindow" => [nil, "bw choice"],
+      "speech" => "Trying to cheese me I see."
+    },
+    "BeforeItemUse_foe" => {
+      "setSpeaker" => :COACH,
+      "editWindow" => [nil, "bw choice"],
+      "speech" => "Didn't want to have to use this, heal up buddy."
+    },
+    "BeforeLastSwitchIn_foe" => {
+      "changeBGM" => "Khaotic Good",
+      "setSpeaker" => :COACH,
+      "editWindow" => [nil, "bw choice"],
+      "speech" => "I'M CRASHING OUT! URSHIFU!! WAVE CHECK!!!",
+    },
+    "BattleEndLoss" => {
+      "setSpeaker" => :COACH,
+      "editWindow" => [nil, "bw choice"],
+      "speech" => "This a Rollie, not a stopwatch, shit don't ever stop!"
+    }
+  }
+
+  POKEMONBREEDER = {
+    "RoundStartCommand_1_foe" => {
+      "setSpeaker" => :POKEMONBREEDER,
+      "editWindow" => [nil, "bw choice"],
+      "speech" => "I'M ALREADY GETTING EXCITED!!!!"
+    },
+    "BattlerFainted_player" => {
+      "setSpeaker" => :POKEMONBREEDER,
+      "editWindow" => [nil, "bw choice"],
+      "speech"  => "Man that was hot..."
+    },
+    "BattlerFainted_foe" => {
+      "setSpeaker" => :POKEMONBREEDER,
+      "editWindow" => [nil, "bw choice"],
+      "speech"  => "EASY BUDDY, WATCH THE ASSETS!!"
+    },
+    "BeforeItemUse_foe" => {
+      "setSpeaker" => :POKEMONBREEDER,
+      "editWindow" => [nil, "bw choice"],
+      "speech" => "*Wipes sweat off brow* Damn this is intense..."
+    },
+    "BeforeLastSwitchIn_foe" => {
+      "changeBGM" => "Khaotic Good",
+      "setSpeaker" => :POKEMONBREEDER,
+      "editWindow" => [nil, "bw choice"],
+      "speech" => "I wonder how sweaty my pokemon will be after all this is over?",
+    },
+    "BattleEndLoss" => {
+      "setSpeaker" => :POKEMONBREEDER,
+      "editWindow" => [nil, "bw choice"],
+      "speech" => "Thank you Keith, I feel closer to my Pokemon already!"
+    }
+  }
+
 end

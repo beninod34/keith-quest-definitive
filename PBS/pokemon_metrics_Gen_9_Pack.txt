@@ -362,7 +362,7 @@ ShadowSize = 1
 #-------------------------------
 [CERULEDGE]
 BackSprite = 0,54
-FrontSprite = -1,10
+FrontSprite = -1,20
 ShadowX = 0
 ShadowSize = 2
 #-------------------------------
