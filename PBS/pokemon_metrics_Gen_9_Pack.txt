@@ -662,7 +662,7 @@ ShadowSize = 3
 #-------------------------------
 [KINGAMBIT]
 BackSprite = 0,40
-FrontSprite = -3,6
+FrontSprite = -3,20
 ShadowX = 0
 ShadowSize = 2
 #-------------------------------
@@ -686,7 +686,7 @@ ShadowSize = 2
 #-------------------------------
 [FLUTTERMANE]
 BackSprite = 0,31
-FrontSprite = 0,0
+FrontSprite = 6,0
 ShadowX = 0
 ShadowSize = 1
 #-------------------------------
@@ -710,7 +710,7 @@ ShadowSize = 2
 #-------------------------------
 [IRONBUNDLE]
 BackSprite = 0,45
-FrontSprite = 2,22
+FrontSprite = 2,24
 ShadowX = 0
 ShadowSize = 2
 #-------------------------------

@@ -1185,4 +1185,48 @@ module MidbattleScripts
     }
   }
 
+  NUBILEDEITY = {
+    "RoundStartCommand_1_foe" => {
+      "setSpeaker" => :NUBILEDEITY,
+      "editWindow" => [nil, "bw choice"],
+      "speech" => "The souls of every Loli watch over me now!\nMagical Girl Sign:\nLoli Vengeance Pretty Cure Fly High Power!!!!"
+    },
+    "BattlerFainted_player" => {
+      "setSpeaker" => :NUBILEDEITY,
+      "editWindow" => [nil, "bw choice"],
+      "speech"  => "Your end is near!!"
+    },
+    "BattlerFainted_foe" => {
+      "setSpeaker" => :NUBILEDEITY,
+      "editWindow" => [nil, "bw choice"],
+      "speech"  => "Kyaaaaaa!!"
+    },
+    "BeforeItemUse_player" => {
+      "setSpeaker" => :NUBILEDEITY,
+      "editWindow" => [nil, "bw choice"],
+      "speech" => "The Gall!"
+    },
+    "BeforeItemUse_foe" => {
+      "setSpeaker" => :NUBILEDEITY,
+      "editWindow" => [nil, "bw choice"],
+      "speech" => "I will not lose hope!!"
+    },
+    "BeforeLastSwitchIn_player" => {
+      "setSpeaker" => :NUBILEDEITY,
+      "editWindow" => [nil, "bw choice"],
+      "speech" => "The horrors are almost over- I'll put an end to you now!!"
+    },
+    "BeforeLastSwitchIn_foe" => {
+      "changeBGM" => "Khaotic Good",
+      "setSpeaker" => :NUBILEDEITY,
+      "editWindow" => [nil, "bw choice"],
+      "speech" => "Putting a little girl into the corner like this, you're a sick, twisted man!!",
+    },
+    "BattleEndLoss" => {
+      "setSpeaker" => :NUBILEDEITY,
+      "editWindow" => [nil, "bw choice"],
+      "speech" => "Finally... True justice for all Lolis..!"
+    }
+  }
+
 end

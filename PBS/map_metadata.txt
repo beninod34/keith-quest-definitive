@@ -162,7 +162,7 @@ MapPosition = 2,15,16
 SnapEdges = true
 #-------------------------------
 [033]	# Inside 1
-Name = Inside 1
+Name = Inside
 MapPosition = 2,15,19
 Flags = HideFollowingPkmn
 BattleBack = indoor3
@@ -221,7 +221,7 @@ MapPosition = 0,11,7
 MapSize = 1,111
 #-------------------------------
 [042]	# Inside 2
-Name = Inside 2
+Name = Inside
 MapPosition = 2,15,19
 Flags = HideFollowingPkmn
 #-------------------------------
@@ -501,7 +501,7 @@ Flags = HideFollowingPkmn
 BattleBack = loliden
 #-------------------------------
 [083]	# Inside 3
-Name = Inside 3
+Name = Inside
 DarkMap = true
 SnapEdges = true
 Flags = HideFollowingPkmn

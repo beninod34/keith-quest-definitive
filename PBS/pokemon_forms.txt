@@ -1778,8 +1778,8 @@ FormName = Mega Diancie
 MegaStone = DIANCITE
 BaseStats = 50,160,110,110,160,110
 BaseExp = 350
-Abilities = MAGICBOUNCE
-HiddenAbilities = MAGICBOUNCE
+Abilities = FILTER
+HiddenAbilities = FILTER
 Height = 1.1
 Weight = 27.8
 #-------------------------------
