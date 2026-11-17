@@ -617,50 +617,50 @@ module MidbattleScripts
 
   LABMONGER = {
     "RoundStartCommand_1_foe" => {
-      "setSpeaker" => :LABMONGER,
+      "setSpeaker" => nil,
       "editWindow" => [nil, "bw choice"],
       "speech" => "Show me a good time, Keith!"
     },
     "BattlerFainted_player" => {
-      "setSpeaker" => :LABMONGER,
+      "setSpeaker" => nil,
       "editWindow" => [nil, "bw choice"],
       "speech"  => "Heeeeeeeeeeee!"
     },
     "BattlerFainted_foe" => {
-      "setSpeaker" => :LABMONGER,
+      "setSpeaker" => nil,
       "editWindow" => [nil, "bw choice"],
       "speech"  => "Sheeeeeeeeesh!"
     },
     "BeforeItemUse_player" => {
-      "setSpeaker" => :LABMONGER,
+      "setSpeaker" => nil,
       "editWindow" => [nil, "bw choice"],
       "speech" => "Heeeeeeeeee! This kid is using an item!"
     },
     "BeforeItemUse_foe" => {
-      "setSpeaker" => :LABMONGER,
+      "setSpeaker" => nil,
       "editWindow" => [nil, "bw choice"],
       "speech" => "Don't mind me..."
     },
     "BeforeLastSwitchIn_player" => {
-      "setSpeaker" => :LABMONGER,
+      "setSpeaker" => nil,
       "editWindow" => [nil, "bw choice"],
       "speech" => "Let's see if he can get himself out of the corner..!"
     },
     "BeforeLastSwitchIn_foe" => {
       "changeBGM" => "Khaotic Good",
-      "setSpeaker" => :LABMONGER,
+      "setSpeaker" => nil,
       "editWindow" => [nil, "bw choice"],
       "speech" => "I'm going full monke, Keith! Let's show him our divine lightning, Zekrom!!!"
     },
     "AfterLastSwitchIn_foe" => {
-      "setSpeaker" => :LABMONGER,
+      "setSpeaker" => nil,
       "editWindow" => [nil, "bw choice"],
       "speech" => "I'm getting pumped. I guess it's time to start schmooving, as well.",
       "text" => "*Benino starts shmooving so fast, that an electric current generates due to the static electricity between his feet and the ground*",
       "changeTerrain_8" => :Electric
     },
     "BattleEndLoss" => {
-      "setSpeaker" => :LABMONGER,
+      "setSpeaker" => nil,
       "editWindow" => [nil, "bw choice"],
       "speech" => "Alright, I won! Looks like we are playing FighterZ next, better hit the lab Keith! Heeeeeeeeeeeeeeeeeeee!"
     }
@@ -747,49 +747,49 @@ module MidbattleScripts
 
   LITESKINLEGEND = {
     "RoundStartCommand_1_foe" => {
-      "setSpeaker" => :LITESKINLEGEND,
+      "setSpeaker" => nil,
       "editWindow" => [nil, "bw choice"],
-      "speech" => "Lets see who's the stronger Keith today!"
+      "speech" => "Let's see who's the stronger Keith today!"
     },
     "BattlerFainted_player" => {
-      "setSpeaker" => :LITESKINLEGEND,
+      "setSpeaker" => nil,
       "editWindow" => [nil, "bw choice"],
       "speech"  => "BOOM Baby!"
     },
     "BattlerFainted_foe" => {
-      "setSpeaker" => :LITESKINLEGEND,
+      "setSpeaker" => nil,
       "editWindow" => [nil, "bw choice"],
       "speech"  => "Dayum!!!!"
     },
     "BeforeItemUse_player" => {
-      "setSpeaker" => :LITESKINLEGEND,
+      "setSpeaker" => nil,
       "editWindow" => [nil, "bw choice"],
       "speech" => "Really, you can do that?"
     },
     "BeforeItemUse_foe" => {
-      "setSpeaker" => :LITESKINLEGEND,
+      "setSpeaker" => nil,
       "editWindow" => [nil, "bw choice"],
       "speech" => "Alright, gotta power up."
     },
     "BeforeLastSwitchIn_player" => {
-      "setSpeaker" => :LITESKINLEGEND,
+      "setSpeaker" => nil,
       "editWindow" => [nil, "bw choice"],
       "speech" => "Hmph. *smirks*"
     },
     "BeforeLastSwitchIn_foe" => {
       "changeBGM" => "Khaotic Good",
-      "setSpeaker" => :LITESKINLEGEND,
+      "setSpeaker" => nil,
       "editWindow" => [nil, "bw choice"],
       "speech" => "*Silent Concentration Mode*",
     },
     "AfterLastSwitchIn_foe" => {
       "text" => "*Brandon leaves the concentration mode for only a second to utter these few, powerful words*",
-      "setSpeaker" => :LITESKINLEGEND,
+      "setSpeaker" => nil,
       "editWindow" => [nil, "bw choice"],
       "speech" => "G i v e   m e   s t r e n g t h",
     },
     "BattleEndLoss" => {
-      "setSpeaker" => :LITESKINLEGEND,
+      "setSpeaker" => nil,
       "editWindow" => [nil, "bw choice"],
       "speech" => "Hmph, guess I won this time, Keith."
     }
@@ -797,43 +797,43 @@ module MidbattleScripts
 
   CROWNLESSKING = {
     "RoundStartCommand_1_foe" => {
-      "setSpeaker" => :CROWNLESSKING,
+      "setSpeaker" => nil,
       "editWindow" => [nil, "bw choice"],
       "speech" => "Let's fight till we wake the dead!!"
     },
     "BattlerFainted_player" => {
-      "setSpeaker" => :CROWNLESSKING,
+      "setSpeaker" => nil,
       "editWindow" => [nil, "bw choice"],
       "speech"  => "Holy shit!!!"
     },
     "BattlerFainted_foe" => {
-      "setSpeaker" => :CROWNLESSKING,
+      "setSpeaker" => nil,
       "editWindow" => [nil, "bw choice"],
       "speech"  => "Fuck!!!"
     },
     "BeforeItemUse_player" => {
-      "setSpeaker" => :CROWNLESSKING,
+      "setSpeaker" => nil,
       "editWindow" => [nil, "bw choice"],
       "speech" => "Lol an item? I guess I'll take it a little easier on you!"
     },
     "BeforeItemUse_foe" => {
-      "setSpeaker" => :CROWNLESSKING,
+      "setSpeaker" => nil,
       "editWindow" => [nil, "bw choice"],
       "speech" => "Damn, looks like I gotta cheat a little bit..."
     },
     "BeforeLastSwitchIn_player" => {
-      "setSpeaker" => :CROWNLESSKING,
+      "setSpeaker" => nil,
       "editWindow" => [nil, "bw choice"],
       "speech" => "Let's see if he can get himself out of the corner..!"
     },
     "BeforeLastSwitchIn_foe" => {
       "changeBGM" => "Khaotic Good",
-      "setSpeaker" => :CROWNLESSKING,
+      "setSpeaker" => nil,
       "editWindow" => [nil, "bw choice"],
       "speech" => "Alright Keith, I'll hold nothing back from this point on! Part the clouds with Hellfire, Reshiram!!!"
     },
     "BattleEndLoss" => {
-      "setSpeaker" => :CROWNLESSKING,
+      "setSpeaker" => nil,
       "editWindow" => [nil, "bw choice"],
       "speech" => "Ah, guess I overdid it a bit..."
     }
@@ -841,43 +841,43 @@ module MidbattleScripts
 
   PRIMORDIALEMPEROR = {
     "RoundStartCommand_1_foe" => {
-      "setSpeaker" => :PRIMORDIALEMPEROR,
+      "setSpeaker" => nil,
       "editWindow" => [nil, "bw choice"],
       "speech" => "Don't disappoint me, Keith..."
     },
     "BattlerFainted_player" => {
-      "setSpeaker" => :PRIMORDIALEMPEROR,
+      "setSpeaker" => nil,
       "editWindow" => [nil, "bw choice"],
       "speech"  => "..."
     },
     "BattlerFainted_foe" => {
-      "setSpeaker" => :PRIMORDIALEMPEROR,
+      "setSpeaker" => nil,
       "editWindow" => [nil, "bw choice"],
       "speech"  => "Impressive, Keith! Very impressive!"
     },
     "BeforeItemUse_player" => {
-      "setSpeaker" => :PRIMORDIALEMPEROR,
+      "setSpeaker" => nil,
       "editWindow" => [nil, "bw choice"],
       "speech" => "Even at this level, am I too strong for you to handle?"
     },
     "BeforeItemUse_foe" => {
-      "setSpeaker" => :PRIMORDIALEMPEROR,
+      "setSpeaker" => nil,
       "editWindow" => [nil, "bw choice"],
       "speech" => "Excellent work so far, Keith."
     },
     "BeforeLastSwitchIn_player" => {
-      "setSpeaker" => :PRIMORDIALEMPEROR,
+      "setSpeaker" => nil,
       "editWindow" => [nil, "bw choice"],
       "speech" => "Are you going to give up after coming so far?"
     },
     "BeforeLastSwitchIn_foe" => {
       "changeBGM" => "Khaotic Good",
-      "setSpeaker" => :PRIMORDIALEMPEROR,
+      "setSpeaker" => nil,
       "editWindow" => [nil, "bw choice"],
       "speech" => "The moment is near Keith, let's see if you can finish what you've started!"
     },
     "BattleEndLoss" => {
-      "setSpeaker" => :PRIMORDIALEMPEROR,
+      "setSpeaker" => nil,
       "editWindow" => [nil, "bw choice"],
       "speech" => "And you got my hopes up too, oh well... Guess I'll go back to searching for bikini babes..."
     }
@@ -885,17 +885,17 @@ module MidbattleScripts
 
   GRANDMASTER = {
     "RoundStartCommand_1_foe" => {
-      "setSpeaker" => :GRANDMASTER,
+      "setSpeaker" => nil,
       "editWindow" => ["Barry", "bw choice"],
       "speech" => "Ho ho ho... such delightful creatures!"
     },
     "BattlerFainted_player" => {
-      "setSpeaker" => :GRANDMASTER,
+      "setSpeaker" => nil,
       "editWindow" => ["Barry", "bw choice"],
       "speech"  => "So that's how it works..."
     },
     "BattlerFainted_foe" => {
-      "setSpeaker" => :GRANDMASTER,
+      "setSpeaker" => nil,
       "editWindow" => ["Barry", "bw choice"],
       "speech"  => "I could feel that from back here!"
     },
@@ -908,12 +908,12 @@ module MidbattleScripts
       "speech_A"  => "Barry: No, Yuna, that's completely legal."
     },
     "BeforeItemUse_foe" => {
-      "setSpeaker" => :GRANDMASTER,
+      "setSpeaker" => nil,
       "editWindow" => ["Barry", "bw choice"],
       "speech" => "Forgive me, my finger slipped!"
     },
     "BeforeLastSwitchIn_player" => {
-      "setSpeaker" => :GRANDMASTER,
+      "setSpeaker" => nil,
       "editWindow" => ["Barry", "bw choice"],
       "speech" => "Barry: Are you okay, child? You seem tense!"
     },
@@ -927,47 +927,47 @@ module MidbattleScripts
       "speech_B" => "Yuna: *BIDIBIDIBIDI!!!*"
     },
     "BattleEndLoss" => {
-      "setSpeaker" => :GRANDMASTER,
+      "setSpeaker" => nil,
       "editWindow" => ["Barry", "bw choice"],
       "speech" => "Come back next time, I'm sure you'll win."
     }
   }
 
-    SILKYSAINT = {
+  SILKYSAINT = {
     "RoundStartCommand_1_foe" => {
-      "setSpeaker" => :SILKYSAINT,
+      "setSpeaker" => nil,
       "editWindow" => [nil, "bw choice"],
       "speech" => "*Tightens Durag* Durag, give me hope!"
     },
     "BattlerFainted_player" => {
-      "setSpeaker" => :SILKYSAINT,
+      "setSpeaker" => nil,
       "editWindow" => [nil, "bw choice"],
       "speech"  => "BOOM! How does my cooking taste!?"
     },
     "BattlerFainted_foe" => {
-      "setSpeaker" => :SILKYSAINT,
+      "setSpeaker" => nil,
       "editWindow" => [nil, "bw choice"],
       "speech"  => "IT DOESN'T MATTER HOW MANY TIMES I GET HIT! I'LL KEEP GETTING UP AGAIN AND AGAIN!!"
     },
     "BeforeItemUse_player" => {
-      "setSpeaker" => :SILKYSAINT,
+      "setSpeaker" => nil,
       "editWindow" => [nil, "bw choice"],
       "speech" => "!\n!?\nAre you serious right now Keith?\nAre you actually for real?\nDid I just see-\nDid you just use an item!?\nAN ITEM!?!?!"
     },
     "BeforeLastSwitchIn_player" => {
-      "setSpeaker" => :SILKYSAINT,
+      "setSpeaker" => nil,
       "editWindow" => [nil, "bw choice"],
       "speech" => "THIS IS WHAT TESTS YOUR TRUE POWER, KEITH!\nARE YOUR EMBERS FADING?\nOR DO YOU STILL HAVE AN INFERNO INSIDE YOU?!"
     },
     "BeforeLastSwitchIn_foe" => {
       "changeBGM" => "Khaotic Good",
-      "setSpeaker" => :SILKYSAINT,
+      "setSpeaker" => nil,
       "editWindow" => [nil, "bw choice"],
       "speech" => "THE BATTLE HAS ONLY JUST BEGUN KEITH!\nMY FLAME IS ROARING!!\nME AND LUDICOLO ARE FILLED WITH NOTHING BUT DETERMINATION!!!!!!",
       "changeWeather_8" => :Rain
     },
     "BattleEndLoss" => {
-      "setSpeaker" => :SILKYSAINT,
+      "setSpeaker" => nil,
       "editWindow" => [nil, "bw choice"],
       "speech" => "BOOM! Told ya you can't hang with me!"
     }
@@ -975,33 +975,33 @@ module MidbattleScripts
 
   CRAZWONK = {
     "BattlerFainted_player" => {
-      "setSpeaker" => :CRAZWONK,
+      "setSpeaker" => nil,
       "editWindow" => [nil, "bw choice"],
       "speech"  => "GO TO BED LITTLE FUCK!"
     },
     "BattlerFainted_foe" => {
-      "setSpeaker" => :CRAZWONK,
+      "setSpeaker" => nil,
       "editWindow" => [nil, "bw choice"],
       "speech"  => "YOU'RE BEING A DICKASS!"
     },
     "BeforeItemUse_player" => {
-      "setSpeaker" => :CRAZWONK,
+      "setSpeaker" => nil,
       "editWindow" => [nil, "bw choice"],
       "speech" => "This NPC is doing an illegal U-Turn."
     },
     "BeforeItemUse_foe" => {
-      "setSpeaker" => :CRAZWONK,
+      "setSpeaker" => nil,
       "editWindow" => [nil, "bw choice"],
       "speech" => "KILL ALL DEFAULTS!"
     },
     "BeforeLastSwitchIn_foe" => {
       "changeBGM" => "Khaotic Good",
-      "setSpeaker" => :CRAZWONK,
+      "setSpeaker" => nil,
       "editWindow" => [nil, "bw choice"],
       "speech" => "CAN YOU NOT SHOOT ME!! IT'S SUPPOSED TO BE THE OPPOSITE! I'M BLACK!!",
     },
     "BattleEndLoss" => {
-      "setSpeaker" => :CRAZWONK,
+      "setSpeaker" => nil,
       "editWindow" => [nil, "bw choice"],
       "speech" => "Did you deep fry your cock!?!"
     }
@@ -1009,33 +1009,33 @@ module MidbattleScripts
 
   OLMAN = {
     "BattlerFainted_player" => {
-      "setSpeaker" => :OLMAN,
+      "setSpeaker" => nil,
       "editWindow" => [nil, "bw choice"],
       "speech"  => "Life just ain't swell I guess."
     },
     "BattlerFainted_foe" => {
-      "setSpeaker" => :OLMAN,
+      "setSpeaker" => nil,
       "editWindow" => [nil, "bw choice"],
       "speech"  => "Perfect."
     },
     "BeforeItemUse_player" => {
-      "setSpeaker" => :OLMAN,
+      "setSpeaker" => nil,
       "editWindow" => [nil, "bw choice"],
       "speech" => "Man, you're twisting my tip with that one."
     },
     "BeforeItemUse_foe" => {
-      "setSpeaker" => :OLMAN,
+      "setSpeaker" => nil,
       "editWindow" => [nil, "bw choice"],
       "speech" => "Reel em in, Reel em in."
     },
     "BeforeLastSwitchIn_foe" => {
       "changeBGM" => "Khaotic Good",
-      "setSpeaker" => :OLMAN,
+      "setSpeaker" => nil,
       "editWindow" => [nil, "bw choice"],
       "speech" => "Let's get this show on the road.",
     },
     "BattleEndLoss" => {
-      "setSpeaker" => :OLMAN,
+      "setSpeaker" => nil,
       "editWindow" => [nil, "bw choice"],
       "speech" => "I'm the God dang champ man."
     }
@@ -1043,7 +1043,7 @@ module MidbattleScripts
 
   CALAMITOUSCOUSINS = {
     "BattleEndLoss" => {
-      "setSpeaker" => :CALAMITOUSCOUSINS,
+      "setSpeaker" => nil,
       "editWindow" => [nil, "bw choice"],
       "speech" => "Jack: Skill issue tbh.\nPatrick: *Welding noises*"
     }
@@ -1051,33 +1051,33 @@ module MidbattleScripts
 
   ORGXIIIMEMBER = {
     "RoundStartCommand_1_foe" => {
-      "setSpeaker" => :ORGXIIIMEMBER,
+      "setSpeaker" => nil,
       "editWindow" => [nil, "bw choice"],
       "speech" => "I'm hyped!!"
     },
     "BattlerFainted_player" => {
-      "setSpeaker" => :ORGXIIIMEMBER,
+      "setSpeaker" => nil,
       "editWindow" => [nil, "bw choice"],
       "speech"  => "Ah, my bad Keith, are you ok?"
     },
     "BattlerFainted_foe" => {
-      "setSpeaker" => :ORGXIIIMEMBER,
+      "setSpeaker" => nil,
       "editWindow" => [nil, "bw choice"],
       "speech"  => "Nice attack, Keith!"
     },
     "BeforeItemUse_foe" => {
-      "setSpeaker" => :ORGXIIIMEMBER,
+      "setSpeaker" => nil,
       "editWindow" => [nil, "bw choice"],
       "speech" => "Man, you got me on the ropes!"
     },
     "BeforeLastSwitchIn_foe" => {
       "changeBGM" => "Khaotic Good",
-      "setSpeaker" => :ORGXIIIMEMBER,
+      "setSpeaker" => nil,
       "editWindow" => [nil, "bw choice"],
       "speech" => "Got it memorized?",
     },
     "BattleEndLoss" => {
-      "setSpeaker" => :ORGXIIIMEMBER,
+      "setSpeaker" => nil,
       "editWindow" => [nil, "bw choice"],
       "speech" => "I'M SO SORRY ARE YOU OK!?"
     }
@@ -1085,33 +1085,33 @@ module MidbattleScripts
 
   FALSEPAPA = {
     "BattlerFainted_player" => {
-      "setSpeaker" => :FALSEPAPA,
+      "setSpeaker" => nil,
       "editWindow" => [nil, "bw choice"],
       "speech"  => "I'll save that one for later."
     },
     "BattlerFainted_foe" => {
-      "setSpeaker" => :FALSEPAPA,
+      "setSpeaker" => nil,
       "editWindow" => [nil, "bw choice"],
       "speech"  => "Damn brat!!<icon=ANGER>"
     },
     "BeforeItemUse_player" => {
-      "setSpeaker" => :FALSEPAPA,
+      "setSpeaker" => nil,
       "editWindow" => [nil, "bw choice"],
       "speech" => "The smugness after using that<icon=ANGER>"
     },
     "BeforeItemUse_foe" => {
-      "setSpeaker" => :FALSEPAPA,
+      "setSpeaker" => nil,
       "editWindow" => [nil, "bw choice"],
       "speech" => "You didn't see that..."
     },
     "BeforeLastSwitchIn_foe" => {
       "changeBGM" => "Khaotic Good",
-      "setSpeaker" => :FALSEPAPA,
+      "setSpeaker" => nil,
       "editWindow" => [nil, "bw choice"],
       "speech" => "I'm gonna show you what happens when you mess with an adult<icon=ANGER><icon=ANGER>!!!",
     },
     "BattleEndLoss" => {
-      "setSpeaker" => :FALSEPAPA,
+      "setSpeaker" => nil,
       "editWindow" => [nil, "bw choice"],
       "speech" => "Don't worry! Ill take gooooood care of your team!!!!! *wild grin*"
     }
@@ -1119,33 +1119,33 @@ module MidbattleScripts
 
   COACH = {
     "BattlerFainted_player" => {
-      "setSpeaker" => :COACH,
+      "setSpeaker" => nil,
       "editWindow" => [nil, "bw choice"],
       "speech"  => "Aaand boom goes the dynamite."
     },
     "BattlerFainted_foe" => {
-      "setSpeaker" => :COACH,
+      "setSpeaker" => nil,
       "editWindow" => [nil, "bw choice"],
       "speech"  => "Relax. Everybody gets one buddy."
     },
     "BeforeItemUse_player" => {
-      "setSpeaker" => :COACH,
+      "setSpeaker" => nil,
       "editWindow" => [nil, "bw choice"],
       "speech" => "Trying to cheese me I see."
     },
     "BeforeItemUse_foe" => {
-      "setSpeaker" => :COACH,
+      "setSpeaker" => nil,
       "editWindow" => [nil, "bw choice"],
       "speech" => "Didn't want to have to use this, heal up buddy."
     },
     "BeforeLastSwitchIn_foe" => {
       "changeBGM" => "Khaotic Good",
-      "setSpeaker" => :COACH,
+      "setSpeaker" => nil,
       "editWindow" => [nil, "bw choice"],
       "speech" => "I'M CRASHING OUT! URSHIFU!! WAVE CHECK!!!",
     },
     "BattleEndLoss" => {
-      "setSpeaker" => :COACH,
+      "setSpeaker" => nil,
       "editWindow" => [nil, "bw choice"],
       "speech" => "This a Rollie, not a stopwatch, shit don't ever stop!"
     }
@@ -1153,33 +1153,33 @@ module MidbattleScripts
 
   POKEMONBREEDER = {
     "RoundStartCommand_1_foe" => {
-      "setSpeaker" => :POKEMONBREEDER,
+      "setSpeaker" => nil,
       "editWindow" => [nil, "bw choice"],
       "speech" => "I'M ALREADY GETTING EXCITED!!!!"
     },
     "BattlerFainted_player" => {
-      "setSpeaker" => :POKEMONBREEDER,
+      "setSpeaker" => nil,
       "editWindow" => [nil, "bw choice"],
       "speech"  => "Man that was hot..."
     },
     "BattlerFainted_foe" => {
-      "setSpeaker" => :POKEMONBREEDER,
+      "setSpeaker" => nil,
       "editWindow" => [nil, "bw choice"],
       "speech"  => "EASY BUDDY, WATCH THE ASSETS!!"
     },
     "BeforeItemUse_foe" => {
-      "setSpeaker" => :POKEMONBREEDER,
+      "setSpeaker" => nil,
       "editWindow" => [nil, "bw choice"],
       "speech" => "*Wipes sweat off brow* Damn this is intense..."
     },
     "BeforeLastSwitchIn_foe" => {
       "changeBGM" => "Khaotic Good",
-      "setSpeaker" => :POKEMONBREEDER,
+      "setSpeaker" => nil,
       "editWindow" => [nil, "bw choice"],
       "speech" => "I wonder how sweaty my pokemon will be after all this is over?",
     },
     "BattleEndLoss" => {
-      "setSpeaker" => :POKEMONBREEDER,
+      "setSpeaker" => nil,
       "editWindow" => [nil, "bw choice"],
       "speech" => "Thank you Keith, I feel closer to my Pokemon already!"
     }
@@ -1187,45 +1187,235 @@ module MidbattleScripts
 
   NUBILEDEITY = {
     "RoundStartCommand_1_foe" => {
-      "setSpeaker" => :NUBILEDEITY,
+      "setSpeaker" => nil,
       "editWindow" => [nil, "bw choice"],
       "speech" => "The souls of every Loli watch over me now!\nMagical Girl Sign:\nLoli Vengeance Pretty Cure Fly High Power!!!!"
     },
     "BattlerFainted_player" => {
-      "setSpeaker" => :NUBILEDEITY,
+      "setSpeaker" => nil,
       "editWindow" => [nil, "bw choice"],
       "speech"  => "Your end is near!!"
     },
     "BattlerFainted_foe" => {
-      "setSpeaker" => :NUBILEDEITY,
+      "setSpeaker" => nil,
       "editWindow" => [nil, "bw choice"],
       "speech"  => "Kyaaaaaa!!"
     },
     "BeforeItemUse_player" => {
-      "setSpeaker" => :NUBILEDEITY,
+      "setSpeaker" => nil,
       "editWindow" => [nil, "bw choice"],
       "speech" => "The Gall!"
     },
     "BeforeItemUse_foe" => {
-      "setSpeaker" => :NUBILEDEITY,
+      "setSpeaker" => nil,
       "editWindow" => [nil, "bw choice"],
       "speech" => "I will not lose hope!!"
     },
     "BeforeLastSwitchIn_player" => {
-      "setSpeaker" => :NUBILEDEITY,
+      "setSpeaker" => nil,
       "editWindow" => [nil, "bw choice"],
       "speech" => "The horrors are almost over- I'll put an end to you now!!"
     },
     "BeforeLastSwitchIn_foe" => {
       "changeBGM" => "Khaotic Good",
-      "setSpeaker" => :NUBILEDEITY,
+      "setSpeaker" => nil,
       "editWindow" => [nil, "bw choice"],
       "speech" => "Putting a little girl into the corner like this, you're a sick, twisted man!!",
     },
     "BattleEndLoss" => {
-      "setSpeaker" => :NUBILEDEITY,
+      "setSpeaker" => nil,
       "editWindow" => [nil, "bw choice"],
       "speech" => "Finally... True justice for all Lolis..!"
+    }
+  }
+
+  CHILDGOBBLER = {
+    "RoundStartCommand_1_foe" => {
+      "setSpeaker" => :CHILDGOBBLER,
+      "editWindow" => ["Shadow Keith", "bw choice"],
+      "speech" => "COME CLONE, LET US BE WHOLE AGAIN..!"
+    },
+    "BattlerFainted_player" => {
+      "setSpeaker" => :CHILDGOBBLER,
+      "editWindow" => ["Shadow Keith", "bw choice"],
+      "speech"  => "LAMENT YOUR WEAKNESS."
+    },
+    "BattlerFainted_foe" => {
+      "setSpeaker" => :CHILDGOBBLER,
+      "editWindow" => ["Shadow Keith", "bw choice"],
+      "speech"  => "HMPH, A MERE STROKE OF LUCK..."
+    },
+    "BeforeItemUse_player" => {
+      "setSpeaker" => :CHILDGOBBLER,
+      "editWindow" => ["Shadow Keith", "bw choice"],
+      "speech" => "WHAT'S WRONG? JUST GIVE UP ALREADY."
+    },
+    "BeforeItemUse_foe" => {
+      "setSpeaker" => :CHILDGOBBLER,
+      "editWindow" => ["Shadow Keith", "bw choice"],
+      "speech" => "YOUR FAILURE WILL BE GUARANTEED"
+    },
+    "BeforeLastSwitchIn_player" => {
+      "setSpeaker" => :CHILDGOBBLER,
+      "editWindow" => ["Shadow Keith", "bw choice"],
+      "speech" => "CEASE THIS FOOLISHNESS AND SURRENDER.\nYOU NEVER HAD A CHANCE TO BEGIN WITH."
+    },
+    "BeforeLastSwitchIn_foe" => {
+      "changeBGM" => "Khaotic Good",
+      "setSpeaker" => :CHILDGOBBLER,
+      "editWindow" => ["Shadow Keith", "bw choice"],
+      "speech" => "YOU THINK YOU'VE CORNERED ME?\nHA!",
+    },
+    "BattleEndLoss" => {
+      "setSpeaker" => :CHILDGOBBLER,
+      "editWindow" => ["Shadow Keith", "bw choice"],
+      "speech" => "HAHAHAHAHAHAHAHAHAHAHAHAHAAAAAAAA!!!!"
+    }
+  }
+
+  FINALBATTLE = {
+    "RoundStartCommand_1_foe" => {
+      "setSpeaker_A" => :FINALBATTLE,
+      "editWindow_A" => ["Shadow Keith", "bw choice"],
+      "speech_A"     => "ALL JOKES ASIDE, YOU DIE NOW.",
+      "textWindow_A"    => "bw choice",
+      "text_A"       => "Shadow Keith powers up his Haxorus!",
+      "auraFlare"  => :Red,
+      "battlerStatsSilent" => [:DEFENSE, 6],
+      "setSpeaker_B" => :FINALBATTLE,
+      "editWindow_B" => ["Shadow Keith", "bw choice"],
+      "speech_B"     => "I WILL END YOUR PITIFUL LIFE WITH THE SAME POKEMON THAT'S FOLLOWED YOU SINCE THE START!!",
+      "text_B"       => [
+        "Las: DON'T LISTEN TO HIM KEITH!!\nHIS HAXORUS MAY BE ON SHADOW STEROIDS-\nBUT... BUT IT'S MISSING ONE CRUCIAL THING--\nHOPE, FRIENDSHIP, BONDS, FRIENDSHIP, COMPASSION, FRIENDSHIP!!!",
+        "Brandon: Kid, you said friendship like 3 times there...",
+        "Alex: I'm detecting his power is reaching an apex..!",
+        "Luke: You'll have to react accordingly, Keith!",
+        "Benino: Just <u><b>ENDURE</b></u> for a little longer, Keith! I've got a plan!",
+        "Z: We've got your back, Keith!!",
+        "Luke: When did you get here, Z?"
+      ],
+      "textWindow_B"    => :Default
+    },
+    "RoundEnd_1_foe" => {
+      "setSpeaker_A" => :FINALBATTLE,
+      "editWindow_A" => ["Shadow Keith", "bw choice"],
+      "speech_A"   => "JUST GIVE UP ALREADY. \nYOU WILL NOT BE ABLE TO SURVIVE THIS NEXT ATTACK.",
+      "textWindow_A"    => "bw choice",
+      "text_A"     => [
+        "Z: Well, somebody's full of himself...",
+        "Brandon: Keith, heal up and keep fighting!"
+      ],
+      "setSpeaker_B" => :FINALBATTLE,
+      "editWindow_B" => ["Shadow Keith", "bw choice"],
+      "speech_B"   => "YOU ALL UNDERSTAND WHAT YOU'RE DOING IS IDIOTIC, RIGHT? \nHEAL ALL YOU WANT! \nIT WON'T MATTER HOW MUCH YOU BRACE YOURSELF FROM NOW ON. \nI WILL NOW REND YOUR SOUL FROM YOUR BODY, CLONE! \nAND DO NOT FRET, DEAR FRIENDS; \nSOON YOU WILL ALL FOLLOW HIM INTO THE AFTERLIFE-- \nYOU CAN CONTINUE YOUR LITTLE GAMES OF PRETEND THERE!",
+      "text_B"     => [
+        "Luke: If helping our bro is idiotic, then I guess we are all dumbasses.",
+        "Z: Well, speak for yoursel-",
+        "Luke: And you're the guy that's about to lose to a crew of dumbasses? What's that make you?",
+        "Benino: A mega moron?",
+        "Brandon: A total soyboy!",
+        "Luke: A Super Retar-!",
+        "Las: THE ONLY ONE HEADED TO THE AFTERLIFE IS YOU!\nUSE YOUR POWERS OF MAKE-BELIEVE TO PRETEND YOU WON!"
+      ],
+      "textWindow_B"    => :Default
+    },
+    "RoundEnd_2_foe" => {
+      "setSpeaker" => :FINALBATTLE,
+      "editWindow" => ["Shadow Keith", "bw choice"],
+      "speech"          => "YOU REALLY ARE A PITIFUL LOT... \nYOUR END IS HERE! \nFULL POWER MEGA EVIL BLACKHOLE SUPER BUSTER x1000 PRIMED! \nFIRING IN 3... 2... 1... \nSAY GOODBYE!",
+      "battlerAura_A"   => false,
+      "cutsceneFade_A"  => :Out,
+      "endBGM"          => 1.0,
+      "wait_A"          => 1.5,
+      "textWindow_A"    => "bw choice",
+      "text_A"          => ["<i>I guess this is it for me...", "<i>So much for a happy birthday...huh?"],
+      "wait_B"          => 1.0,
+      "text_B"          => ["???:....ei.....k..", "???: ...it...  ...ke...t...!"],
+      "wait_C"          => 1.5,
+      "changeBGM"       => "Last Obstacle",
+      "shoutText_A"     => ["Benino: Keith!! Don't falter! We've got him right where we want him!!!",
+                            "Luke: Loli God, do the thing!!!"],
+      "playSE"          => "Charging Beam",
+      "shoutText_B"     => ["Loli God: Twinkle Twinkle Miracle Cure Trillion Birthday Galaxy Cannon X1001!!!!",
+                            "Las: Everyone, lend Keith your energy while she distracts him!"],
+      "text_C"          => "*The loudest rendition of Happy Birthday echoes throughout the void*",
+      "stopSE"          => "Charging Beam",
+      "characterSlide_A" => ["Friend_Luke", :Left],
+      "text_D"           => "Luke: \"HAPPY\"",
+      "characterSlide_B" => ["Friend_Brandon", :Right],
+      "text_E"           => "Brandon: \"BIRTH-\"",
+      "characterSlide_C" => ["Friend_Barry", :Left],
+      "text_F"           => "Barry: \"DAY\"",
+      "characterSlide_D" => ["Friend_Alex", :Right],
+      "text_G"           => "Alex: \"TO\"",
+      "characterSlide_E" => ["Friend_Lascelles", :Left],
+      "text_H"           => "LAS: \"YOUUUUUUUUU!!\"",
+      "characterSlide_F" => ["Friend_Benino", :Right],
+      "text_I"           => "Benino: Go get em', champ!",
+      "wait_D"           => 0.5,
+      "cutsceneFade_B"   => :In,
+      "textWindow_B"    => :Default,
+      "battlerAura_B"    => :Red
+    },
+    "RoundStartCommand_3_foe" => {
+      "setSpeaker" => :FINALBATTLE,
+      "editWindow" => ["Shadow Keith", "bw choice"],
+      "speech"   => "SHHHHUUUUUUUTTTTTTTTTTTT UUUUUUUUUUUPPPPPPPPPPPP!!!!!!!!!!!!\nDIE DIE DIE DIE DIE DIE DIE DIE DIE DIE DIE!!!!!!!!\nFUUUUUUUUUUUUUUUUUUUUUUUUU!!!!!!!!",
+      "textWindow_A"    => "bw choice",
+      "text"     => [
+        "Brandon: Huh, guess he lost his composure after all.",
+        "Alex: His energy is spiraling out of control...",
+        "Benino: Victory is close, Keith!",
+        "Z: Keith, keep holding on until then!! <u><b>ENDURE!!</b></u>"
+      ],
+      "textWindow_B"  => :Default
+    },
+    "RoundEnd_3_foe" => {
+      "setSpeaker" => :FINALBATTLE,
+      "editWindow" => ["Shadow Keith", "bw choice"],
+      "speech"   => "UUUUUUUURRRRAAAAAAHHHHH!!!!!\nIT'S FINALLY TIME FOR YOUR WORTHLESS LIFE TO MEAN SOMETHING. TO BE APART OF ME WILL GIVE YOUR EXISTENCE PURPOSE. HAHAHAHA!",
+      "textWindow_A"    => "bw choice",
+      "text_A"     => [
+        "Las: That's so cap, bruh. The only one here with no purpose is you.",
+        "Brandon: For real, this guy is delusional.",
+        "Luke: Shut this cracker up, Keith!!",
+        "Benino: Hit him with the schmix!!!!!!"
+      ],
+      "setBattler"         => :Opposing,      # everything below targets the player's Pokémon
+      "auraFlare"          => :Blue,
+      "battlerStatsSilent" => [:SPEED, 6],
+      "text_B"             => "Your Haxorus responded to your energy and powered up!",
+      "textWindow_B"    => :Default
+    },
+    "RoundStartCommand_4_foe" => {
+      "setSpeaker_A" => :FINALBATTLE,
+      "editWindow_A" => ["Shadow Keith", "bw choice"],
+      "speech_A" => "IT'S USELESS! YOU WILL NEVER PREVAIL!!",
+      "textWindow_A"    => "bw choice",
+      "text_A"   => "Brandon: *Does the Drake dance*",
+      "setSpeaker_B" => :FINALBATTLE,
+      "editWindow_B" => ["Shadow Keith", "bw choice"],
+      "speech_B" => "W H A T.",
+      "text_B"   => ["Luke: Quick Keith, while he's distracted!!",
+                    "Benino: Now's the time! Unleash all the energy we've gathered!!!",
+                    "Las: NOTHING CAN STAND IN THE WAY OF THE POWER OF OUR FRIENDSHIP!!!!!!!!!!!!!!!!!!!!!!!!!!!!!",
+                    "*The Friendship Supernova is fully charged!*"
+      ],
+      "textWindow_B"    => :Default,          
+      "runCode"  => proc { |battle, idxBattler, idxTarget|
+        battler = battle.battlers[0]   # player's Pokémon
+        move = Pokemon::Move.new(:FRIENDSHIPSUPERNOVA)
+        battler.moves[0] = Battle::Move.from_pokemon_move(battle, move)
+        battler.pokemon.moves[0] = move
+      }
+    },
+    "BeforeMoveAnim_FRIENDSHIPSUPERNOVA_player" => {
+      "flashImage" => ["Haxorus_Shock", 0.75, "Boom", 160]
+    },
+    "BattleEndLoss" => {
+      "setSpeaker" => :FINALBATTLE,
+      "editWindow" => ["Shadow Keith", "bw choice"],
+      "speech" => "HAHAHAHAHAHAHAHAHAHAHAHAHAAAAAAAA!!!!"
     }
   }
 

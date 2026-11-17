@@ -131,7 +131,13 @@ def pbCheckForItem(item)
   pbCheckForBadge(item[:item_needed_badge]) && pbCheckForSwitch(item[:item_needed_switches])
 end
 
+def pbItemDisabledBySwitch?(item)
+  switch_id = item[:item_disable_switch]
+  return switch_id && switch_id > 0 && $game_switches[switch_id]
+end
+
 def pbCanUseItem(item)
+  return false if pbItemDisabledBySwitch?(item)
   return true if item[:allow_item_debug] && $DEBUG
   $bag.has?(item[:internal_name]) && pbCheckForBadge(item[:item_needed_badge]) && pbCheckForSwitch(item[:item_needed_switches])
 end
@@ -1228,7 +1234,7 @@ end
 #===============================================================================
 def pbFlyToNewLocation(user = nil, element = nil)
   return false if $game_temp.fly_destination.nil?
-  if !$DEBUG && !pkmn
+  if !$DEBUG && !user
     $game_temp.fly_destination = nil
     yield if block_given?
     return false
@@ -1249,7 +1255,7 @@ def pbFlyToNewLocation(user = nil, element = nil)
   end
   $stats.fly_count += 1
   pbFadeOutIn do
-    pbSEPlay("Fly")
+    pbSEPlay(user == $player ? "Sudden Appearance" : "Fly")
     $game_temp.player_new_map_id    = $game_temp.fly_destination[0]
     $game_temp.player_new_x         = $game_temp.fly_destination[1]
     $game_temp.player_new_y         = $game_temp.fly_destination[2]

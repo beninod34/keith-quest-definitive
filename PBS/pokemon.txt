@@ -23695,3 +23695,24 @@ Category = King
 Pokedex = Calyrex is a merciful Pokémon, capable of providing healing and blessings. It reigned over the Galar region in times of yore.
 Generation = 8
 Flags = Legendary
+#-------------------------------
+[DAD]
+Name = Dad
+Types = NORMAL,FIGHTING
+BaseStats = 120,150,110,60,110,130
+GenderRatio = AlwaysMale
+GrowthRate = Slow
+BaseExp = 306
+EVs = ATTACK,3
+CatchRate = 3
+Happiness = 0
+Abilities = PUREPOWER
+EggGroups = Undiscovered
+HatchSteps = 30720
+Height = 1.8
+Weight = 145.0
+Color = White
+Shape = Bipedal
+Category = Chad
+Pokedex = The best dad a son could wish for.
+Generation = 0

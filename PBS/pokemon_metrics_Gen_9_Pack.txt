@@ -62,7 +62,7 @@ ShadowSize = 3
 #-------------------------------
 [SAMUROTT,1]
 BackSprite = -6,45
-FrontSprite = 2,13
+FrontSprite = 2,11
 ShadowX = 0
 ShadowSize = 3
 #-------------------------------
@@ -452,7 +452,7 @@ ShadowSize = 1
 #-------------------------------
 [SCOVILLAIN]
 BackSprite = 0,51
-FrontSprite = -7,18
+FrontSprite = -7,7
 ShadowX = 0
 ShadowSize = 2
 #-------------------------------
@@ -698,7 +698,7 @@ ShadowSize = 2
 #-------------------------------
 [SANDYSHOCKS]
 BackSprite = 0,46
-FrontSprite = -3,10
+FrontSprite = -3,16
 ShadowX = 0
 ShadowSize = 2
 #-------------------------------
@@ -957,5 +957,24 @@ ShadowSize = 3
 [PECHARUNT]
 BackSprite = 0,50
 FrontSprite = 0,7
+ShadowX = 0
+ShadowSize = 2
+#-------------------------------
+[STARMIE,1]
+BackSprite = 0,0
+FrontSprite = 0,16
+ShadowX = 0
+ShadowSize = 2
+#-------------------------------
+[STARAPTOR,1]
+BackSprite = 0,0
+FrontSprite = 0,14
+ShadowX = 0
+ShadowY = 50
+ShadowSize = 2
+#-------------------------------
+[EXCADRILL,1]
+BackSprite = 0,0
+FrontSprite = -3,10
 ShadowX = 0
 ShadowSize = 2

@@ -165,28 +165,43 @@ class Game_FollowingPkmn < Game_Follower
         else        dirs = [bg_dir]
         end
         
-        dirs.each do |dir|
+        dirs.each_with_index do |dir, i|
           t = $map_factory.getFacingTile(dir, leader)
           next if !t
-          
+
           # Check passability
           map = $map_factory.getMap(t[0])
           next if !map || !map.valid?(t[1], t[2])
-          
+
+          # Only consider side tiles that are one step from the follower,
+          # otherwise fancy_moveto can't walk there and teleports instead
+          if i > 0
+            next if t[0] != self.map.map_id
+            next if (t[1] - self.x).abs + (t[2] - self.y).abs > 1
+          end
+
           # Check for blocking events (excluding through events)
           blocked_by_event = map.events.values.any? do |e|
             !e.through && e.at_coordinate?(t[1], t[2]) && e != self && e != leader
           end
           next if blocked_by_event
-          
-          # Check passability using the follower itself (self)
-          if map.passable?(t[1], t[2], 0, self)
+
+          # Check passability using bridge-aware logic (Game_Map#passable?
+          # ignores $PokemonGlobal.bridge for non-player events)
+          passable = if t[0] == self.map.map_id
+                       location_passable?(t[1], t[2], 10 - dir)
+                     else
+                       map.passable?(t[1], t[2], 0, self)
+                     end
+          if passable
             target = t
             break
           end
         end
 
-        # If no target found by strict passability, allow falling back to player position (below)
+        # If nothing passed, fall back to the tile directly behind the leader
+        # (base Essentials behaviour) instead of jumping onto the leader's tile
+        target ||= $map_factory.getFacingTile(bg_dir, leader)
 
         
         if target && $map_factory.getTerrainTag(target[0], target[1], target[2]).ledge
@@ -325,9 +340,9 @@ class Game_FollowingPkmn < Game_Follower
     # Check passability to ensure we don't visual clip into walls
     case self.direction
     when 4 # Facing Left -> Move Right
-      ret += offset if self.map.passable?(self.x, self.y, 6)
+      ret += offset if location_passable?(self.x, self.y, 6)
     when 6 # Facing Right -> Move Left
-      ret -= offset if self.map.passable?(self.x, self.y, 4)
+      ret -= offset if location_passable?(self.x, self.y, 4)
     end
     return ret
   end
@@ -349,9 +364,9 @@ class Game_FollowingPkmn < Game_Follower
     # Check passability to ensure we don't visual clip into walls
     case self.direction
     when 2 # Facing Down -> Move Up
-      ret -= offset if self.map.passable?(self.x, self.y, 8)
+      ret -= offset if location_passable?(self.x, self.y, 8)
     when 8 # Facing Up -> Move Down
-      ret += offset if self.map.passable?(self.x, self.y, 2)
+      ret += offset if location_passable?(self.x, self.y, 2)
     end
     return ret
   end

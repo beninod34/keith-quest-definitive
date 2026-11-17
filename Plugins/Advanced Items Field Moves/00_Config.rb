@@ -698,10 +698,12 @@ module AdvancedItemsFieldMoves
 # Cannon HM
   FLY_CONFIG = {
     #===================[Item Config]===================#
-    :internal_name                      => :FLYITEM,                # :FLYITEM
+    :internal_name                      => :ELDRITCHHORRORS,        # :FLYITEM
     :item                               => true,                    # Default: true
     :item_needed_badge                  => 0,                       # Default: 0
     :item_needed_switches               => [],                      # Default: []
+    :item_disable_switch                => 63,                       # Game switch ID; while ON the item can't be used (0 = never disabled)
+    :item_usable_indoors                => true,                    # Default: false (true = item works on non-outdoor maps)
     :allow_item_debug                   => false,                   # Default: false
     #===================[Move Config]===================#
     :move_name                          => [:FLY],                  # :FLY
@@ -714,6 +716,7 @@ module AdvancedItemsFieldMoves
     #===[Item Text]===#
         :text_item_badge                => "Badge",
         :text_item_comfirm              => "Would you like to use the {2}, to travel through the dimensions?", # {2} = Item
+        :text_item_disabled             => "The {1} are silent... They refuse to answer you.", # {1} = Item (shown while :item_disable_switch is ON)
     #===[Move Text]===#
         :text_move_badge                => "Badge",
         :text_move_comfirm              => "Would you like to use {2}, to travel thought the skies?", # {2} = Move

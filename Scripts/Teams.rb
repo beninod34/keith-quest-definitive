@@ -1207,6 +1207,7 @@ def pbAddTeamRaymond
   pkmn5.nature = :JOLLY
   pkmn5.item = :MYSTICWATER
   pkmn5.moves = [:SURGINGSTRIKES, :CLOSECOMBAT, :AQUAJET, :DRAGONASCENT]
+  pkmn5.gmax_factor = true
   pkmn5.happiness = 255
   pkmn5.iv = perfect_ivs
   pkmn5.ev = { :HP => 4, :ATTACK => 252, :SPEED => 252 }
@@ -1308,4 +1309,301 @@ def pbAddTeamKilla
   $PokemonStorage.pbStoreCaught(pkmn4)
   $PokemonStorage.pbStoreCaught(pkmn5)
 
+end
+
+def pbAddTeamLoliGod
+  loli = NPCTrainer.new("Loli God", :NUBILEDEITY)
+  perfect_ivs = {
+    :HP => 31, :ATTACK => 31, :DEFENSE => 31,
+    :SPECIAL_ATTACK => 31, :SPECIAL_DEFENSE => 31, :SPEED => 31
+  }
+
+  pkmn0 = Pokemon.new(:CELEBI, 90, loli, false)
+  pkmn0.gender = 1
+  pkmn0.ability = :PRANKSTER
+  pkmn0.nature = :CALM
+  pkmn0.item = :ROCKYHELMET
+  pkmn0.moves = [:RECOVER, :UTURN, :GRASSKNOT, :STEALTHROCK]
+  pkmn0.happiness = 255
+  pkmn0.iv = perfect_ivs
+  pkmn0.ev = { :HP => 252, :SPECIAL_DEFENSE => 220, :SPEED => 36 }
+  pkmn0.obtain_map = 112
+
+  pkmn1 = Pokemon.new(:VICTINI, 90, loli, false)
+  pkmn1.gender = 1
+  pkmn1.ability = :CONTRARY
+  pkmn1.nature = :JOLLY
+  pkmn1.item = :CHOICEBAND
+  pkmn1.moves = [:VCREATE, :UTURN, :BOLTSTRIKE, :BRICKBREAK]
+  pkmn1.happiness = 255
+  pkmn1.iv = perfect_ivs
+  pkmn1.ev = { :ATTACK => 252, :SPECIAL_DEFENSE => 4, :SPEED => 252 }
+  pkmn1.obtain_map = 112
+
+  pkmn2 = Pokemon.new(:JIRACHI, 90, loli, false)
+  pkmn2.gender = 1
+  pkmn2.ability = :LEVITATE
+  pkmn2.nature = :HASTY
+  pkmn2.item = :EXPERTBELT
+  pkmn2.moves = [:IRONHEAD, :ICYWIND, :THUNDERBOLT, :HIDDENPOWER]
+  pkmn2.happiness = 255
+  pkmn2.iv = perfect_ivs
+  pkmn2.ev = { :ATTACK => 4, :SPECIAL_ATTACK => 252, :SPEED => 252 }
+  pkmn2.obtain_map = 112
+
+  pkmn3 = Pokemon.new(:TAPULELE, 90, loli, false)
+  pkmn3.gender = 1
+  pkmn3.ability = :PSYCHICSURGE
+  pkmn3.nature = :MODEST
+  pkmn3.item = :TAPUNIUMZ
+  pkmn3.moves = [:MOONBLAST, :EXPANDINGFORCE, :NATURESMADNESS, :EARTHPOWER]
+  pkmn3.happiness = 255
+  pkmn3.iv = perfect_ivs
+  pkmn3.ev = { :SPECIAL_ATTACK => 252, :SPECIAL_DEFENSE => 4, :SPEED => 252 }
+  pkmn3.obtain_map = 112
+
+  pkmn4 = Pokemon.new(:MELOETTA, 90, loli, false)
+  pkmn4.gender = 1
+  pkmn4.ability = :DOWNLOAD
+  pkmn4.nature = :HASTY
+  pkmn4.item = :LIFEORB
+  pkmn4.moves = [:RELICSONG, :CLOSECOMBAT, :PSYCHIC, :THUNDERBOLT]
+  pkmn4.happiness = 255
+  pkmn4.iv = perfect_ivs
+  pkmn4.ev = { :ATTACK => 4, :SPECIAL_ATTACK => 252, :SPEED => 252 }
+  pkmn4.obtain_map = 112
+
+  pkmn5 = Pokemon.new(:DIANCIE, 90, loli, false)
+  pkmn5.gender = 1
+  pkmn5.ability = :SANDSTREAM
+  pkmn5.nature = :TIMID
+  pkmn5.item = :DIANCITE
+  pkmn5.moves = [:DIAMONDSTORM, :DRAININGKISS, :CALMMIND, :EARTHPOWER]
+  pkmn5.happiness = 255
+  pkmn5.iv = perfect_ivs
+  pkmn5.ev = { :DEFENSE => 252, :SPECIAL_ATTACK => 4, :SPECIAL_DEFENSE => 252 }
+  pkmn5.obtain_map = 112
+
+  $PokemonStorage.pbStoreCaught(pkmn0)
+  $PokemonStorage.pbStoreCaught(pkmn1)
+  $PokemonStorage.pbStoreCaught(pkmn2)
+  $PokemonStorage.pbStoreCaught(pkmn3)
+  $PokemonStorage.pbStoreCaught(pkmn4)
+  $PokemonStorage.pbStoreCaught(pkmn5)
+
+end
+
+def pbAddTeamShadowKeith
+  evil = NPCTrainer.new("Shadow Keith", :CHILDGOBBLER)
+  perfect_ivs = {
+    :HP => 31, :ATTACK => 31, :DEFENSE => 31,
+    :SPECIAL_ATTACK => 31, :SPECIAL_DEFENSE => 31, :SPEED => 31
+  }
+
+  pkmn0 = Pokemon.new(:DEOXYS, 100, evil, false)
+  pkmn0.form = 3
+  pkmn0.ability = :INTIMIDATE
+  pkmn0.nature = :TIMID
+  pkmn0.item = :ROCKYHELMET
+  pkmn0.moves = [:STEALTHROCK, :SPIKES, :REFLECT, :TAUNT]
+  pkmn0.happiness = 255
+  pkmn0.iv = perfect_ivs
+  pkmn0.ev = { :HP => 248, :SPECIAL_DEFENSE => 8, :SPEED => 252 }
+  pkmn0.obtain_map = 111
+
+  pkmn1 = Pokemon.new(:DEOXYS, 100, evil, false)
+  pkmn1.ability = :SIMPLE
+  pkmn1.nature = :HASTY
+  pkmn1.item = :KASIBBERRY
+  pkmn1.moves = [:PSYCHOBOOST, :PURSUIT, :ICEBEAM, :CALMMIND]
+  pkmn1.happiness = 255
+  pkmn1.iv = perfect_ivs
+  pkmn1.ev = { :ATTACK => 4, :SPECIAL_ATTACK => 252, :SPEED => 252 }
+  pkmn1.obtain_map = 111
+
+  pkmn2 = Pokemon.new(:DEOXYS, 100, evil, false)
+  pkmn2.form = 1
+  pkmn2.ability = :SHEERFORCE
+  pkmn2.nature = :HASTY
+  pkmn2.item = :LIFEORB
+  pkmn2.moves = [:PSYCHOBOOST, :ICEBEAM, :SUPERPOWER, :DARKPULSE]
+  pkmn2.happiness = 255
+  pkmn2.iv = perfect_ivs
+  pkmn2.ev = { :ATTACK => 4, :SPECIAL_ATTACK => 252, :SPEED => 252 }
+  pkmn2.obtain_map = 111
+
+  pkmn3 = Pokemon.new(:DEOXYS, 100, evil, false)
+  pkmn3.form = 2
+  pkmn3.ability = :MULTISCALE
+  pkmn3.nature = :CAREFUL
+  pkmn3.item = :LEFTOVERS
+  pkmn3.moves = [:RECOVER, :TOXIC, :LIGHTSCREEN, :DRAINPUNCH]
+  pkmn3.happiness = 255
+  pkmn3.iv = perfect_ivs
+  pkmn3.ev = { :HP => 252, :ATTACK => 4, :SPECIAL_DEFENSE => 252 }
+  pkmn3.obtain_map = 111
+
+  pkmn4 = Pokemon.new(:LEAVANNY, 100, evil, false)
+  pkmn4.gender = 1
+  pkmn4.ability = :WONDERGUARD
+  pkmn4.nature = :JOLLY
+  pkmn4.item = :FOCUSSASH
+  pkmn4.moves = [:LEAFBLADE, :XSCISSOR, :SWORDSDANCE, :POISONJAB]
+  pkmn4.happiness = 255
+  pkmn4.iv = perfect_ivs
+  pkmn4.ev = { :ATTACK => 252, :SPECIAL_DEFENSE => 4, :SPEED => 252 }
+  pkmn4.obtain_map = 111
+
+  pkmn5 = Pokemon.new(:HAXORUS, 100, evil, false)
+  pkmn5.gender = 0
+  pkmn5.ability = :NOGUARD
+  pkmn5.nature = :JOLLY
+  pkmn5.item = :ASSAULTVEST
+  pkmn5.moves = [:FIRSTIMPRESSION, :GUILLOTINE, :ROCKSLIDE, :OUTRAGE]
+  pkmn5.happiness = 255
+  pkmn5.iv = perfect_ivs
+  pkmn5.ev = { :ATTACK => 252, :SPECIAL_DEFENSE => 4, :SPEED => 252 }
+  pkmn5.obtain_map = 111
+
+  $PokemonStorage.pbStoreCaught(pkmn0)
+  $PokemonStorage.pbStoreCaught(pkmn1)
+  $PokemonStorage.pbStoreCaught(pkmn2)
+  $PokemonStorage.pbStoreCaught(pkmn3)
+  $PokemonStorage.pbStoreCaught(pkmn4)
+  $PokemonStorage.pbStoreCaught(pkmn5)
+
+end
+
+def pbAddTeamShadowDominic
+  evil = NPCTrainer.new("Dominic", :LITTLEWARRIOR)
+  perfect_ivs = {
+    :HP => 31, :ATTACK => 31, :DEFENSE => 31,
+    :SPECIAL_ATTACK => 31, :SPECIAL_DEFENSE => 31, :SPEED => 31
+  }
+
+  pkmn0 = Pokemon.new(:DIALGA, 100, evil, false)
+  pkmn0.gender = 0
+  pkmn0.ability = :LEVITATE
+  pkmn0.nature = :NAIVE
+  pkmn0.item = :LEFTOVERS
+  pkmn0.moves = [:STEALTHROCK, :DRACOMETEOR, :FIREBLAST, :DRAGONTAIL]
+  pkmn0.happiness = 255
+  pkmn0.iv = perfect_ivs
+  pkmn0.ev = { :ATTACK => 4, :SPECIAL_ATTACK => 252, :SPEED => 252 }
+  pkmn0.obtain_map = 83
+
+  pkmn1 = Pokemon.new(:GIRATINA, 100, evil, false)
+  pkmn1.gender = 0
+  pkmn1.ability = :SHADOWTAG
+  pkmn1.nature = :CAREFUL
+  pkmn1.item = :GRISEOUSORB
+  pkmn1.moves = [:DRAGONTAIL, :SHADOWSNEAK, :WILLOWISP, :SUBSTITUTE]
+  pkmn1.happiness = 255
+  pkmn1.iv = perfect_ivs
+  pkmn1.ev = { :HP => 248, :ATTACK => 8, :SPECIAL_DEFENSE => 252 }
+  pkmn1.obtain_map = 83
+
+  pkmn2 = Pokemon.new(:PALKIA, 100, evil, false)
+  pkmn2.gender = 0
+  pkmn2.ability = :PARENTALBOND
+  pkmn2.nature = :TIMID
+  pkmn2.item = :LUSTROUSORB
+  pkmn2.moves = [:SPACIALREND, :HYDROPUMP, :FIREBLAST, :THUNDER]
+  pkmn2.happiness = 255
+  pkmn2.iv = perfect_ivs
+  pkmn2.ev = { :SPECIAL_ATTACK => 252, :SPECIAL_DEFENSE => 4, :SPEED => 252 }
+  pkmn2.obtain_map = 83
+
+  pkmn3 = Pokemon.new(:GENESECT, 100, evil, false)
+  pkmn3.gender = 0
+  pkmn3.ability = :FLASHFIRE
+  pkmn3.nature = :HASTY
+  pkmn3.item = :CHOICESCARF
+  pkmn3.moves = [:UTURN, :ICEBEAM, :BLAZEKICK, :IRONHEAD]
+  pkmn3.happiness = 255
+  pkmn3.iv = perfect_ivs
+  pkmn3.ev = { :ATTACK => 252, :SPECIAL_ATTACK => 4, :SPEED => 252 }
+  pkmn3.obtain_map = 83
+
+  pkmn4 = Pokemon.new(:FARFETCHD, 100, evil, false)
+  pkmn4.gender = 0
+  pkmn4.shiny = true
+  pkmn4.ability = :WONDERGUARD
+  pkmn4.nature = :LONELY
+  pkmn4.item = :LEEK
+  pkmn4.moves = [:OBLIVIONWING, :VCREATE, :SKYATTACK, :SKULLBASH]
+  pkmn4.happiness = 255
+  pkmn4.iv = perfect_ivs
+  pkmn4.ev = { :HP => 248, :ATTACK => 252, :SPECIAL_ATTACK => 8 }
+  pkmn4.obtain_map = 83
+
+  pkmn5 = Pokemon.new(:ARCEUS, 100, evil, false)
+  pkmn5.gender = 0
+  pkmn5.ability = :MULTITYPE
+  pkmn5.nature = :TIMID
+  pkmn5.item = :SPOOKYPLATE
+  pkmn5.moves = [:CALMMIND, :JUDGMENT, :FOCUSBLAST, :RECOVER]
+  pkmn5.happiness = 255
+  pkmn5.iv = perfect_ivs
+  pkmn5.ev = { :HP => 252, :SPECIAL_ATTACK => 4, :SPEED => 252 }
+  pkmn5.obtain_map = 83
+
+  $PokemonStorage.pbStoreCaught(pkmn0)
+  $PokemonStorage.pbStoreCaught(pkmn1)
+  $PokemonStorage.pbStoreCaught(pkmn2)
+  $PokemonStorage.pbStoreCaught(pkmn3)
+  $PokemonStorage.pbStoreCaught(pkmn4)
+  $PokemonStorage.pbStoreCaught(pkmn5)
+
+end
+
+#===============================================================================
+# Cinematic party swap
+#   Saves the player's current party and replaces it with a single Pokémon for a
+#   scripted fight, then restores the original party afterwards. The saved party
+#   lives on $PokemonGlobal, so it survives the player saving mid-cutscene.
+#
+#   Usage in an event Script command:
+#     pbStartCinematicParty(:HAXORUS, 100)            # species + level
+#     pbStartCinematicParty(my_pokemon_object)        # or a prebuilt Pokemon
+#     TrainerBattle.start(:TRAINERTYPE, "Name")
+#     pbEndCinematicParty
+#===============================================================================
+class PokemonGlobalMetadata
+  attr_accessor :cinematic_saved_party
+end
+
+def pbCinematicPartyActive?
+  return !$PokemonGlobal.cinematic_saved_party.nil?
+end
+
+# pkmn: a Pokemon object, or a species symbol (then level is used).
+def pbStartCinematicParty()
+  if pbCinematicPartyActive?
+    echoln("pbStartCinematicParty: a party is already saved; not overwriting it.")
+    return false
+  end
+  perfect_ivs = {
+    :HP => 31, :ATTACK => 31, :DEFENSE => 31,
+    :SPECIAL_ATTACK => 31, :SPECIAL_DEFENSE => 31, :SPEED => 31
+  }
+  pkmn = Pokemon.new(:HAXORUS, 100, $player, false)
+  pkmn.gender = 0
+  pkmn.ability = :MOLDBREAKER
+  pkmn.nature = :JOLLY
+  pkmn.moves = [:UNCHARGEDSUPERNOVA, :ENDURE, :FIRSTIMPRESSION, :STRENGTH]
+  pkmn.happiness = 255
+  pkmn.iv = perfect_ivs
+  pkmn.ev = { :ATTACK => 252, :SPECIAL_DEFENSE => 4, :SPEED => 252 }
+  $PokemonGlobal.cinematic_saved_party = $player.party
+  $player.party = [pkmn]
+  return true
+end
+
+def pbEndCinematicParty(heal = false)
+  return false if !pbCinematicPartyActive?
+  $player.party = $PokemonGlobal.cinematic_saved_party
+  $PokemonGlobal.cinematic_saved_party = nil
+  $player.heal_party if heal
+  return true
 end

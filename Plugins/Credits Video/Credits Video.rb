@@ -26,7 +26,7 @@ end
 def pbPlayCreditsVideo(fps = 20, fade_seconds = 4)
   folder = "Graphics/Credits/"
   song = "Audio/BGM/CreditsVideo"
-  vol = $PokemonSystem.bgmvolume
+  vol = $PokemonSystem.bgmvolume + 20
   frames = Dir.glob(folder + "frame_*.png").length
   viewport = Viewport.new(0, 0, Graphics.width, Graphics.height)
   viewport.z = 99990
@@ -42,13 +42,13 @@ def pbPlayCreditsVideo(fps = 20, fade_seconds = 4)
     if Input.trigger?(Input::BACK)
       Audio.bgm_stop
       break if pbConfirmMessage(_INTL("Skip the credits?"))
-      Audio.bgm_play(song, 100, 100, i.to_f / fps)   # resume from this point
+      Audio.bgm_play(song, vol, 100, i.to_f / fps)   # resume from this point
     end
     i += 1
   end
   # Slow fade to black on the last frame
   fade_frames = (fade_seconds * Graphics.frame_rate).to_i
-  Audio.bgm_fade((fade_seconds * 1000).to_i)
+  Audio.bgm_fade(1)
   fade_frames.times do |f|
     sprite.color = Color.new(0, 0, 0, 255 * (f + 1) / fade_frames)
     Graphics.update

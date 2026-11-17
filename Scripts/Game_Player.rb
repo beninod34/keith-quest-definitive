@@ -471,6 +471,8 @@ class Game_Player < Game_Character
           set_movement_type((faster) ? :surfing_fast : :surfing)
         elsif $PokemonGlobal&.bicycle
           set_movement_type((faster) ? :cycling_fast : :cycling)
+        elsif $PokemonGlobal&.shmooving
+          set_movement_type(:shmooving)
         else
           set_movement_type((faster) ? :running : :walking)
         end
@@ -600,9 +602,9 @@ def pbMountBike
   $PokemonGlobal.bicycle = true
   $stats.cycle_count += 1
   pbUpdateVehicle
-  bike_bgm = GameData::Metadata.get.bicycle_BGM
-  pbCueBGM(bike_bgm, 0.4) if bike_bgm
-  pbSEPlay("Bicycle")
+  # bike_bgm = GameData::Metadata.get.bicycle_BGM
+  # pbCueBGM(bike_bgm, 0.4) if bike_bgm
+  # pbSEPlay("Bicycle")
   pbPokeRadarCancel
 end
 

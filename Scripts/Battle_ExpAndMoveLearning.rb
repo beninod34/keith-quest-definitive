@@ -157,6 +157,13 @@ class Battle
       exp = exp * 6 / 5
       isOutsider = true   # To show the "boosted Exp" message
     end
+    # ===== SuperSimple Level Cap System by Clara =====
+    levelCapExp = 0   # Exp gained while at the cap (keep it under 100)
+    levelCap = $game_switches[75] ? 110 : 100
+    if pkmn.level >= levelCap
+      exp = levelCapExp
+    end
+    # =================================================
     # Make sure Exp doesn't exceed the maximum
     expFinal = growth_rate.add_exp(pkmn.exp, exp)
     expGained = expFinal - pkmn.exp

@@ -6753,7 +6753,7 @@ Pocket = 1
 Price = 10000
 Description = This warm candle was lit in honor of you. Can be given to someone to change Pokemon EVs.
 #-------------------------------
-[FLYITEM]
+[ELDRITCHHORRORS]
 Name = Eldritch Horrors
 NamePlural = Eldritch Horrors
 Pocket = 8
@@ -6804,3 +6804,20 @@ Price = 0
 Flags = KeyItem, HeldKeyItem
 ShowQuantity = false
 Description = A capacitor taken from a high-end arcade machine. Can be held by a Pokemon to set Electric terrain.
+#-------------------------------
+[SHADOWREMNANT]
+Name = Shadow Remnant
+NamePlural = Shadow Remnants
+Pocket = 8
+Price = 0
+FieldUse = OnPokemon
+Flags = KeyItem
+Consumable = false
+Description = What remains of Shadow Keith's curse. It still hungers to undo growth, reversing a Pokémon's evolution.
+#-------------------------------
+[DRENCHEDROCK]
+Name = Drenched Rock
+NamePlural = Drenched Rocks
+Pocket = 1
+Price = 8000
+Description = An item to be held by a Pokémon. Causes rain when entering a battle.

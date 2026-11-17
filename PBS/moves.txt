@@ -8835,6 +8835,40 @@ FunctionCode = RaiseUserDefense1
 Description = The user withdraws its body into its hard shell, raising its Defense stat.
 Flags = ZPower_DEFENSE_1
 #-------------------------------
+[ANNIHILATIONBLAST]
+Name = Annihilation Blast
+Type = DRAGON
+Category = Physical
+Power = 500
+Accuracy = 100
+TotalPP = 5
+Target = NearOther
+FunctionCode = AttackAndSkipNextTurn
+Flags = Contact,CanProtect,CanMirrorMove
+Description = The foe is attacked with a powerful beam. The user must rest on the next turn to regain its energy.
+#-------------------------------
+[UNCHARGEDSUPERNOVA]
+Name = Friendship Supernova
+Type = NORMAL
+Category = Status
+Accuracy = 0
+TotalPP = 40
+Target = User
+FunctionCode = DoesNothingUnusableInGravity
+Description = The foe is attacked with a powerful beam. Can't seemed to be used yet.
+#-------------------------------
+[FRIENDSHIPSUPERNOVA]
+Name = Friendship Supernova
+Type = DRAGON
+Category = Physical
+Power = 1000
+Accuracy = 100
+TotalPP = 5
+Target = NearOther
+FunctionCode = AttackAndSkipNextTurn
+Flags = Contact,CanProtect,CanMirrorMove
+Description = The foe is attacked with a powerful beam. The user must rest on the next turn to regain its energy.
+#-------------------------------
 [DEATH]
 Name = Death
 Type = ICE
@@ -8846,3 +8880,16 @@ Target = NearOther
 FunctionCode = HitTwoTimes
 Flags = Contact,CanProtect,CanMirrorMove
 Description = Death comes for us all.
+#-------------------------------
+[SIZZLYSLIDE]
+Name = Sizzly Slide
+Type = FIRE
+Category = Physical
+Power = 60
+Accuracy = 0
+TotalPP = 20
+Target = NearOther
+FunctionCode = BurnTarget
+Flags = Contact,CanProtect,CanMirrorMove,ThawsUser
+EffectChance = 100
+Description = The user cloaks itself in fire and charges at the target with full force. This also leaves the target with a burn.

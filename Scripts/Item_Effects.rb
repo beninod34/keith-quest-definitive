@@ -5,7 +5,11 @@ ItemHandlers::UseText.add(:BICYCLE, proc { |item|
   next ($PokemonGlobal.bicycle) ? _INTL("Walk") : _INTL("Use")
 })
 
-ItemHandlers::UseText.copy(:BICYCLE, :MACHBIKE, :ACROBIKE, :SHMOOVEMENTLICENSE)
+ItemHandlers::UseText.copy(:BICYCLE, :MACHBIKE, :ACROBIKE)
+
+ItemHandlers::UseText.add(:SHMOOVEMENTLICENSE, proc { |item|
+  next ($PokemonGlobal.shmooving) ? _INTL("Stop shmooving") : _INTL("Shmoove")
+})
 
 ItemHandlers::UseText.add(:EXPALLOFF, proc { |item|
   next _INTL("Turn on")
@@ -44,7 +48,11 @@ ItemHandlers::UseFromBag.add(:BICYCLE, proc { |item|
   next (pbBikeCheck) ? 2 : 0
 })
 
-ItemHandlers::UseFromBag.copy(:BICYCLE, :MACHBIKE, :ACROBIKE, :SHMOOVEMENTLICENSE)
+ItemHandlers::UseFromBag.copy(:BICYCLE, :MACHBIKE, :ACROBIKE)
+
+ItemHandlers::UseFromBag.add(:SHMOOVEMENTLICENSE, proc { |item|
+  next 2
+})
 
 ItemHandlers::UseFromBag.add(:OLDROD, proc { |item|
   notCliff = $game_map.passable?($game_player.x, $game_player.y, $game_player.direction, $game_player)
@@ -271,7 +279,17 @@ ItemHandlers::UseInField.add(:BICYCLE, proc { |item|
   next false
 })
 
-ItemHandlers::UseInField.copy(:BICYCLE, :MACHBIKE, :ACROBIKE, :SHMOOVEMENTLICENSE)
+ItemHandlers::UseInField.copy(:BICYCLE, :MACHBIKE, :ACROBIKE)
+
+ItemHandlers::UseInField.add(:SHMOOVEMENTLICENSE, proc { |item|
+  $PokemonGlobal.shmooving = !$PokemonGlobal.shmooving
+  if $PokemonGlobal.shmooving
+    pbMessage(_INTL("{1} started shmooving!", $player.name))
+  else
+    pbMessage(_INTL("{1} stopped shmooving.", $player.name))
+  end
+  next true
+})
 
 ItemHandlers::UseInField.add(:OLDROD, proc { |item|
   notCliff = $game_map.passable?($game_player.x, $game_player.y, $game_player.direction, $game_player)
@@ -928,11 +946,17 @@ ItemHandlers::UseOnPokemon.add(:SERIOUSMINT, proc { |item, qty, pkmn, scene|
 })
 
 ItemHandlers::UseOnPokemonMaximum.add(:RARECANDY, proc { |item, pkmn|
-  next GameData::GrowthRate.max_level - pkmn.level
+  levelCap = $game_switches[75] ? 110 : 100
+  next [GameData::GrowthRate.max_level, levelCap].min - pkmn.level
 })
 
 ItemHandlers::UseOnPokemon.add(:RARECANDY, proc { |item, qty, pkmn, scene|
   if pkmn.shadowPokemon?
+    scene.pbDisplay(_INTL("It won't have any effect."))
+    next false
+  end
+  levelCap = $game_switches[75] ? 110 : 100
+  if pkmn.level >= levelCap
     scene.pbDisplay(_INTL("It won't have any effect."))
     next false
   end
@@ -1547,4 +1571,25 @@ ItemHandlers::UseOnPokemon.add(:FAMILYPHOTO, proc { |item, qty, pkmn, scene|
     next true
   end
   next false
+})
+
+ItemHandlers::UseOnPokemon.add(:SHADOWREMNANT, proc { |item, qty, pkmn, scene|
+  prev = pkmn.species_data.get_previous_species
+  if pkmn.egg? || prev == pkmn.species
+    scene.pbDisplay(_INTL("It won't have any effect."))
+    next false
+  end
+  prev_name = GameData::Species.get(prev).name
+  next false if !scene.pbConfirm(_INTL("Return {1} to {2}?", pkmn.name, prev_name))
+  old_name = pkmn.name
+  form = pkmn.form
+  pkmn.species = prev
+  # Keep regional forms (e.g. Galarian Rapidash -> Galarian Ponyta)
+  pkmn.form = form if GameData::Species.get_species_form(prev, form).form == form
+  pkmn.calc_stats
+  $player.pokedex.register(pkmn)
+  $player.pokedex.set_owned(pkmn.species)
+  scene.pbRefresh
+  scene.pbDisplay(_INTL("{1} returned to being {2}!", old_name, prev_name))
+  next true
 })

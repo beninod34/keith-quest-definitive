@@ -1355,6 +1355,10 @@ if AIFM_Fly[:item]
     config_name = AIFM_Fly
     item_name = GameData::Item.get(config_name[:internal_name]).name
     item_badge = config_name[:text_item_badge].to_s + (config_name[:item_needed_badge] > 1 ? "s" : "")
+    if pbItemDisabledBySwitch?(config_name)
+      pbMessage(_INTL(config_name[:text_item_disabled], item_name))
+      next 0
+    end
     if !pbCanUseItem(config_name)
       pbMessage(_INTL("{1}", config_name[:missing_bagde_item], config_name[:item_needed_badge], item_badge, item_name))
       next 0
@@ -1366,11 +1370,15 @@ if AIFM_Fly[:item]
     config_name = AIFM_Fly
     item_name = GameData::Item.get(config_name[:internal_name]).name
     item_badge = config_name[:text_item_badge].to_s + (config_name[:item_needed_badge] > 1 ? "s" : "")
+    if pbItemDisabledBySwitch?(config_name)
+      pbMessage(_INTL(config_name[:text_item_disabled], item_name))
+      next false
+    end
     if !pbCanUseItem(config_name)
       pbMessage(_INTL("{1}", config_name[:missing_bagde_item], config_name[:item_needed_badge], item_badge, item_name))
       next false
     end
-    if !$game_map.metadata&.outdoor_map
+    if !config_name[:item_usable_indoors] && !$game_map.metadata&.outdoor_map
       pbMessage(_INTL("You can't use the \\c[0]{1}\\c[0] when you are inside.", item_name))
       next false
     end

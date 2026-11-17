@@ -1987,7 +1987,15 @@ Battle::ItemEffects::OnSwitchIn.add(:ARCADECAPACITOR,
     cause = [battler.pbThis, battler.itemName]
     battler.pbHeldItemTriggered(battler.item)
     battle.pbStartTerrain(battler, :Electric, true, cause)
-    battler.pbConsumeItem
+  }
+)
+
+Battle::ItemEffects::OnSwitchIn.add(:DRENCHEDROCK,
+  proc { |item, battler, battle|
+    next if battle.field.weather == :Rain
+    next if [:HarshSun, :HeavyRain, :StrongWinds].include?(battle.field.weather)
+    battle.pbDisplay(_INTL("{1}'s {2} drenched the battlefield!", battler.pbThis, battler.itemName))
+    battle.pbStartWeather(battler, :Rain, true)
   }
 )
 

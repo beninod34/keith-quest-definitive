@@ -403,5 +403,6 @@ Teams.rb
 Badges_BadgeCase.rb
 EVTraining.rb
 MegaStoneHints.rb
+Map_AdjustableMapRegions.rb
 [[ Main ]].rb
 Main.rb

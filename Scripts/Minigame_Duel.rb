@@ -63,6 +63,14 @@ class PokemonDuel
     @sprites["player"].setBitmap(GameData::TrainerType.front_sprite_filename($player.trainer_type))
     @sprites["opponent"] = IconSprite.new(Graphics.width + 32, 96, @viewport)
     @sprites["opponent"].setBitmap(GameData::TrainerType.front_sprite_filename(opponent.trainer_type))
+    # Animated Trainer Intros sets a bottom-center origin on trainer bitmaps;
+    # this minigame positions sprites by their top-left corner.
+    # It also pre-scales trainer bitmaps for battle; undo that here.
+    [["player", $player.trainer_type], ["opponent", opponent.trainer_type]].each do |key, tr_type|
+      @sprites[key].ox = @sprites[key].oy = 0
+      scale = GameData::TrainerType.get(tr_type).trainer_sprite_scale.to_f
+      @sprites[key].zoom_x = @sprites[key].zoom_y = 1.0 / scale
+    end
     @sprites["playerwindow"] = DuelWindow.new($player.name, false)
     @sprites["playerwindow"].x        = -@sprites["playerwindow"].width
     @sprites["playerwindow"].viewport = @viewport

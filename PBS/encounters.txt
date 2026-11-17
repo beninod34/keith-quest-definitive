@@ -324,3 +324,16 @@ Land,21
     10,PIKACHU,11,14
     10,SANDSHREW_1,11,14
     10,VULPIX_1,11,14
+#-------------------------------
+[087] # Lost Woods
+Land,75
+    16,DRAGONITE,100
+    16,FLYGON,100
+    16,SALAMENCE,100
+    16,GARCHOMP,100
+    16,HAXORUS,100
+    16,HYDREIGON,100
+     1,LATIAS,100
+     1,LATIOS,100
+     1,KYUREM,100
+     1,RATTATA,110

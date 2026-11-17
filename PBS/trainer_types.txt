@@ -530,3 +530,75 @@ Gender = Male
 BaseMoney = 100
 BattleBGM = Unwinnable Battle
 VictoryBGM = God Defeated
+#-------------------------------
+[DOJOSTUDENT_M]
+Name = Dojo Student
+Gender = Male
+BaseMoney = 100
+BattleBGM = Sparring Match
+#-------------------------------
+[DOJOSTUDENT_F]
+Name = Dojo Student
+Gender = Female
+BaseMoney = 100
+BattleBGM = Sparring Match
+#-------------------------------
+[GRANDPA]
+Name = Your
+Gender = Male
+BaseMoney = 100
+BattleBGM = Sparring Match
+#-------------------------------
+[SILKYSAINTV2]
+Name = Silky Saint
+Gender = Male
+BaseMoney = 100
+BattleBGM = Battle of the Heat
+#-------------------------------
+[GRANDMASTERV2]
+Name = Adolescent Blastscourge
+Gender = Female
+BaseMoney = 100
+BattleBGM = Yuna's Team
+#-------------------------------
+[PRIMORDIALEMPERORV2]
+Name = Primodial Emperor
+Gender = Male
+BaseMoney = 100
+BattleBGM = Floating Darkness
+#-------------------------------
+[CROWNLESSKINGV2]
+Name = Crownless King
+Gender = Male
+BaseMoney = 100
+BattleBGM = Royal Flush
+#-------------------------------
+[LITESKINLEGENDV2]
+Name = Liteskin Legend
+Gender = Male
+BaseMoney = 100
+BattleBGM = Atlanta Anthem
+#-------------------------------
+[LABMONGERV2]
+Name = Labmonger
+Gender = Male
+BaseMoney = 100
+BattleBGM = Match of Movement
+#-------------------------------
+[LITTLEWARRIOR]
+Name = Final Form
+Gender = Male
+BaseMoney = 100
+BattleBGM = Battle of the Deities
+#-------------------------------
+[DOJOMASTER]
+Name = Dojo Master
+Gender = Male
+BaseMoney = 100
+BattleBGM = Fatherly Fued
+#-------------------------------
+[SINNOHCHAMPION]
+Name = Champion
+Gender = Female
+BaseMoney = 100
+BattleBGM = Battle Cynthia

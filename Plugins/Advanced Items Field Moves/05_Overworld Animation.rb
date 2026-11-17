@@ -43,6 +43,7 @@ class PokemonGlobalMetadata
   attr_accessor :descending_lavafall
   attr_accessor :ascending_lavafall
   attr_accessor :crossing_lavaswirl
+  attr_accessor :shmooving   # Toggled by the Shmoovement License
   #Movement Spirtes
   attr_accessor :lifting
   attr_accessor :base_pkmn_surf
@@ -340,6 +341,9 @@ class Game_Player < Game_Character
     when :running
       self.move_speed = 4 if !@move_route_forcing
       new_charset = pbGetPlayerCharset(meta.run_charset)
+    when :shmooving
+      self.move_speed = 6 if !@move_route_forcing
+      new_charset = pbGetPlayerCharset(meta.run_charset)
     when :ice_sliding
       self.move_speed = 4 if !@move_route_forcing
       new_charset = pbGetPlayerCharset(meta.walk_charset)
@@ -464,6 +468,8 @@ class Game_Player < Game_Character
             set_movement_type((faster) ? :lifting_fast : :lifting)
         elsif $PokemonGlobal&.bicycle
           set_movement_type((faster) ? :cycling_fast : :cycling)
+        elsif $PokemonGlobal&.shmooving
+          set_movement_type(:shmooving)
         else
           set_movement_type((faster) ? :running : :walking)
         end

@@ -5,7 +5,9 @@ class ZoomMap
 
   def initialize(goal,speed,zoom="in")
     @viewport = Viewport.new(0, 0, Graphics.width, Graphics.height)
-    @viewport.z = 99999
+    # Just below the z 99999 overlays (messages, map name, Advanced Map
+    # Transfers fades) so those draw on top of the zoomed map.
+    @viewport.z = 99990
     self.goal = goal
     self.speed = speed
     self.zoom = zoom.downcase
@@ -28,7 +30,10 @@ class ZoomMap
       messagewindow.visible = false if messagewindow
       cmdwindow.visible = false if cmdwindow
       pausemenu.pbHideMenu if pausemenu
+      overlays = pbZoomOverlays
+      overlays.each { |vp| vp.visible = false }
       @sprites["map"].bitmap =  Graphics.snap_to_bitmap
+      overlays.each { |vp| vp.visible = true }
       @sprites["map"].center_origins
       @sprites["map"].x = Graphics.width/2
       @sprites["map"].y = Graphics.height/2
@@ -57,17 +62,112 @@ class ZoomMap
     pbDisposeSpriteHash(@sprites)
     @viewport.dispose
   end
- 
+
+  # Skips the animation: sets the zoom straight to the goal and re-snaps.
+  def jump_to_goal
+    @sprites["map"].zoom = self.goal
+    update
+  end
+
+  attr_accessor :auto   # true if this zoom was created from MapZoomConfig::MAPS
 end
 
 
-def pbZoomMap(goal,speed,zoom="in")
+#===============================================================================
+# Maps that start already zoomed in (no animation, applied before the screen
+# fades in). Format: map_id => zoom level. Remove any autorun zoom event from
+# these maps.
+#===============================================================================
+module MapZoomConfig
+  MAPS = {
+    82 => 2.0,
+  }
+end
+
+
+# Overlay viewports (screen transitions, etc.) that the zoom should NOT capture.
+# They're hidden while the zoom takes its screenshot, so they stay unzoomed.
+# Give them a z above 99990 so they draw on top of the zoomed map.
+def pbZoomOverlays
+  $game_temp.zoom_overlays ||= []
+  $game_temp.zoom_overlays.reject! { |vp| vp.disposed? }
+  return $game_temp.zoom_overlays
+end
+
+def pbAddZoomOverlay(viewport)
+  pbZoomOverlays.push(viewport) if !pbZoomOverlays.include?(viewport)
+end
+
+def pbRemoveZoomOverlay(viewport)
+  pbZoomOverlays.delete(viewport)
+end
+
+
+# Pass instant = true to jump straight to the goal with no animation.
+def pbZoomMap(goal,speed,zoom="in",instant=false)
   if !$game_temp.background_zoom
     $game_temp.background_zoom = ZoomMap.new(goal,speed,zoom)
   else
     $game_temp.background_zoom.goal = goal
     $game_temp.background_zoom.speed = speed
     $game_temp.background_zoom.zoom = zoom
+  end
+  $game_temp.background_zoom.jump_to_goal if instant
+end
+
+
+# Applies (or clears) the per-map zoom. Called right after the map's sprites
+# are built, which happens before the transfer's fade-in transition.
+def pbApplyMapZoomConfig
+  return if !$game_map
+  goal = MapZoomConfig::MAPS[$game_map.map_id]
+  current = $game_temp.background_zoom
+  if goal
+    pbZoomMap(goal, 0.1, (goal >= 1) ? "in" : "out", true)
+    $game_temp.background_zoom.auto = true
+  elsif current.is_a?(ZoomMap) && current.auto
+    # Leaving an auto-zoomed map: drop the zoom before the new map fades in.
+    current.dispose
+    $game_temp.background_zoom = nil
+  end
+end
+
+# Keep the map name signpost out of the zoom's snapshot so it isn't zoomed.
+# It keeps its normal z 99999 (above the zoom at 99990, and still underneath
+# transition fades created after it).
+class LocationWindow
+  alias __map_zoom_initialize initialize unless method_defined?(:__map_zoom_initialize)
+  def initialize(name)
+    __map_zoom_initialize(name)
+    @zoom_viewport = @window.viewport
+    pbAddZoomOverlay(@zoom_viewport)
+  end
+
+  alias __map_zoom_update update unless method_defined?(:__map_zoom_update)
+  def update
+    __map_zoom_update
+    release_zoom_viewport if @window.disposed?
+  end
+
+  alias __map_zoom_dispose dispose unless method_defined?(:__map_zoom_dispose)
+  def dispose
+    __map_zoom_dispose
+    release_zoom_viewport
+  end
+
+  def release_zoom_viewport
+    return if !@zoom_viewport
+    pbRemoveZoomOverlay(@zoom_viewport)
+    @zoom_viewport.dispose if !@zoom_viewport.disposed?
+    @zoom_viewport = nil
+  end
+end
+
+class Scene_Map
+  alias __map_zoom_createSpritesets createSpritesets unless method_defined?(:__map_zoom_createSpritesets)
+  def createSpritesets
+    __map_zoom_createSpritesets
+    pbApplyMapZoomConfig
   end
 end
 
@@ -147,6 +247,7 @@ end
 #when taking a screenshot, so that the text won't be zoomed in.
 class Game_Temp
   attr_accessor :background_zoom
+  attr_accessor :zoom_overlays
   attr_accessor :message_window
   attr_accessor :cmd_window
   attr_accessor :pause_menu_scene

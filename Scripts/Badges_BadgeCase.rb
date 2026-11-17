@@ -393,7 +393,9 @@ class AnimatedBitmapWrapperAnim
     @width=@bitmap.height*@scale
     @height=@bitmap.height*@scale
     
-    @totalFrames=@bitmap.width/@bitmap.height
+    # Clamp to 1 so sprites taller than they are wide (e.g. 78x83) don't
+    # end up with 0 frames and render from a negative source offset.
+    @totalFrames=[@bitmap.width/@bitmap.height, 1].max
     @animationFrames=@totalFrames*@frames
       # calculates total number of frames
     @loop_points=[0,@totalFrames]
