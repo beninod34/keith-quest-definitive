@@ -1,0 +1,7 @@
+Name       = Battle Aura
+Version    = 1.0
+Essentials = 21.1
+Requires   = Deluxe Battle Kit,1.3
+Optional   = [DBK] Animated Pokémon System,1.1.2
+Optional   = BW Speech Bubble,1.2.1
+Credits    = Benino D.,Luka S.J. (original EBDX Aura Flare)

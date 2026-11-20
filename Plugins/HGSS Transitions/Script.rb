@@ -39,7 +39,16 @@ def pbHGSSTransitions(place,black=true)
     pbToneChangeAll(Tone.new(-255,-255,-255),0) if black
     viewport=Viewport.new(0,0,Graphics.width,Graphics.height)
     viewport.z=99
+    if defined?(pbAddZoomOverlay)   # keep the transition out of the Map Zoom snapshot
+      viewport.z=99995   # above the zoom (99990), below the map name (99999)
+      pbAddZoomOverlay(viewport)
+    end
+    blackbg=Sprite.new(viewport)
+    blackbg.bitmap=Bitmap.new(Graphics.width,Graphics.height)
+    blackbg.bitmap.fill_rect(0,0,Graphics.width,Graphics.height,Color.new(0,0,0))
+    blackbg.z=0
     bg=Sprite.new(viewport)
+    bg.z=1
     if File.exist?("Graphics/Pictures/Transitions/#{place}_#{name}.png")
       bg.bitmap=Bitmap.new("Graphics/Pictures/Transitions/#{place}_#{name}.png")
     elsif File.exist?("Graphics/Pictures/Transitions/#{place}.png")
@@ -70,6 +79,16 @@ def pbHGSSTransitions(place,black=true)
       pbUpdateSceneMap
     end
     bg.dispose
+    # Fade out black
+    20.times do
+      blackbg.opacity-=13
+      Graphics.update
+      Input.update
+      pbUpdateSceneMap
+    end
+    blackbg.bitmap.dispose
+    blackbg.dispose
+    pbRemoveZoomOverlay(viewport) if defined?(pbRemoveZoomOverlay)
     viewport.dispose
     Graphics.update
     Input.update

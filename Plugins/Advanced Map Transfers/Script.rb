@@ -242,6 +242,9 @@ module Transitions
     if reverse
       if entrance
         pbCaveEntrance
+        # Save the exact tile the player landed on (pbSetEscapePoint steps back one tile)
+        $PokemonGlobal.escapePoint = [$game_map.map_id, $game_player.x,
+                                      $game_player.y, $game_player.direction]
       else
         pbCaveExit
       end

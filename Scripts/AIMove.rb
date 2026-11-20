@@ -142,6 +142,8 @@ class Battle::AI::AIMove
       case user.ability_id
       when :AERILATE, :GALVANIZE, :PIXILATE, :REFRIGERATE
         multipliers[:power_multiplier] *= 1.2 if type == :NORMAL   # NOTE: Not calc_type.
+      when :TERRADRACE
+        multipliers[:power_multiplier] *= 1.2 if type == :GROUND
       when :ANALYTIC
         if rough_priority(user) <= 0
           user_faster = false

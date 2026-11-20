@@ -6702,3 +6702,122 @@ Pocket = 8
 Price = 0
 Flags = KeyItem
 Description = A faded sea chart that shows the way to a certain island.
+#-------------------------------
+[FAMILYPHOTO]
+Name = Family Photo
+NamePlural = Family Photos
+Pocket = 8
+Price = 0
+FieldUse = OnPokemon
+Flags = KeyItem
+Description = Joyful memories come back to you as you gaze at this photo. Raises a Pokémon's happiness to max.
+#-------------------------------
+[SHMOOVEMENTLICENSE]
+Name = Shmoovement License
+NamePlural = Shmoovement Licenses
+Pocket = 8
+Price = 0
+FieldUse = Direct
+Flags = KeyItem
+Description = Whilst wielding this license, you can shmoove around at ungodly speeds.
+#-------------------------------
+[MOVETOKEN]
+Name = Move Token
+NamePlural = Move Tokens
+Pocket = 1
+Price = 10000
+Description = A token that is very shiny. Can be given to someone to change Pokemon moves.
+#-------------------------------
+[KEYBLADE]
+Name = Keyblade
+NamePlural = Keyblades
+Pocket = 8
+Price = 0
+Flags = KeyItem, HeldKeyItem
+ShowQuantity = false
+Description = "My friends are my power!" Can be held by a Pokemon to boost its two highest stats.
+#-------------------------------
+[BESTCHARACTERBADGE]
+Name = Best Character Badge
+NamePlural = Best Character Badges
+Pocket = 8
+Price = 0
+FieldUse = Direct
+Flags = KeyItem
+Description = "My friends are my power!" Can be used in battle to give a boost to all stats once per battle.
+#-------------------------------
+[BIRTHDAYCANDLE]
+Name = Birthday Candle
+NamePlural = Birthday Candles
+Pocket = 1
+Price = 10000
+Description = This warm candle was lit in honor of you. Can be given to someone to change Pokemon EVs.
+#-------------------------------
+[ELDRITCHHORRORS]
+Name = Eldritch Horrors
+NamePlural = Eldritch Horrors
+Pocket = 8
+Price = 0
+FieldUse = Direct
+Flags = KeyItem
+Description = Gaze into the gap? Allows you to travel to places you've been to.
+#-------------------------------
+[EXPALL]
+Name = Egg of Enlightenment
+NamePlural = Eggs of Enlightenment
+Pocket = 8
+Price = 0
+FieldUse = Direct
+Flags = KeyItem
+Description = Irasshaimase. You now gain 1.5x the amount of exp after battle and all of the Pokémon in your party gain exp.
+#-------------------------------
+[EXPALLOFF]
+Name = Egg of Enlightenment
+NamePlural = Eggs of Enlightenment
+Pocket = 8
+Price = 0
+FieldUse = Direct
+Flags = KeyItem
+Description = Irasshaimase. You now gain 1.5x the amount of exp after battle and all of the Pokémon in your party gain exp.
+#-------------------------------
+[DURAGOFGREED]
+Name = Durag of Greed
+NamePlural = Durags of Greed
+Pocket = 8
+Price = 0
+Flags = KeyItem
+Description = The greed consumes you. You now gain double the amount of money after winning a battle.
+#-------------------------------
+[STRENGTHITEM]
+Name = Strong
+NamePlural = Strongs
+Pocket = 8
+Price = 0
+Flags = KeyItem
+Description = ...
+#-------------------------------
+[ARCADECAPACITOR]
+Name = Arcade Capacitor
+NamePlural = Arcade Capacitor
+Pocket = 8
+Price = 0
+Flags = KeyItem, HeldKeyItem
+ShowQuantity = false
+Description = A capacitor taken from a high-end arcade machine. Can be held by a Pokemon to set Electric terrain.
+#-------------------------------
+[SHADOWREMNANT]
+Name = Shadow Remnant
+NamePlural = Shadow Remnants
+Pocket = 8
+Price = 0
+FieldUse = OnPokemon
+Flags = KeyItem
+Consumable = false
+Description = What remains of Shadow Keith's curse. It still hungers to undo growth, reversing a Pokémon's evolution.
+#-------------------------------
+[DRENCHEDROCK]
+Name = Drenched Rock
+NamePlural = Drenched Rocks
+Pocket = 1
+Price = 8000
+Description = An item to be held by a Pokémon. Causes rain when entering a battle.

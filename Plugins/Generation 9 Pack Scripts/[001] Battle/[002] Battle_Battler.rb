@@ -563,7 +563,7 @@ class Battle::Battler
         self.eachMove do |m|
           hasThisMove    = true if m.id == @id
           hasOtherMoves  = true if m.id != @id
-          hasUnusedMoves = true if m.id != @id && !user.movesUsed.include?(m.id)
+          hasUnusedMoves = true if m.id != @id && !movesUsed.include?(m.id)
         end
         if !hasThisMove || !hasOtherMoves || hasUnusedMoves
           msg = _INTL("This move can't be used!", pbThis, move.name) if showMessages

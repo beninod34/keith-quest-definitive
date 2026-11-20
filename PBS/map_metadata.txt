@@ -10,7 +10,7 @@ ShowArea = true
 MapPosition = 0,13,12
 BattleBack = field
 #-------------------------------
-[003]   # Player's house
+[003]   # \PN's house
 Name = \PN's house
 HealingSpot = 2,8,8
 MapPosition = 0,13,12
@@ -51,7 +51,7 @@ Name = Cedolan City
 MapPosition = 0,13,10
 BattleBack = indoor3
 Environment = Rock
-Flags = DisableBoxLink
+Flags = DisableBoxLink,PowerSpot
 #-------------------------------
 [011]   # Pokémon Institute
 Name = Cedolan City
@@ -152,7 +152,7 @@ MapPosition = 0,14,6
 BattleBack = field
 MapSize = 2,1101
 #-------------------------------
-[032]	# KEITH'S HOUSE
+[032]   # KEITH'S HOUSE
 Name = Keith's House
 Outdoor = true
 ShowArea = true
@@ -160,6 +160,12 @@ Bicycle = true
 HealingSpot = 32,26,10
 MapPosition = 2,15,16
 SnapEdges = true
+#-------------------------------
+[033]   # Inside 1
+Name = Inside
+MapPosition = 2,15,19
+BattleBack = indoor3
+Flags = HideFollowingPkmn
 #-------------------------------
 [034]   # Ice Cave
 Name = Route 3
@@ -184,7 +190,7 @@ MapPosition = 0,13,6
 Name = Ingido Plateau
 MapPosition = 0,13,6
 BattleBack = elite1
-Flags = DisableBoxLink
+Flags = DisableBoxLink,PowerSpot
 #-------------------------------
 [038]   # Hall of Fame
 Name = Ingido Plateau
@@ -214,16 +220,16 @@ BicycleAlways = true
 MapPosition = 0,11,7
 MapSize = 1,111
 #-------------------------------
-[042]	# Inside 2
-Name = Inside 2
+[042]   # Inside 2
+Name = Inside
 MapPosition = 2,15,19
+Flags = HideFollowingPkmn
 #-------------------------------
-[043]	# THE GREAT OUTDOORS
+[043]   # THE GREAT OUTDOORS
 Name = The Great Outdoors
 Outdoor = true
 ShowArea = true
 Bicycle = true
-BicycleAlways = false
 MapPosition = 2,15,0
 SnapEdges = true
 #-------------------------------
@@ -257,13 +263,14 @@ BattleBack = rocky
 MapSize = 2,11
 Environment = Rock
 #-------------------------------
-[048]	# FAIRY VALE
+[048]   # FAIRY VALE
 Name = Fairy Vale
 Outdoor = true
 ShowArea = true
 Bicycle = true
 MapPosition = 2,22,3
 SnapEdges = true
+BattleBack = field
 #-------------------------------
 [049]   # Rock Cave 1F
 Name = Route 7
@@ -315,7 +322,7 @@ MapPosition = 0,17,10
 Name = Battle Frontier
 MapPosition = 0,17,10
 BattleBack = indoor1
-Flags = DisableBoxLink
+Flags = DisableBoxLink,PowerSpot
 #-------------------------------
 [057]   # Stadium Cup lobby
 Name = Battle Frontier
@@ -329,7 +336,7 @@ MapPosition = 0,17,10
 Name = Battle Frontier
 MapPosition = 0,17,10
 BattleBack = indoor1
-Flags = DisableBoxLink
+Flags = DisableBoxLink,PowerSpot
 #-------------------------------
 [060]   # Battle Arena
 Name = Battle Frontier
@@ -339,7 +346,7 @@ MapPosition = 0,17,10
 Name = Battle Frontier
 MapPosition = 0,17,10
 BattleBack = indoor1
-Flags = DisableBoxLink
+Flags = DisableBoxLink,PowerSpot
 #-------------------------------
 [062]   # Battle Factory
 Name = Battle Frontier
@@ -354,7 +361,7 @@ Flags = DisableBoxLink
 Name = Battle Frontier
 MapPosition = 0,17,10
 BattleBack = indoor1
-Flags = DisableBoxLink
+Flags = DisableBoxLink,PowerSpot
 #-------------------------------
 [065]   # Battle Factory corridor
 Name = Battle Frontier
@@ -427,23 +434,25 @@ Outdoor = true
 MapPosition = 1,13,16
 BattleBack = city
 #-------------------------------
-[076]	# MARE INSULARUM
+[076]   # MARE INSULARUM
 Name = Mare Insularum
 Outdoor = true
 ShowArea = true
 Bicycle = true
 MapPosition = 2,19,14
 SnapEdges = true
+BattleBack = beach
 #-------------------------------
-[077]	# GRAND SCHISM
+[077]   # GRAND SCHISM
 Name = Grand Schism
 Outdoor = true
 ShowArea = true
 Bicycle = true
 MapPosition = 2,8,5
 SnapEdges = true
+BattleBack = icefire
 #-------------------------------
-[078]	# PROMETHEAN KILN
+[078]   # PROMETHEAN KILN
 Name = Promethean Kiln
 Outdoor = true
 ShowArea = true
@@ -451,8 +460,9 @@ Bicycle = true
 Weather = Sun,100
 MapPosition = 2,10,13
 SnapEdges = true
+BattleBack = hotpot
 #-------------------------------
-[079]	# PURGATORIUM
+[079]   # PURGATORIUM
 Name = Purgatorium
 Outdoor = true
 ShowArea = true
@@ -460,169 +470,223 @@ Bicycle = true
 Weather = Rain,100
 MapPosition = 2,5,10
 SnapEdges = true
+BattleBack = bridge
 #-------------------------------
-[080]	# ATELIER ACCELERATUS
+[080]   # ATELIER ACCELERATUS
 Name = Atelier Acceleratus
 Outdoor = true
 ShowArea = true
 Bicycle = true
 MapPosition = 2,24,10
 SnapEdges = true
+BattleBack = indoor1
 #-------------------------------
-[081]	# ROOTS
+[081]   # ROOTS
 Name = Roots
 Outdoor = true
 ShowArea = true
 Bicycle = true
 MapPosition = 2,15,6
-SafariMap = false
 SnapEdges = true
+BattleBack = forest
+Flags = HideFollowingPkmn,PowerSpot
 #-------------------------------
-[082]	# THE DUNGEON
+[082]   # THE DUNGEON
 Name = THE DUNGEON
 ShowArea = true
 SnapEdges = true
+Flags = HideFollowingPkmn
 #-------------------------------
-[083]	# Inside 3
-Name = Inside 3
+[083]   # Inside 3
+Name = Inside
 DarkMap = true
 SnapEdges = true
+BattleBack = distortion
+Flags = HideFollowingPkmn
 #-------------------------------
-[084]	# Final Frontier
+[084]   # Final Frontier
 Name = Final Frontier
 SnapEdges = true
+Flags = HideFollowingPkmn
 #-------------------------------
-[085]	# THE DOJO
+[085]   # THE DOJO
 Name = The Dojo
 Outdoor = true
 ShowArea = true
 Bicycle = true
 MapPosition = 2,15,19
 SnapEdges = true
+BattleBack = dojo
+Flags = HideFollowingPkmn
 #-------------------------------
-[086]	# FAIRY VALE
+[086]   # FAIRY VALE
 Name = Fairy Vale
 ShowArea = true
-Bicycle = false
 MapPosition = 2,22,3
 SnapEdges = true
+BattleBack = field
 #-------------------------------
-[087]	# Lost Woods
+[087]   # Lost Woods
 Name = Lost Woods
 ShowArea = true
-Bicycle = false
 SnapEdges = true
+BattleBack = forest
+Flags = HideFollowingPkmn
 #-------------------------------
-[088]	# FAIRY VALE
+[088]   # FAIRY VALE
 Name = Fairy Vale
 Outdoor = true
 ShowArea = true
 Bicycle = true
+MapPosition = 3,22,3
 SnapEdges = true
+BattleBack = field
 #-------------------------------
-[089]	# PROMETHEAN KILN
+[089]   # PROMETHEAN KILN
 Name = Promethean Kiln
 Outdoor = true
 ShowArea = true
 Weather = Sun,100
 SnapEdges = true
+BattleBack = hotpot
 #-------------------------------
-[091]	# PURGATORIUM
+[090]   # Restaurant
+Name = Restaurant
+Flags = HideFollowingPkmn
+#-------------------------------
+[091]   # PURGATORIUM
 Name = Purgatorium
 Outdoor = true
 ShowArea = true
+MapPosition = 3,5,9
 Weather = Rain,100
 SnapEdges = true
+BattleBack = bridge
 #-------------------------------
-[092]	# Casino
+[092]   # Casino
 Name = Casino
 SnapEdges = true
+Flags = HideFollowingPkmn
 #-------------------------------
-[093]	# The Clearing
+[093]   # The Clearing
 Name = The Clearing
 ShowArea = true
-Bicycle = false
 SnapEdges = true
+Flags = HideFollowingPkmn
 #-------------------------------
-[094]	# 2nd Floor
+[094]   # 2nd Floor
 Name = 2nd Floor
 SnapEdges = true
+Flags = HideFollowingPkmn
 #-------------------------------
-[095]	# ATELIER ACCELERATUS
+[095]   # ATELIER ACCELERATUS
 Name = Atelier Acceleratus
 ShowArea = true
 Bicycle = true
 SnapEdges = true
+BattleBack = indoor1
 #-------------------------------
-[096]	# RaceTrack
+[096]   # RaceTrack
 Name = RaceTrack
-Bicycle = false
 SnapEdges = true
+Flags = HideFollowingPkmn
 #-------------------------------
-[097]	# ATELIER ACCELERATUS
+[097]   # ATELIER ACCELERATUS
 Name = Atelier Acceleratus
 ShowArea = true
+Bicycle = true
+MapPosition = 3,24,10
+SnapEdges = true
+BattleBack = indoor1
+#-------------------------------
+[098]   # GRAND SCHISM
+Name = Grand Schism
+MapPosition = 3,8,5
 SnapEdges = true
 #-------------------------------
-[098]	# GRAND SCHISM
+[099]   # GRAND SCHISM
 Name = Grand Schism
 SnapEdges = true
+Flags = HideFollowingPkmn
 #-------------------------------
-[099]	# GRAND SCHISM
-Name = Grand Schism
-SnapEdges = true
-#-------------------------------
-[100]	# The Tower
+[100]   # The Tower
 Name = The Tower
 SnapEdges = true
+BattleBack = tower
+Flags = HideFollowingPkmn
 #-------------------------------
-[101]	# MARE INSULARUM
+[101]   # MARE INSULARUM
 Name = Mare Insularum
 ShowArea = true
 SnapEdges = true
+BattleBack = beach
 #-------------------------------
-[102]	# THE VOID
+[102]   # THE VOID
 Name = The Void
-Bicycle = false
+Flags = HideFollowingPkmn
 #-------------------------------
-[103]	# Void Heights
+[103]   # Void Heights
 Name = Void Heights
-Bicycle = false
 SnapEdges = true
+Flags = HideFollowingPkmn
 #-------------------------------
-[104]	# Void Lab
+[104]   # Void Lab
 Name = Void Lab
-Bicycle = false
 SnapEdges = true
+Flags = HideFollowingPkmn
 #-------------------------------
-[105]	# Void Garden
+[105]   # Void Garden
 Name = Void Garden
-Bicycle = false
 SnapEdges = true
+Flags = HideFollowingPkmn
 #-------------------------------
-[106]	# Void Duality
+[106]   # Void Duality
 Name = Void Duality
-Bicycle = false
 SnapEdges = true
+Flags = HideFollowingPkmn
 #-------------------------------
-[107]	# Void Pan
+[107]   # Void Pan
 Name = Void Pan
-Bicycle = false
 SnapEdges = true
+Flags = HideFollowingPkmn
 #-------------------------------
-[108]	# Void Graveyard
+[108]   # Void Graveyard
 Name = Void Graveyard
-Bicycle = false
 SnapEdges = true
+Flags = HideFollowingPkmn
 #-------------------------------
-[109]	# MARE INSULARUM
+[109]   # MARE INSULARUM
 Name = Mare Insularum
 ShowArea = true
+MapPosition = 3,19,14
 SnapEdges = true
+BattleBack = beach
 #-------------------------------
-[110]	# PROMETHEAN KILN
+[110]   # PROMETHEAN KILN
 Name = Promethean Kiln
 Outdoor = true
 ShowArea = true
+MapPosition = 3,10,13
 Weather = Sun,100
 SnapEdges = true
+BattleBack = hotpot
+#-------------------------------
+[111]   # SHADOW KEITH'S DOMAIN
+Name = Shadow Keith's Domain
+SnapEdges = true
+BattleBack = distortion
+Flags = HideFollowingPkmn,PowerSpot
+#-------------------------------
+[112]   # LOLI BEACH
+Name = Loli Beach
+ShowArea = true
+SnapEdges = true
+BattleBack = loliden
+Flags = HideFollowingPkmn
+#-------------------------------
+[113]   # SECLUDED GRAVE
+Name = Secluded Grave
+Outdoor = true
+ShowArea = true
+SnapEdges = true
+Flags = HideFollowingPkmn

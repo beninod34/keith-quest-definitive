@@ -7,6 +7,10 @@ ItemHandlers::UseText.add(:BICYCLE, proc { |item|
 
 ItemHandlers::UseText.copy(:BICYCLE, :MACHBIKE, :ACROBIKE)
 
+ItemHandlers::UseText.add(:SHMOOVEMENTLICENSE, proc { |item|
+  next ($PokemonGlobal.shmooving) ? _INTL("Stop shmooving") : _INTL("Shmoove")
+})
+
 ItemHandlers::UseText.add(:EXPALLOFF, proc { |item|
   next _INTL("Turn on")
 })
@@ -45,6 +49,10 @@ ItemHandlers::UseFromBag.add(:BICYCLE, proc { |item|
 })
 
 ItemHandlers::UseFromBag.copy(:BICYCLE, :MACHBIKE, :ACROBIKE)
+
+ItemHandlers::UseFromBag.add(:SHMOOVEMENTLICENSE, proc { |item|
+  next 2
+})
 
 ItemHandlers::UseFromBag.add(:OLDROD, proc { |item|
   notCliff = $game_map.passable?($game_player.x, $game_player.y, $game_player.direction, $game_player)
@@ -273,6 +281,16 @@ ItemHandlers::UseInField.add(:BICYCLE, proc { |item|
 
 ItemHandlers::UseInField.copy(:BICYCLE, :MACHBIKE, :ACROBIKE)
 
+ItemHandlers::UseInField.add(:SHMOOVEMENTLICENSE, proc { |item|
+  $PokemonGlobal.shmooving = !$PokemonGlobal.shmooving
+  if $PokemonGlobal.shmooving
+    pbMessage(_INTL("{1} started shmooving!", $player.name))
+  else
+    pbMessage(_INTL("{1} stopped shmooving.", $player.name))
+  end
+  next true
+})
+
 ItemHandlers::UseInField.add(:OLDROD, proc { |item|
   notCliff = $game_map.passable?($game_player.x, $game_player.y, $game_player.direction, $game_player)
   if !$game_player.pbFacingTerrainTag.can_fish || (!$PokemonGlobal.surfing && !notCliff)
@@ -375,6 +393,18 @@ ItemHandlers::UseInField.add(:EXPALLOFF, proc { |item|
   $bag.replace_item(:EXPALLOFF, :EXPALL)
   pbMessage(_INTL("The Exp Share was turned on."))
   next true
+})
+
+ItemHandlers::UseInField.add(:BESTCHARACTERBADGE,proc{ |item|
+    pbMessage(_INTL("You stare at the badge..."))
+    if pbConfirmMessage("Do you acknowledge that Swiftwind exists?")
+      for i in $player.party
+      i.heal
+      end
+    pbSEPlay("Use item in party")
+    pbMessage(_INTL("Your Pokémon were fully healed."))
+    end
+   next 1
 })
 
 #===============================================================================
@@ -916,11 +946,17 @@ ItemHandlers::UseOnPokemon.add(:SERIOUSMINT, proc { |item, qty, pkmn, scene|
 })
 
 ItemHandlers::UseOnPokemonMaximum.add(:RARECANDY, proc { |item, pkmn|
-  next GameData::GrowthRate.max_level - pkmn.level
+  levelCap = $game_switches[75] ? 110 : 100
+  next [GameData::GrowthRate.max_level, levelCap].min - pkmn.level
 })
 
 ItemHandlers::UseOnPokemon.add(:RARECANDY, proc { |item, qty, pkmn, scene|
   if pkmn.shadowPokemon?
+    scene.pbDisplay(_INTL("It won't have any effect."))
+    next false
+  end
+  levelCap = $game_switches[75] ? 110 : 100
+  if pkmn.level >= levelCap
     scene.pbDisplay(_INTL("It won't have any effect."))
     next false
   end
@@ -1520,5 +1556,40 @@ ItemHandlers::UseOnPokemon.add(:REINSOFUNITYUSED, proc { |item, qty, pkmn, scene
     scene.pbDisplay(_INTL("{1} changed Forme!", pkmn.name))
   end
   $bag.replace_item(:REINSOFUNITYUSED, :REINSOFUNITY)
+  next true
+})
+
+ItemHandlers::UseOnPokemon.add(:FAMILYPHOTO, proc { |item, qty, pkmn, scene|
+  if pkmn.happiness >= 255
+    scene.pbDisplay(_INTL("It won't have any effect."))
+    next false
+  end
+  if scene.pbConfirm(_INTL("Would you like to max out {1}'s Happiness?", pkmn.name))
+    pkmn.changeHappiness("familyphoto",true)
+    scene.pbRefresh
+    scene.pbDisplay(_INTL("{1}'s Happiness maxed out!",pkmn.name))
+    next true
+  end
+  next false
+})
+
+ItemHandlers::UseOnPokemon.add(:SHADOWREMNANT, proc { |item, qty, pkmn, scene|
+  prev = pkmn.species_data.get_previous_species
+  if pkmn.egg? || prev == pkmn.species
+    scene.pbDisplay(_INTL("It won't have any effect."))
+    next false
+  end
+  prev_name = GameData::Species.get(prev).name
+  next false if !scene.pbConfirm(_INTL("Return {1} to {2}?", pkmn.name, prev_name))
+  old_name = pkmn.name
+  form = pkmn.form
+  pkmn.species = prev
+  # Keep regional forms (e.g. Galarian Rapidash -> Galarian Ponyta)
+  pkmn.form = form if GameData::Species.get_species_form(prev, form).form == form
+  pkmn.calc_stats
+  $player.pokedex.register(pkmn)
+  $player.pokedex.set_owned(pkmn.species)
+  scene.pbRefresh
+  scene.pbDisplay(_INTL("{1} returned to being {2}!", old_name, prev_name))
   next true
 })

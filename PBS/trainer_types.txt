@@ -118,11 +118,6 @@ Name = Poké Maniac
 Gender = Male
 BaseMoney = 64
 #-------------------------------
-[POKEMONBREEDER]
-Name = Pokémon Breeder
-Gender = Female
-BaseMoney = 48
-#-------------------------------
 [PROFESSOR]
 Name = Professor
 Gender = Male
@@ -405,3 +400,205 @@ Name = Little Brother
 Gender = Male
 BaseMoney = 100
 BattleBGM = Dominic Theme
+#-------------------------------
+[LABMONGER]
+Name = Labmonger
+Gender = Male
+BaseMoney = 100
+BattleBGM = 50_50
+VictoryBGM = Difficult Battle Won
+#-------------------------------
+[DIAMETRICDUO]
+Name = Diametric Duo
+Gender = Male
+BaseMoney = 100
+BattleBGM = Clashing Views Aimed Straight
+#-------------------------------
+[HEATMASTER]
+Name = Heatmaster
+Gender = Male
+BaseMoney = 100
+BattleBGM = Clashing Views Aimed Straight
+#-------------------------------
+[SNOWMASTER]
+Name = Snowmaster
+Gender = Male
+BaseMoney = 100
+BattleBGM = Clashing Views Aimed Straight
+#-------------------------------
+[LITESKINLEGEND]
+Name = Liteskin Legend
+Gender = Male
+BaseMoney = 100
+BattleBGM = Perfect Compatibility
+VictoryBGM = Difficult Battle Won
+#-------------------------------
+[CROWNLESSKING]
+Name = Crownless King
+Gender = Male
+BaseMoney = 100
+BattleBGM = Super Sexy Handsome Music
+VictoryBGM = Difficult Battle Won
+#-------------------------------
+[PRIMORDIALEMPEROR]
+Name = Primordial Emperor
+Gender = Male
+BaseMoney = 100
+BattleBGM = Desperate Struggle
+VictoryBGM = Difficult Battle Won
+#-------------------------------
+[GRANDMASTER]
+Name = Grandmaster
+Gender = Male
+BaseMoney = 100
+BattleBGM = Barry's Duel
+VictoryBGM = Difficult Battle Won
+#-------------------------------
+[SILKYSAINT]
+Name = Silky Saint
+Gender = Male
+BaseMoney = 100
+BattleBGM = Ultra Friendship Battle
+VictoryBGM = Difficult Battle Won
+#-------------------------------
+[CRAZWONK]
+Name = Craz Wonk
+Gender = Male
+BaseMoney = 100
+BattleBGM = Conflict Through the Roots
+VictoryBGM = Difficult Battle Won
+#-------------------------------
+[OLMAN]
+Name = Ol' Man
+Gender = Male
+BaseMoney = 100
+BattleBGM = Conflict Through the Roots
+VictoryBGM = Difficult Battle Won
+#-------------------------------
+[CALAMITOUSCOUSINS]
+Name = Calamitous Cousins
+Gender = Male
+BaseMoney = 100
+BattleBGM = Conflict Through the Roots
+VictoryBGM = Difficult Battle Won
+#-------------------------------
+[ORGXIIIMEMBER]
+Name = Org XIII Member
+Gender = Male
+BaseMoney = 100
+BattleBGM = Conflict Through the Roots
+VictoryBGM = Difficult Battle Won
+#-------------------------------
+[FALSEPAPA]
+Name = False Papa
+Gender = Male
+BaseMoney = 100
+BattleBGM = Conflict Through the Roots
+VictoryBGM = Difficult Battle Won
+#-------------------------------
+[COACH]
+Name = Coach
+Gender = Male
+BaseMoney = 100
+BattleBGM = Conflict Through the Roots
+VictoryBGM = Difficult Battle Won
+#-------------------------------
+[POKEMONBREEDER]
+Name = Pokémon Breeder
+Gender = Male
+BaseMoney = 100
+BattleBGM = A Questionable Outlook
+VictoryBGM = Difficult Battle Won
+#-------------------------------
+[NUBILEDEITY]
+Name = Moe Moe Kawaii
+Gender = Male
+BaseMoney = 100
+BattleBGM = Fly High Power
+VictoryBGM = Difficult Battle Won
+#-------------------------------
+[CHILDGOBBLER]
+Name = Shadow
+Gender = Male
+BaseMoney = 100
+BattleBGM = Unwinnable Battle
+VictoryBGM = Difficult Battle Won
+#-------------------------------
+[FINALBATTLE]
+Name = Aggravated Shadow
+Gender = Male
+BaseMoney = 100
+BattleBGM = Unwinnable Battle
+VictoryBGM = God Defeated
+#-------------------------------
+[DOJOSTUDENT_M]
+Name = Dojo Student
+Gender = Male
+BaseMoney = 100
+BattleBGM = Sparring Match
+#-------------------------------
+[DOJOSTUDENT_F]
+Name = Dojo Student
+Gender = Female
+BaseMoney = 100
+BattleBGM = Sparring Match
+#-------------------------------
+[GRANDPA]
+Name = Your
+Gender = Male
+BaseMoney = 100
+BattleBGM = Sparring Match
+#-------------------------------
+[SILKYSAINTV2]
+Name = Silky Saint
+Gender = Male
+BaseMoney = 100
+BattleBGM = Battle of the Heat
+#-------------------------------
+[GRANDMASTERV2]
+Name = Adolescent Blastscourge
+Gender = Female
+BaseMoney = 100
+BattleBGM = Yuna's Team
+#-------------------------------
+[PRIMORDIALEMPERORV2]
+Name = Primodial Emperor
+Gender = Male
+BaseMoney = 100
+BattleBGM = Floating Darkness
+#-------------------------------
+[CROWNLESSKINGV2]
+Name = Crownless King
+Gender = Male
+BaseMoney = 100
+BattleBGM = Royal Flush
+#-------------------------------
+[LITESKINLEGENDV2]
+Name = Liteskin Legend
+Gender = Male
+BaseMoney = 100
+BattleBGM = Atlanta Anthem
+#-------------------------------
+[LABMONGERV2]
+Name = Labmonger
+Gender = Male
+BaseMoney = 100
+BattleBGM = Match of Movement
+#-------------------------------
+[LITTLEWARRIOR]
+Name = Final Form
+Gender = Male
+BaseMoney = 100
+BattleBGM = Battle of the Deities
+#-------------------------------
+[DOJOMASTER]
+Name = Dojo Master
+Gender = Male
+BaseMoney = 100
+BattleBGM = Fatherly Fued
+#-------------------------------
+[SINNOHCHAMPION]
+Name = Champion
+Gender = Female
+BaseMoney = 100
+BattleBGM = Battle Cynthia

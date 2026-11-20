@@ -1086,6 +1086,14 @@ Battle::AbilityEffects::ModifyMoveBaseType.add(:REFRIGERATE,
   }
 )
 
+Battle::AbilityEffects::ModifyMoveBaseType.add(:TERRADRACE,
+  proc { |ability, user, move, type|
+    next if type != :GROUND || !GameData::Type.exists?(:DRAGON)
+    move.powerBoost = true
+    next :DRAGON
+  }
+)
+
 #===============================================================================
 # AccuracyCalcFromUser handlers
 #===============================================================================
@@ -1200,7 +1208,7 @@ Battle::AbilityEffects::DamageCalcFromUser.add(:AERILATE,
   }
 )
 
-Battle::AbilityEffects::DamageCalcFromUser.copy(:AERILATE, :GALVANIZE, :NORMALIZE, :PIXILATE, :REFRIGERATE)
+Battle::AbilityEffects::DamageCalcFromUser.copy(:AERILATE, :GALVANIZE, :NORMALIZE, :PIXILATE, :REFRIGERATE, :TERRADRACE)
 
 Battle::AbilityEffects::DamageCalcFromUser.add(:ANALYTIC,
   proc { |ability, user, target, move, mults, power, type|

@@ -1246,8 +1246,8 @@ module Transitions
     BAR_Y              = 80
     BAR_SCROLL_SPEED   = 1800
     BAR_MASK           = [8, 7, 6, 5, 4, 3, 2, 1, 0, 1, 2, 3, 4, 5, 6, 7]
-    FOE_SPRITE_X_LIMIT = 384   # Slides to here before jumping to final position
-    FOE_SPRITE_X       = 428   # Final position of foe sprite
+    FOE_SPRITE_X_LIMIT = 340   # Slides to here before jumping to final position
+    FOE_SPRITE_X       = 384   # Final position of foe sprite
 
     def initialize_bitmaps
       @bar_bitmap   = RPG::Cache.transition("hgss_vsBar_#{$game_temp.transition_animation_data[0]}")

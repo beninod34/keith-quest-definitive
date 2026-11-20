@@ -683,17 +683,15 @@ class Pokemon
     when Array
       GameData::Stat.each_main do |stat|
         val = value[stat.pbs_order].clamp(0, EV_STAT_LIMIT)
-        total_ev += val
-        total_ev = [total_ev, EV_LIMIT].min
         val = [val, EV_LIMIT - total_ev].min
+        total_ev += val
         @ev[stat.id] = val
       end
     when Hash
       value.each do |stat, val|
         val = val.clamp(0, EV_STAT_LIMIT)
-        total_ev += val
-        total_ev = [total_ev, EV_LIMIT].min
         val = [val, EV_LIMIT - total_ev].min
+        total_ev += val
         @ev[stat] = val
       end
     end

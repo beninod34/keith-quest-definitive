@@ -195,7 +195,7 @@ class Battle
             old_user = user
             midbattle[trigger].each do |key, params|
               base_key = key.split("_").first
-              ret = MidbattleHandlers.trigger(:midbattle_triggers, base_key, self, user, target, params)
+              ret = MidbattleHandlers.trigger(:midbattle_triggers, base_key, self, user, target, params, key)
               oldVar = @midbattleVariable if base_key == "setVariable"
               if !ret.nil?
                 case base_key
@@ -243,9 +243,9 @@ class Battle
   # Midbattle triggers upon a trainer using an item.
   #-----------------------------------------------------------------------------
   def pbUseItemOnPokemon(item, idxParty, userBattler)
-    pbDeluxeTriggers(userBattler, nil, "BeforeItemUse", item)
-    trainerName = pbGetOwnerName(userBattler.index)
     pkmn = pbParty(userBattler.index)[idxParty]
+    pbDeluxeTriggers(userBattler, nil, "BeforeItemUse", item, pkmn.species)
+    trainerName = pbGetOwnerName(userBattler.index)
     battler = pbFindBattler(idxParty, userBattler.index)
     pbUseItemMessage(item, trainerName, (battler || pkmn))
     ch = @choices[userBattler.index]
@@ -264,9 +264,11 @@ class Battle
   end
   
   def pbUseItemOnBattler(item, idxParty, userBattler)
-    pbDeluxeTriggers(userBattler, nil, "BeforeItemUse", item)
-    trainerName = pbGetOwnerName(userBattler.index)
     battler = pbFindBattler(idxParty, userBattler.index)
+    triggers = ["BeforeItemUse", item]
+    triggers.push(battler.species) if battler
+    pbDeluxeTriggers(userBattler, nil, *triggers)
+    trainerName = pbGetOwnerName(userBattler.index)
     pbUseItemMessage(item, trainerName, battler)
     ch = @choices[userBattler.index]
     if battler
@@ -290,9 +292,9 @@ class Battle
   end
   
   def pbUseItemInBattle(item, idxBattler, userBattler)
-    pbDeluxeTriggers(userBattler, idxBattler, "BeforeItemUse", item)
-    trainerName = pbGetOwnerName(userBattler.index)
     battler = (idxBattler < 0) ? userBattler : @battlers[idxBattler]
+    pbDeluxeTriggers(userBattler, idxBattler, "BeforeItemUse", item, battler.species)
+    trainerName = pbGetOwnerName(userBattler.index)
     pbUseItemMessage(item, trainerName, battler)
     pkmn = battler.pokemon
     ch = @choices[userBattler.index]
