@@ -783,7 +783,7 @@ module MidbattleScripts
       "speech" => "*Silent Concentration Mode*",
     },
     "AfterLastSwitchIn_foe" => {
-      "text" => "*Brandon leaves the concentration mode for only a second to utter these few, powerful words*",
+      "text" => "<i>Brandon leaves the concentration mode for only a second to utter these few, powerful words</i>",
       "setSpeaker" => nil,
       "editWindow" => [nil, "bw choice"],
       "speech" => "G i v e   m e   s t r e n g t h",

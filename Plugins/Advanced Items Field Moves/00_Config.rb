@@ -702,9 +702,10 @@ module AdvancedItemsFieldMoves
     :item                               => true,                    # Default: true
     :item_needed_badge                  => 0,                       # Default: 0
     :item_needed_switches               => [],                      # Default: []
-    :item_disable_switch                => 63,                       # Game switch ID; while ON the item can't be used (0 = never disabled)
+    :item_disable_switch                => 83,                       # Game switch ID; while ON the item can't be used (0 = never disabled)
     :item_usable_indoors                => true,                    # Default: false (true = item works on non-outdoor maps)
     :allow_item_debug                   => false,                   # Default: false
+    :item_escape_maps                   => [82,111,112],                      # Map IDs where the item acts like an Escape Rope instead of Fly (e.g. [42, 76])
     #===================[Move Config]===================#
     :move_name                          => [:FLY],                  # :FLY
     :move                               => false,                    # Default: true

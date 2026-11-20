@@ -1350,6 +1350,43 @@ end
 #===============================================================================
 # Fly
 #================================[Item Handler]================================#
+# Returns true if the Fly item should act like an Escape Rope on the current map.
+def pbFlyItemEscapeMap?
+  return (AIFM_Fly[:item_escape_maps] || []).include?($game_map.map_id)
+end
+
+# Escape Rope behaviour for the Fly item (used on maps in :item_escape_maps).
+def pbFlyItemEscape(item)
+  escape = ($PokemonGlobal.escapePoint rescue nil)
+  if !escape || escape == []
+    pbMessage(_INTL("Can't use that here."))
+    return false
+  end
+  if !$game_player.can_map_transfer_with_follower?
+    pbMessage(_INTL("It can't be used when you have someone with you."))
+    return false
+  end
+  item_name = GameData::Item.get(item).name
+  if $PokemonSystem.ask_text != 1 &&
+     !pbConfirmMessage(_INTL("{1}", AIFM_Fly[:text_item_comfirm], item_name))
+    return false
+  end
+  pbUseItemMessage(item)
+  pbFadeOutIn do
+    pbSEPlay("Sudden Appearance")
+    $game_temp.player_new_map_id    = escape[0]
+    $game_temp.player_new_x         = escape[1]
+    $game_temp.player_new_y         = escape[2]
+    $game_temp.player_new_direction = escape[3]
+    pbCancelVehicles
+    $scene.transfer_player
+    $game_map.autoplay
+    $game_map.refresh
+  end
+  pbEraseEscapePoint
+  return true
+end
+
 if AIFM_Fly[:item]
   ItemHandlers::UseFromBag.add(AIFM_Fly[:internal_name], proc do |item|
     config_name = AIFM_Fly
@@ -1362,6 +1399,17 @@ if AIFM_Fly[:item]
     if !pbCanUseItem(config_name)
       pbMessage(_INTL("{1}", config_name[:missing_bagde_item], config_name[:item_needed_badge], item_badge, item_name))
       next 0
+    end
+    if pbFlyItemEscapeMap?
+      escape = ($PokemonGlobal.escapePoint rescue nil)
+      if !escape || escape == []
+        pbMessage(_INTL("Can't use that here."))
+        next 0
+      end
+      if !$game_player.can_map_transfer_with_follower?
+        pbMessage(_INTL("It can't be used when you have someone with you."))
+        next 0
+      end
     end
     next 2
   end)
@@ -1378,6 +1426,7 @@ if AIFM_Fly[:item]
       pbMessage(_INTL("{1}", config_name[:missing_bagde_item], config_name[:item_needed_badge], item_badge, item_name))
       next false
     end
+    next pbFlyItemEscape(item) if pbFlyItemEscapeMap?
     if !config_name[:item_usable_indoors] && !$game_map.metadata&.outdoor_map
       pbMessage(_INTL("You can't use the \\c[0]{1}\\c[0] when you are inside.", item_name))
       next false
@@ -1386,16 +1435,17 @@ if AIFM_Fly[:item]
       pbMessage(_INTL("It can't be used when you have someone with you."))
       next false
     end
+    if $PokemonSystem.ask_text != 1 &&
+       !pbConfirmMessage(_INTL("{1}", config_name[:text_item_comfirm], item_name))
+      next false
+    end
     scene = PokemonRegionMap_Scene.new(-1, false)
     screen = PokemonRegionMapScreen.new(scene)
     ret = screen.pbStartFlyScreen
     if ret
       $game_temp.fly_destination = ret
     end
-    if $game_temp.fly_destination.nil?
-      pbMessage(_INTL("You can't use that here."))
-      next false
-    end
+    next false if $game_temp.fly_destination.nil?   # Backed out of the map
     pbFlyToNewLocation($player, item_name)
     next true
   end)
