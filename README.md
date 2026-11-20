@@ -1,6 +1,6 @@
 # Keith Quest — Definitive Edition
 
-A Pokémon fan game built on Pokémon Essentials, following the journey of **Keith** as he explores the region, battles trainers, and ultimately confronts a corrupted version of himself — **Shadow Keith** — in a climactic final battle.
+A Pokémon fan game built on Pokémon Essentials, following the journey of **Keith** on his birthday.
 
 This repository is the **Definitive Edition** of Keith Quest: a from-the-ground-up revision of the original project, migrating from Pokémon Essentials v19.1 to **v21** and reworking systems along the way.
 
