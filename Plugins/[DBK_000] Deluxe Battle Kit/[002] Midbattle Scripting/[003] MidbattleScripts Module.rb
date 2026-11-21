@@ -1340,6 +1340,7 @@ module MidbattleScripts
                             "Las: Everyone, lend Keith your energy while she distracts him!"],
       "text_C"          => "*The loudest rendition of Happy Birthday echoes throughout the void*",
       "stopSE"          => "Charging Beam",
+      "textWindow_C"     => :None,
       "characterSlide_A" => ["Friend_Luke", :Left],
       "text_D"           => "Luke: \"HAPPY\"",
       "characterSlide_B" => ["Friend_Brandon", :Right],

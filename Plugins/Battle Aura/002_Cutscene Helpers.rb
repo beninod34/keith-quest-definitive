@@ -61,7 +61,7 @@ class Battle::Scene
   def pbCharacterSlide(filename, fromLeft = true, seconds = 0.35)
     sprite = Sprite.new(@viewport)
     sprite.bitmap = RPG::Cache.picture(filename)
-    sprite.y = (Graphics.height - 96) / 2 - sprite.bitmap.height / 2
+    sprite.y = (Graphics.height - 96) / 2 - sprite.bitmap.height / 2 + 20
     sprite.z = CUTSCENE_SLIDE_Z
     if fromLeft
       startX  = -sprite.bitmap.width
@@ -97,11 +97,28 @@ class Battle::Scene
     return if respond_to?(:pbInCinematicSpeech?) && pbInCinematicSpeech?
     cw = @sprites["messageWindow"]
     @sprites["messageBox"].visible = false
+    if @cutscene_text_skin == :none
+      # No box at all: just white text (with a dark shadow) on the screen.
+      cw.opacity     = 0
+      cw.baseColor   = Color.new(248, 248, 248)
+      cw.shadowColor = Color.new(40, 40, 40)
+      return
+    end
     cw.setSkin("Graphics/Windowskins/#{@cutscene_text_skin}")
     cw.opacity = 255
     colors = getDefaultTextColors(cw.windowskin)
     cw.baseColor   = colors[0]
     cw.shadowColor = colors[1]
+  end
+
+  # Closing a paused message with Use/Back only clears its text and leaves the
+  # window visible. With a custom skin (opaque window) that shows as an empty
+  # box lingering through waits/slides/fades, so hide it once it's empty.
+  alias battle_aura_pbDisplayPausedMessage pbDisplayPausedMessage
+  def pbDisplayPausedMessage(msg, &block)
+    battle_aura_pbDisplayPausedMessage(msg, &block)
+    cw = @sprites["messageWindow"]
+    cw.visible = false if cw && nil_or_empty?(cw.text)
   end
 
   # Slams a Graphics/Pictures image over the whole battle with a white flash
@@ -150,7 +167,11 @@ class Battle::Scene
     pbShowWindow(BLANK) if defined?(BLANK)
     msgwindow = pbCreateMessageWindow(@viewport)
     msgwindow.z = 200
-    if @cutscene_text_skin
+    if @cutscene_text_skin == :none
+      msgwindow.opacity     = 0
+      msgwindow.baseColor   = Color.new(248, 248, 248)
+      msgwindow.shadowColor = Color.new(40, 40, 40)
+    elsif @cutscene_text_skin
       msgwindow.setSkin("Graphics/Windowskins/#{@cutscene_text_skin}")
       colors = getDefaultTextColors(msgwindow.windowskin)
       msgwindow.baseColor   = colors[0]
@@ -281,12 +302,14 @@ MidbattleHandlers.add(:midbattle_triggers, "stopSE",
 
 #-------------------------------------------------------------------------------
 # "textWindow" => "bw choice"   (any Graphics/Windowskins file)
+# "textWindow" => :None         (no box, just white text)
 # "textWindow" => :Default      (back to the normal battle text box)
 # Skins regular "text" messages. Stays on until you set it back.
 #-------------------------------------------------------------------------------
 MidbattleHandlers.add(:midbattle_triggers, "textWindow",
   proc { |battle, idxBattler, idxTarget, params|
     skin = (params.is_a?(String) && !params.empty?) ? params : nil
+    skin = :none if params == :None
     battle.scene.pbSetTextWindowSkin(skin)
     next nil
   }

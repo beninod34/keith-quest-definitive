@@ -398,11 +398,11 @@ Compiler_CompilePBS.rb
 Compiler_WritePBS.rb
 Compiler_MapsAndEvents.rb
 ================== (21).rb
-[[ Custom ]].rb
 Teams.rb
 Badges_BadgeCase.rb
-EVTraining.rb
-MegaStoneHints.rb
-Map_AdjustableMapRegions.rb
 [[ Main ]].rb
 Main.rb
+EVTraining.rb
+Map_AdjustableMapRegions.rb
+MegaStoneHints.rb
+[[ Custom ]].rb
